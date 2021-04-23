@@ -1,0 +1,24 @@
+# robots.txt file for Shopline Merchant
+User-agent: MJ12bot
+Disallow: /
+
+# split user-agent disallows for different bots, as not all bots may follow google's multi-user-agent standard
+User-agent: HubSpot
+Disallow: /
+
+
+User-agent: *
+
+Sitemap: https://www.miacake2008.com/sitemap.xml
+
+# Allow crawling of all content except
+
+Disallow: /closed
+Disallow: /preview/
+Disallow: /users/
+Disallow: /orders
+Disallow: /*?*debug=*
+Disallow: /*?*theme_preview=*
+Disallow: /*?*draft=*
+Disallow: /api/
+Disallow: /themes/

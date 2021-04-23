@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html ng-app="shop_app">
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"aa0d8411ae","applicationID":"5470801","transactionName":"ewxaQUoKDQ0DQRhfQFwGRkYXBgkEBVhYRUY=","queueTime":0,"applicationTime":447,"agent":"js-agent.newrelic.com/nr-768.min.js"}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwAPUFFTGwYEU1FaBwA="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:26,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:12,4:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:24,2:25,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:24,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
+    
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  
+    <title>Mia cake 米亞手工蛋糕</title>
+
+  <meta name="google" value="notranslate">
+    <link rel="shortcut icon" type="image/png" href="http://img-shoplineapp-com.s3.amazonaws.com/media/image_clips/55f3acc869702d6fc7fd3d00/original.jpg?1442032840">
+
+  <!-- styles-->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+  <link href="/assets/application-97c0997a624b55c0d8926cc51a4b5e8f.css" media="all" rel="stylesheet" />
+  <link rel="stylesheet" href="/themes/v1/lace/assets/css/lace.css?modified=2015-12-19">
+  <!-- styles-->
+
+
+  <script src="https://cdn.shopify.com/s/javascripts/currencies.js"></script>
+  <script src="/assets/application-6fa1853223b294329bb929c2cd8593a9.js"></script>
+
+
+
+
+
+  <script type="text/javascript">
+    app.value('mainConfig', {
+      merchantId: '55f23f06e36c8e916c000071',
+      sessionId: "1e4312a9c5193f0a6cdaddc80b507b68",
+      appCoreHost: "shoplineapp.com",
+      apiBaseUrl: "http://shoplineapp.com",
+      counterApiHost: "http://count.shoplineapp.com/",
+      appendToUrl:'',
+      env: 'production',
+      merchantData: {"_id":"55f23f06e36c8e916c000071","emails":{"order":"","message":"","comment":""},"features":[],"opensrs_login":"miacake2008com","base_country_code":"TW","default_language_code":"zh-hant","instagram_id":null,"instagram_info":null,"owner_type":"User","status":"active","shop_status":"open","profile_image":null,"facebook_page_id":"319074308138528","current_plan_key":"pro_month","current_theme_key":"lace","connect_features":[],"signup_ref":{"utm_source":"fbpost","utm_campaign":"hketnews2015","utm_medium":"facebook","utm_content":"tw"},"phones":{"main":"02-22453579"},"remarks":{},"tags_s":"","tags":[],"owner_id":"55f23f06e36c8e916c000070","owner_id_s":"55f23f06e36c8e916c000070","name":"Mia cake 米亞手工蛋糕","email":"mia@miacake.com.tw","handle":"mia126","updated_at":"2015-11-25T07:39:15.713Z","created_at":"2015-09-11T02:40:06.725Z","base_currency_code":"TWD","custom_domain":"www.miacake2008.com","custom_domain_requested":"miacake2008.com","favicon_media_id":"55f3acc869702d6fc7fd3d00","invoice_activation":"inactive","domain_remarks":"","domain_expiry_date":"2016-10-15T00:00:00.000Z","brand_home_url":"http://www.miacake2008.com","logo_media_url":"http://img-shoplineapp-com.s3.amazonaws.com/media/image_clips/55f3ad5069702d6a541a3d00/original.jpg?1442032975","base_currency":{"id":"twd","iso_code":"TWD","alternate_symbol":"NT$","name":"New Taiwan Dollar","symbol_first":true,"subunit_to_unit":1},"shop_default_home_url":"http://mia126.shoplineapp.com","payment_method_count":2,"delivery_option_count":6,"favicon_media_url":"http://img-shoplineapp-com.s3.amazonaws.com/media/image_clips/55f3acc869702d6fc7fd3d00/original.jpg?1442032840"},
+      themeBasePath: '/themes/v1/default',
+      // loadedLanguage:'zh-hant',
+      localeData: {"loadedLanguage":{"name":"中文(繁)","code":"zh-hant"},"supportedLocales":[{"name":"EN","code":"en"}]},
+      currentUser:null,
+      themeSettings:{"theme_color":"mint.sea","categories_collapsed":true,"image_fill":true,"is_multicurrency_enabled":false},
+      requestCountry: "US",
+      trackerEventData: {},
+      currencyData: {"displayedCurrency":{"name":"$ TWD","iso_code":"TWD"},"supportedCurrencies":[{"name":"$ HKD","iso_code":"hkd"},{"name":"¥ CNY","iso_code":"cny"},{"name":"$ USD","iso_code":"usd"},{"name":"$ SGD","iso_code":"sgd"},{"name":"€ EUR","iso_code":"eur"},{"name":"$ AUD","iso_code":"aud"},{"name":"£ GBP","iso_code":"gbp"},{"name":"₱ PHP","iso_code":"php"},{"name":"RM MYR","iso_code":"myr"},{"name":"฿ THB","iso_code":"thb"},{"name":"د.إ AED","iso_code":"aed"},{"name":"¥ JPY","iso_code":"jpy"},{"name":"K MMK","iso_code":"mmk"},{"name":"$ BND","iso_code":"bnd"},{"name":"₩ KRW","iso_code":"krw"}]},
+      previousUrl: ''
+    });
+
+    app.value('flash', {
+    });
+
+    app.value('flash_data', {});
+    app.value('routeParams', {"controller":"orders","action":"checkout"});
+  </script>
+
+
+
+
+  <!-- GLOBAL CONTENT FOR HTML HEAD START-->
+<link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="/themes/v1/lace/assets/css/lace.css?modified=2015-12-19">
+	
+		
+<!-- GLOBAL CONTENT FOR HTML HEAD END -->
+      <style>
+      .boxify-image {
+        background-size: cover;
+      }
+      </style>
+    <style>
+      
+    </style>
+    
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="GeL6VXEfTHzz4dkgl70H8hhjKdYYAm29G6vRv7d+UBY=" name="csrf-token" />
+    <meta property="og:site_name" content="Mia cake 米亞手工蛋糕"/>
+    <meta property="og:title" content="Mia cake 米亞手工蛋糕"/>
+    <meta property="og:url" content="http://www.miacake2008.com"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:image" content="http://img-shoplineapp-com.s3.amazonaws.com/media/image_clips/55f3ad5069702d6a541a3d00/original.jpg?1442032975"/>
+  
+
+</head>
+
+<body class="orders checkout" ng-controller="MainController"  ng-cloak>
+	<div id="left-panel" style="display:none">  
+<div class="language-switcher">
+  <!-- <select ng-change="changeLanguage(currentLanguage)" ng-model="currentLanguage">
+      <option value="en">
+         English
+      </option>
+      <option value="zh-hant">
+         中文(繁) 
+      </option>
+  </select> -->
+</div>
+
+<div class="clear"></div>
+<!-- <div style="float: left;width: 100%;background-color:#262d36;" ng-show='isUserLoggedIn'>
+  <div class="sidr-photo">
+    <div class="sidr-photo-ring">
+      <img class="img-circle sidr-chat-head" ng-src="{{currentUser.profile_image_url}}"/>
+    </div>
+  </div>
+</div>
+<div style="float: left;width: 100%;background-color:#262d36;" ng-show='!isUserLoggedIn'>
+  <div style="height: 1px;background-color:#232a32;"></div>
+</div> -->
+
+
+<div class="clear"></div>
+<div ng-show='isUserLoggedIn' class="hello" style="padding: 25px 15px;word-wrap:break-word;">
+  你好, {{currentUser.name}}
+</div>
+<div ng-show='!isUserLoggedIn' class="hello"></div>
+<div class="clear"></div>
+<div class="visible-sm visible-xs">
+  <div class="section-header">
+     目錄
+  </div>
+  <ul>
+    <li>
+      <a href="/products">所有商品</a>
+    <li>
+      <a href="/categories/生日造型蛋糕">造型蛋糕</a>
+    <li>
+      <a href="/categories/戚風蛋糕">低溫點心</a>
+    <li>
+      <a href="/categories/手工麵包"></a>
+    <li>
+      <a href="/categories/客製餐盒">客製餐盒</a>
+    <li>
+      <a href="/categories/季節限定"></a>
+  </ul>
+</div>
+
+  
+<div class="clear"></div>
+  <div class="visible-sm visible-xs">
+    <div class="section-header">
+      分類
+    </div>
+    <ul>
+        <li class=" text-secondary-color">
+          
+          <a href="/categories/55f23f07e36c8e916c000082">精選商品<!-- <span class="catcount"></span> --></a>
+        </li>
+        <li class=" text-secondary-color">
+          
+          <a href="/categories/55f3eb18e36c8e1fbc00000a">造型蛋糕<!-- <span class="catcount"></span> --></a>
+        </li>
+        <li class=" text-secondary-color">
+          
+          <a href="/categories/55f582bce37ec6e695000034">低溫點心<!-- <span class="catcount"></span> --></a>
+        </li>
+        <li class=" text-secondary-color">
+          
+          <a href="/categories/55f584f3039055afc0000003">常溫點心<!-- <span class="catcount"></span> --></a>
+        </li>
+    </ul>
+  </div>
+
+  <div style="" ng-show='isUserLoggedIn'>
+    <div class="section-header">
+        帳戶
+    </div>
+     <div collapse="isProfileSectionCollapsed">
+      <ul >
+        <li> <a ng-href="/users/{{currentUser._id}}/edit" target="_self">個人資訊</a></li>
+        <li> <a href="/messages" >訊息</a></li>  
+        <li> <a href="/orders" >訂單</a></li>
+
+        <li><a data-method="delete" href="/users/sign_out" rel="nofollow">登出</a>
+         
+         </li>
+      </ul>
+    </div>
+   </div>
+    <div style="" ng-show='!isUserLoggedIn'>
+    <div>
+    <div class="section-header">
+        帳戶
+    </div>  
+    <ul>
+      <li><a class="" href="/users/sign_in" >會員登入</a></li> 
+      <li><a class="" href="/users/sign_up">新用戶註冊</a></li>
+    </ul>
+    </div>
+  </div>
+</div> 
+<!--left-panel-->
+
+
+<div id="cart-panel" style="display:none">
+  <!-- cart Start -->
+   <div ng-controller="CartsController">
+    <div class="cart-header">
+      購物車
+    </div>
+    <!-- cart items start-->
+    <div class="clear"></div>
+    <div class="" ng-show="currentCart.isCartEmpty()">
+      <div style="display:block;padding:15px">
+        你的購物車是空的
+      </div>
+    </div>
+    <div class="" ng-hide="currentCart.isCartEmpty()">
+      <div id="" style="" class="cart-items">
+        <div class="cart-item" ng-repeat="item in currentCart.getItems()" style=""> 
+          <a href="/products/{{item.item_id}}" target="_blank" class="product-link">
+            <img class="" style="margin-right:10px;width:50px;height:50px;float:left;" ng-src="{{item.data.cover_media.images.thumb.url}}"/>
+          </a>
+          <div class="cart-item-content" style="float:left;width:130px;">
+            <div class="title">{{item.data.title_translations|translateModel}}</div>
+            <div ng-repeat="field in item.variation.fields">
+              <div class="variation">{{ field.name_translations | translateModel }}</div>
+            </div>
+            <div class="variation" ng-hide="item.variation.fields">{{item.variation.name}}</div>
+            <div class="price-details">
+              {{item.quantity}}<span style=";margin:0 3px;">x</span>
+              <span ng-bind-html="currentCart.getItemPrice(item).label | changeCurrency"></span>
+            </div>  
+          </div><!--cart-item-content-->
+            <div class="remove"><a ng-click="removeItemFromCart(item.item_id,item.variation_id,$event)" >刪除</a></div>
+          <div class="clear"></div>
+        </div><!-- cart-item-->
+        <div class="clear"></div>
+      </div> <!--cart-items-->
+      <!-- cart items end -->
+      <div class="clear"></div>
+      <div class="cart-chkt-btn-cont">
+        <button id="btn-checkout" class="cart-chkt-btn ladda-button" data-style="slide-down" ladda="checkoutButtonLoading" ng-click="onCheckoutClicked($event)">
+          訂單結帳
+        </button>
+      </div>
+    </div>
+  </div> 
+</div> <!--cart-panel-->
+
+<!-- cart End -->
+<script type="text/javascript">
+$(function() {
+  $('.left-panel-button').sidr({
+    name: 'left-panel',
+    side: 'left',
+    body: ".body-wrapper"
+  });
+  $('.cart-panel-button').sidr({
+    name: 'cart-panel',
+    side: 'left',
+    body: ".body-wrapper"
+  });
+  $( ".body-wrapper" ).click(function() {
+    $.sidr('close','left-panel');
+    $.sidr('close','cart-panel');
+  });
+});
+</script>
+
+  <div id="fixed-menu-container" ui-scrollfix ng-cloak class='ng-cloak'>
+  <a class="menu-button cog-button" id="" href="/admin" ng-show="currentUser && mainConfig.merchantData.owner_id == currentUser._id"  ng-cloak target="_blank">
+    <span class="fa fa-cog"> </span>
+  </a>
+  
+  <a class="left-panel-button menu-button" id="" href="#left-panel" ng-class="{'ie-hack':!mainConfig.themeSettings.is_multicurrency_enabled}">
+    <span class="fa fa-bars"> </span><span class="menu-words" style="padding-left:6px;">目錄</span>
+  </a>
+
+  <a class="cart-panel-button menu-button" id="" href="#cart-panel" ng-class="{'ie-hack':!mainConfig.themeSettings.is_multicurrency_enabled}">
+    <span class="fa fa-shopping-cart"> </span><span class="menu-words" style="padding-left:6px;">購物車</span>
+     <span class="cart-count" ng-show="currentCart.getItemCount()>0">({{currentCart.getItemCount()}})</span>
+  </a>
+
+  <a class="menu-button message-button" ng-click="showMessageForm()" ng-class="{'ie-hack':!mainConfig.themeSettings.is_multicurrency_enabled}">
+    <span class="fa fa-comment"></span><span class="menu-words" style="padding-left:6px;">聯絡店主</span>
+  </a>
+
+  <div class="dropdown" dropdown ng-class="{'ie-hack':!mainConfig.themeSettings.is_multicurrency_enabled}">
+    <span class="menu-button dropdown-toggle" dropdown-toggle>
+      <span class="fa fa-globe"> </span>
+      <span class="menu-words" style="padding-left:5px;padding-right:5px;">中文(繁)</span>
+      <span class="caret menu-words" style="float: right;position: relative;top: 7px;"></span>
+    </span>
+    <ul class="dropdown-menu menu-button">
+        <li ng-click="changeLanguage('en')"><span>EN</span></li>
+    </ul>
+  </div>
+
+  <div class="dropdown" dropdown ng-show="mainConfig.themeSettings.is_multicurrency_enabled" ng-class="{'ie-hack':!mainConfig.themeSettings.is_multicurrency_enabled}">
+    <span class="menu-button dropdown-toggle" dropdown-toggle>
+      <span class="fa menu-words-reversed">$</span>
+      <span class="menu-words" style="padding-left:5px;padding-right:5px;">$ TWD</span>
+      <span class="caret menu-words" style="float: right;position: relative;top: 7px;"></span>
+    </span>
+    <ul class="dropdown-menu menu-button">
+      <li ng-click="changeCurrency('hkd')"><span>$ HKD</span></li>
+      <li ng-click="changeCurrency('cny')"><span>¥ CNY</span></li>
+      <li ng-click="changeCurrency('usd')"><span>$ USD</span></li>
+      <li ng-click="changeCurrency('sgd')"><span>$ SGD</span></li>
+      <li ng-click="changeCurrency('eur')"><span>€ EUR</span></li>
+      <li ng-click="changeCurrency('aud')"><span>$ AUD</span></li>
+      <li ng-click="changeCurrency('gbp')"><span>£ GBP</span></li>
+      <li ng-click="changeCurrency('php')"><span>₱ PHP</span></li>
+      <li ng-click="changeCurrency('myr')"><span>RM MYR</span></li>
+      <li ng-click="changeCurrency('thb')"><span>฿ THB</span></li>
+      <li ng-click="changeCurrency('aed')"><span>د.إ AED</span></li>
+      <li ng-click="changeCurrency('jpy')"><span>¥ JPY</span></li>
+      <li ng-click="changeCurrency('mmk')"><span>K MMK</span></li>
+      <li ng-click="changeCurrency('bnd')"><span>$ BND</span></li>
+      <li ng-click="changeCurrency('krw')"><span>₩ KRW</span></li>
+    </ul>
+  </div>
+    
+</div>
+	
+	<div class="body-wrapper" >
+    <div class="body-content">
+        
+      
+
+ <!---navigation -->
+<div class="navbar-wrapper " >
+  <div class="navbar" role="navigation" style="">
+  <div class="navbar-header-wrapper">
+    <div class="container" >
+      <div class="navbar-header">
+        <a  href="http://www.miacake2008.com/">
+          <img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&url=http://img-shoplineapp-com.s3.amazonaws.com/media/image_clips/55f3ad5069702d6a541a3d00/original.jpg?1442032975&resize_h=140px"  class="logo-image"/>
+          
+        </a>
+      </div>
+    </div> <!--container-->    
+  </div>
+  <div class="navbar-menu-wrapper">
+    <div class="container" >
+      <div class="navbar-menu hidden-xs">
+        <ul class="text-primary-color">
+            <!-- Has dropdown links -->
+            <!-- doesn't have dropdown links -->
+            <li class="">
+              <a class="" href="/products" target="">所有商品</a>
+            </li>
+            <!-- Has dropdown links -->
+            <!-- doesn't have dropdown links -->
+            <li class="">
+              <a class="" href="/categories/生日造型蛋糕" target="">造型蛋糕</a>
+            </li>
+            <!-- Has dropdown links -->
+            <!-- doesn't have dropdown links -->
+            <li class="">
+              <a class="" href="/categories/戚風蛋糕" target="">低溫點心</a>
+            </li>
+            <!-- Has dropdown links -->
+            <!-- doesn't have dropdown links -->
+            <li class="">
+              <a class="" href="/categories/手工麵包" target=""></a>
+            </li>
+            <!-- Has dropdown links -->
+            <!-- doesn't have dropdown links -->
+            <li class="">
+              <a class="" href="/categories/客製餐盒" target="">客製餐盒</a>
+            </li>
+            <!-- Has dropdown links -->
+            <!-- doesn't have dropdown links -->
+            <li class="">
+              <a class="" href="/categories/季節限定" target=""></a>
+            </li>
+        </ul>
+      </div>  
+    </div> <!--container-->    
+  </div>
+</div><!--navbar-->
+</div><!--navbar-wrapper-->
+<!-- navigation end -->
+
+        
+      <!-- main Content -->
+      <div class="yield-wrapper">
+      
+        <script>
+	var checkoutOpts = {"delivery_options":[{"_id":"55f7fe9a69702d0765861900","accepted_countries":null,"config_data":null,"coupon_id":null,"created_at":"2015-09-15T11:18:50.045Z","description_translations":{"zh-hant":"請於預約時間內取貨\n店面資訊：新北市中和區景平路431巷90號 聯絡電話：(02)2245-3579 或0982-270608\n營業時間:週二~週五 pm3:00~pm7:00"},"excluded_payment_ids":[],"fee":{"cents":0,"currency_symbol":"NT$","currency_iso":"TWD","label":"","dollars":0.0},"form_fields":[],"is_return":null,"merchant_name":"","name_translations":{"zh-hant":"(店面取貨)~造型蛋糕取貨時間(A)12:30~14:30"},"owner_id":"55f23f06e36c8e916c000071","owner_type":"Merchant","phone_number":"","region_type":"custom","requires_customer_address":true,"return_storeid":"","sender_name":"","seven_eleven_return_option":"","shopid":"","show_description_on_checkout":false,"status":"active","updated_at":"2015-09-15T11:19:49.297Z"},{"_id":"55f7ff1a69702d6fd1fc7200","accepted_countries":null,"config_data":null,"coupon_id":null,"created_at":"2015-09-15T11:20:58.444Z","description_translations":{},"excluded_payment_ids":[],"fee":{"cents":0,"currency_symbol":"NT$","currency_iso":"TWD","label":"","dollars":0.0},"form_fields":[],"is_return":null,"merchant_name":null,"name_translations":{"zh-hant":"(店面取貨)~造型蛋糕取貨時間(B)16:30~19:00"},"owner_id":"55f23f06e36c8e916c000071","owner_type":"Merchant","phone_number":null,"region_type":"custom","requires_customer_address":true,"return_storeid":null,"sender_name":null,"seven_eleven_return_option":null,"shopid":null,"show_description_on_checkout":false,"status":"active","updated_at":"2015-09-15T11:20:58.444Z"},{"_id":"564973ce69702d2361377800","accepted_countries":null,"config_data":null,"coupon_id":null,"created_at":"2015-11-16T06:12:30.399Z","description_translations":{},"excluded_payment_ids":[],"fee":{"cents":150,"currency_symbol":"NT$","currency_iso":"TWD","label":"NT$150","dollars":150.0},"form_fields":[],"is_return":null,"merchant_name":null,"name_translations":{"zh-hant":"黑貓宅配(低溫)"},"owner_id":"55f23f06e36c8e916c000071","owner_type":"Merchant","phone_number":null,"region_type":"custom","requires_customer_address":true,"return_storeid":null,"sender_name":null,"seven_eleven_return_option":null,"shopid":null,"show_description_on_checkout":false,"status":"active","updated_at":"2015-11-16T06:12:30.399Z"},{"_id":"564436a569702d0c63752c00","accepted_countries":[],"config_data":null,"coupon_id":null,"created_at":"2015-11-12T06:50:13.110Z","description_translations":{},"excluded_payment_ids":[],"fee":{"cents":140,"currency_symbol":"NT$","currency_iso":"TWD","label":"NT$140","dollars":140.0},"form_fields":[],"is_return":null,"merchant_name":"","name_translations":{"zh-hant":"黑貓宅配(常溫)牛軋糖未滿5000元運費"},"owner_id":"55f23f06e36c8e916c000071","owner_type":"Merchant","phone_number":"","region_type":"custom","requires_customer_address":true,"return_storeid":"","sender_name":"","seven_eleven_return_option":"","shopid":"","show_description_on_checkout":false,"status":"active","updated_at":"2015-12-15T07:41:42.224Z"},{"_id":"55fc143169702d47247a0f00","accepted_countries":null,"config_data":null,"coupon_id":null,"created_at":"2015-09-18T13:40:01.508Z","description_translations":{},"excluded_payment_ids":[],"fee":{"cents":180,"currency_symbol":"NT$","currency_iso":"TWD","label":"NT$180","dollars":180.0},"form_fields":[],"is_return":null,"merchant_name":"","name_translations":{"zh-hant":"(黑貓宅配)~造型蛋糕  6吋運費"},"owner_id":"55f23f06e36c8e916c000071","owner_type":"Merchant","phone_number":"","region_type":"custom","requires_customer_address":true,"return_storeid":"","sender_name":"","seven_eleven_return_option":"","shopid":"","show_description_on_checkout":false,"status":"active","updated_at":"2015-09-18T13:41:03.710Z"},{"_id":"55fc14a169702d03d18d0f00","accepted_countries":null,"config_data":null,"coupon_id":null,"created_at":"2015-09-18T13:41:53.061Z","description_translations":{},"excluded_payment_ids":[],"fee":{"cents":230,"currency_symbol":"NT$","currency_iso":"TWD","label":"NT$230","dollars":230.0},"form_fields":[],"is_return":null,"merchant_name":null,"name_translations":{"zh-hant":"(黑貓宅配)~造型蛋糕 8~10吋運費"},"owner_id":"55f23f06e36c8e916c000071","owner_type":"Merchant","phone_number":null,"region_type":"custom","requires_customer_address":true,"return_storeid":null,"sender_name":null,"seven_eleven_return_option":null,"shopid":null,"show_description_on_checkout":false,"status":"active","updated_at":"2015-09-18T13:41:53.061Z"}],"payment_methods":[{"_id":"55f4435069702d5a36cc4700","fee_percent":0.0,"fee_multiplier":0.0,"instructions_translations":{"zh-hant":"請於下單後2日內將款項存至，彰化銀行(009)，帳號5647-01-03579-200，中和分行，戶名：亨利均國際有限公司。 請匯款後在訂單問與答裡通知我們，如有特別需求，請註明於備註裡，謝謝!"},"show_description_on_checkout":false,"fee_amount":{"cents":0,"currency_symbol":"NT$","currency_iso":"TWD","label":"","dollars":0.0},"name_translations":{"zh-hant":"銀行轉帳／ATM(請於下單後2日內將款項入帳)"},"type":"bank_transfer","excluded_delivery_option_ids":[]},{"_id":"55f6ba8769702d0767270600","fee_percent":0.0,"fee_multiplier":0.0,"instructions_translations":{"zh-hant":"請於下單後2日內來店付款完成"},"show_description_on_checkout":false,"fee_amount":{"cents":0,"currency_symbol":"NT$","currency_iso":"TWD","label":"","dollars":0.0},"name_translations":{"zh-hant":"來店付款(請於下單後2日內來店付款完成)"},"type":"custom","excluded_delivery_option_ids":[]}],"order_settings":{"custom_fields":[{"type":"text","name_translations":{"zh-hant":"宅配收件時段 (A)中午前 (B)12時~17時 及 收貨地址 收貨人電話"},"hint_translations":{"zh-hant":"造型蛋糕建議來店自取,若選擇黑貓配送.不論是宅配到家還是站所自取皆有風險,若遇損壞.黑貓是不負責的唷!"},"label":"宅配收件時段 (a)中午前 (b)12時~17時 及 收貨地址 收貨人電話","name":"宅配收件時段 (a)中午前 (b)12時~17時 及 收貨地址 收貨人電話"},{"type":"text","name_translations":{"zh-hant":"加購區(盤叉1組10元/6入)(台灣蠟燭5元/隻,日本蠟燭40元/隻 )(壽星名字$50元/片)"},"hint_translations":{"zh-hant":"基本盤叉，台灣蠟燭皆有附贈, 壽星姓名,每片50元,8吋以上最多2個姓名"},"label":"加購區(盤叉1組10元/6入)(台灣蠟燭5元/隻,日本蠟燭40元/隻 )(壽星名字$50元/片)","name":"加購區(盤叉1組10元/6入)(台灣蠟燭5元/隻,日本蠟燭40元/隻 )(壽星名字$50元/片)"},{"type":"text","name_translations":{"zh-hant":"訂購造型蛋糕請在此註明[蠟燭歲數] 及 [製作圖案]"},"hint_translations":{"zh-hant":""},"label":"訂購造型蛋糕請在此註明[蠟燭歲數] 及 [製作圖案]","name":"訂購造型蛋糕請在此註明[蠟燭歲數] 及 [製作圖案]","required":false},{"type":"text","name_translations":{"zh-hant":"[匯款金額+加購金額]"},"hint_translations":{"zh-hant":"造型蛋糕一律先付款,若要來店付款.請注意付款時間唷!下單後2日內未付款,訂單即失效.請再重新詢問欲訂購日期及名額唷"},"label":"[匯款金額+加購金額]","name":"[匯款金額+加購金額]","required":true}],"invoice_activation":"inactive"},"user_settings":{"general_fields":[{"type":"gender","options":{"order":{"include":"false","required":"false"},"signup":{"include":"false","required":"false"},"profile":{"include":"false","required":"false"}}},{"type":"birthday","options":{"order":{"include":"false","required":"false"},"signup":{"include":"false","required":"false"},"profile":{"include":"false","required":"false"}}}],"custom_fields":[{"type":"text","name_translations":{"zh-hant":"訂購人姓名"},"options":{"order":{"include":"true","required":"true"},"signup":{"include":"true","required":"false"},"profile":{"include":"true","required":"false"}},"field_id":"55f61feb69702d0a4f6b5700","hint_translations":{"zh-hant":"本國人請填完整中文姓名"}},{"type":"text","name_translations":{"zh-hant":"發票類型"},"hint_translations":{"zh-hant":"若要開立三聯發票，請輸入統一編號"},"options":{"order":{"include":"true","required":"false"},"signup":{"include":"true","required":"false"},"profile":{"include":"true","required":"false"}},"field_id":"55f620a669702d0acad85c00"},{"type":"text","name_translations":{"zh-hant":"FB姓名 或是 Line ID"},"hint_translations":{"zh-hant":"請告知是用什麼方式與我們聯絡的~方便我們聯繫"},"options":{"order":{"include":"true","required":"false"},"signup":{"include":"true","required":"false"},"profile":{"include":"true","required":"false"}},"field_id":"55f6213069702d0a4f785700"}],"facebook_login":{"status":"active","app_id":"619466044847368","app_secret":"1e193eb2f7d5bb134bd95c9d7ee5c250"}}};
+  flash_data = null
+
+  app.value('hop_locations', [{"id":"KLKCDHMT001","name_translations":{"en":"G/F, Homantin Plaza,80 Fat Kwong Street,Ho Man Tin, Kowloon","zh-hant":"九龍，九龍城區，何文田採石山佛光街80號，何文田廣場地下"}},{"id":"KLKCDTWS001","name_translations":{"en":"2/F,Tsz Wan Shan Shopping Centre, 23Yuk Wah Street,Tsz Wan Shan, Kowloon","zh-hant":"九龍，黃大仙區，慈雲山毓華街23號，慈雲山中心2樓"}},{"id":"KLKCDKNT001","name_translations":{"en":"LG/F, Lei Yue Mun Plaza, 80 Lei Yue Mun Road, Yau Tong, Kwun Tong, Kowloon","zh-hant":"九龍，觀塘區，觀塘油塘鯉魚門道80號，鯉魚門廣場地下一層"}},{"id":"KLKCDDDH001","name_translations":{"en":"Level 3, Fung Tak Shopping Centre, 111 Fung Tak Road, Diamond Hill, Kowloon","zh-hant":"九龍，黃大仙區，鑽石山鳳德道111號，鳳德商場3樓"}},{"id":"NTTMDTKR001","name_translations":{"en":"1/F, Leung King Plaza, 31 Tin King Road, Tuen Mun","zh-hant":"新界，屯門區，田景路31號，良景廣場1樓"}},{"id":"NTNHDFNL001","name_translations":{"en":"G/F, Cheung Wah Shopping Centre, 38 San Wan Road, Fanling, Northern District","zh-hant":"新界，北區，粉嶺新運路38號，祥華商場地下"}},{"id":"NTTPDHWR001","name_translations":{"en":"G/F, Wan Tau Tong Shopping Centre, 10 Hiu Wan Road, Tai Po, New Territories","zh-hant":"新界，大埔區，曉運路10號，運頭塘商場地下"}},{"id":"NTKTDTYI001","name_translations":{"en":"Level 1, Cheung Fat Plaza, 6 Tam Kon Shan Road, Tsing Yi, New Territories","zh-hant":"新界，葵青區，青衣担杆山路6號，長發廣場1樓"}},{"id":"NTSTDTWA001","name_translations":{"en":"G/F, Lung Hang Commercial Centre, 1 Tin Sam Street, Tai Wai, Sha Tin, New Territories","zh-hant":"新界，沙田區，大圍田心街1號，隆亨商場"}},{"id":"NTSTDTWA002","name_translations":{"en":"2/F, Sun Chui Shopping Centre, 2 Chui Tin Street, Tai Wai, Sha Tin, New Territories","zh-hant":"新界，沙田區，大圍翠田街2號，新翠商場"}},{"id":"\"NTKTDKCA001","name_translations":{"en":"LG2/F, Shek Yam Shopping Centre, 120 Lei Muk Road, Kwai Chung, Kwai Tsing, New Territories","zh-hant":"新界，葵青區，葵涌梨木道120號，石蔭商場地下2樓"}},{"id":"KLKCDLTA001","name_translations":{"en":"2/F, Kwong Tin Shopping Centre, 168 Pik Wan Road, Lam Tin, Kwun Tong, Kowloon","zh-hant":"九龍，觀塘區，觀塘碧雲道168號，廣田商場2樓"}},{"id":"ISLTITCA001","name_translations":{"en":"Yat Tung Shopping Centre, 8 Yat Tung Street, Tung Chung, New Territories","zh-hant":"離島，離島區，大嶼山東涌逸東街8號，逸東商場"}},{"id":"HKHKESSW001","name_translations":{"en":"2/F, Siu Sai Wan Plaza, 10 Siu Sai Wan Road, Siu Sai Wan, Eastern District, Hong Kong","zh-hant":"香港，東區，小西灣道10號，小西灣廣場2樓"}},{"id":"HKHKSABA001","name_translations":{"en":"2/F, Tin Wan Shopping Centre, 15, 17 \u0026 26 Tin Wan Street, Aberdeen, Southern District, Hong Kong","zh-hant":"香港，南區，香港仔田灣街15, 17及26號，田灣商場2樓"}},{"id":"\"NTKTDMFA001","name_translations":{"en":"1/F, Nob Hill Square, No. 8 King Lai Path, Kwai Chung, New Territories, Hong Kong","zh-hant":"新界葵涌景荔徑8 號盈暉薈1樓"}},{"id":"HKHKESKW001","name_translations":{"en":"1/F, Yiu Tung Shopping Centre, 12 Yiu Hing Road, Shau Kei Wan, Hong Kong","zh-hant":"香港筲箕灣耀興道12號耀東商場1樓"}}]);
+  app.value('sf_locations', {"Aberdeen":{"district_translations":{"en":"Aberdeen","zh-hant":"香港仔"},"locations":[{"name_translations":{"en":"Shop S24A, Commercial Centre, Wah Fu Estate Phase II, Aberdeen, HK\n","zh-hant":"香港香港仔華富村第二期商業中心第S24A舖"}},{"name_translations":{"en":"Shop 6, Wah Kwai Shopping Centre, Wah Kwai Estate, Aberdeen, HK\n","zh-hant":"香港香港仔華貴村華貴商場地下6號舖"}},{"name_translations":{"en":"Shop 102, Tin Wan Shopping Centre, Tin Wan Estate, Aberdeen, HK\n","zh-hant":"香港香港仔田灣村田灣商場102號舖"}},{"name_translations":{"en":"Shop 25, G/F, Aberdeen Centre, 7-11 Nam Ning Street, Aberdeen, HK\n","zh-hant":"香港香港仔南寧街7-11號香港仔中心25號舖"}},{"name_translations":{"en":"G/F, Benefit Industrial Factory Building, 61 Wong Chuk Hang Road, Aberdeen, HK\n","zh-hant":"香港香港仔黃竹坑道61號本利發工業大廈地下"}},{"name_translations":{"en":"Shop 7 \u0026 8, Town Centre, Wah Fu Estate, Aberdeen, HK\n","zh-hant":"香港香港仔華富中心7及8號舖"}},{"name_translations":{"en":"Shop 7, G/F, Site 5, Aberdeen Centre., Aberdeen, HK\n","zh-hant":"香港香港仔香港仔中心第五期地下7號舖"}},{"name_translations":{"en":"Shop 3 \u0026 4, G/F, Silver Mansion, 81 Shek Pai Wan Road, Aberdeen, HK\n","zh-hant":"香港香港仔石排灣道81號兆輝大廈地下3及4號舖"}},{"name_translations":{"en":"Shop 116, Wah On House, Wah Fu (1) Estate, Aberdeen, HK\n","zh-hant":"香港香港仔華富村華安樓116號舖"}},{"name_translations":{"en":"Shop 7, Shek Pai Wan Shopping Centre, Aberdeen, HK\n","zh-hant":"香港香港仔石排灣商場7號舖"}},{"name_translations":{"en":"G/F, Main Block, Grantham Hospital, 125 Wong Chuk Hang Road, Aberdeen, HK\n","zh-hant":"香港香港仔黃竹坑道125號葛量洪醫院主樓地下"}},{"name_translations":{"en":"G/F, 23 Tung Sing Road, Aberdeen, HK\n","zh-hant":"香港香港仔東勝道23號地下"}},{"name_translations":{"en":"Shop 30, Wah Fu (II) Commercial Complex, Wah Fu (II) Estate, Aberdeen, HK\n","zh-hant":"香港香港仔華富(二)村華富(二)商場30號舖"}}]},"Ap Lei Chau":{"district_translations":{"en":"Ap Lei Chau","zh-hant":"鴨脷洲"},"locations":[{"name_translations":{"en":"Shop 6-9, G/F, Ning Fung Mansion, 25-31 Main Street, Ap Lei Chau, HK\n","zh-hant":"香港鴨脷洲鴨利洲大街25-31號年豐大廈地下6-9號舖"}},{"name_translations":{"en":"Shop 6, G/F, Multi-Storey Carpark, Ap Lei Chau Estate, Ap Lei Chau, HK\n","zh-hant":"香港鴨脷洲鴨利洲村多層停車場地下6號舖"}},{"name_translations":{"en":"Shop 102, Lei Tung Estate Phase I, Ap Lei Chau, HK\n","zh-hant":"香港鴨利洲利東村商業中心一期102號舖"}},{"name_translations":{"en":"Shop G2, East COM BLK of South Horizons, 18A South Horizon Road, Ap Lei Chau, HK\n","zh-hant":"香港鴨脷洲海怡路18A號海怡廣場(東翼)地下G02號舖"}},{"name_translations":{"en":"95, Main Street, Ap Lei Chau, HK\n","zh-hant":"香港鴨脷洲鴨脷洲大街95號"}}]},"Causeway Bay":{"district_translations":{"en":"Causeway Bay","zh-hant":"銅鑼灣"},"locations":[{"name_translations":{"en":"G/F, 222-228 Gloucester Road, Causeway Bay, HK\n","zh-hant":"香港銅鑼灣告士打道228號地下"}},{"name_translations":{"en":"Shop 2 G/F, Wai Tak Building, 414, 418 -430 Lockhart Road, Causeway Bay, HK\n","zh-hant":"香港銅鑼灣駱克道414,418-430號偉德大廈地下2號舖"}},{"name_translations":{"en":"G/F \u0026 Cockloft, 5 Canal Road East, Causeway Bay, HK\n","zh-hant":"香港銅鑼灣堅拿道東5號地下及閣樓"}}]},"Central":{"district_translations":{"en":"Central","zh-hant":"中環"},"locations":[{"name_translations":{"en":"G/F, 89 Caine Road, Central, HK\n","zh-hant":"香港中環堅道89號地下"}},{"name_translations":{"en":"G/F, 27 Caine Road, Central, HK\n","zh-hant":"香港中環堅道27號地下"}},{"name_translations":{"en":"G/F, 40 Elgin Street, Central, HK\n","zh-hant":"香港中環伊利近街40號地下舖位"}},{"name_translations":{"en":"Shop No.1 G/F., No.10-16 Cochrane Street, Central, Hong Kong\n","zh-hant":"香港中環閣麟街10-16號致發大廈地下1號舖"}},{"name_translations":{"en":"Shop A, B \u0026 C, G/F, Pier 3, 11 Man Kwong Street, Central, HK\n","zh-hant":"香港中環民光街11號3號碼頭A,B及C號舖"}},{"name_translations":{"en":"Shop 1, L/G., Citibank Plaza, 3 Garden Road, Central, HK\n","zh-hant":"香港中環花園道3號萬國寶通廣場地下1號舖"}},{"name_translations":{"en":"Lounge 1\u0026 2, CUHK, 1/F, Bank of Amercia Tower, 12 Harcourt Road, Central, HK\n","zh-hant":"香港中環夏愨道十二號美國銀行中心一樓香港中文大學"}},{"name_translations":{"en":"Shop 1002B, 1/F, United Centre, 95 Queensway, Central, HK\n","zh-hant":"香港中環金鐘道95號統一中心1樓1002B號舖"}},{"name_translations":{"en":"Shop A, Upper G/F, Kimley Commercial Building, 142-146 Queen's Road Central, HK\n","zh-hant":"香港中環皇后大道中142-146號金利商業大廈高層地下A號舖"}}]},"Chai Wan":{"district_translations":{"en":"Chai Wan","zh-hant":"柴灣"},"locations":[{"name_translations":{"en":"Shop MS1, Wan Tsui Market, Wan Tsui Estate, Chai Wan, HK\n","zh-hant":"香港柴灣環翠村街市舖位MS1號舖"}},{"name_translations":{"en":"Kiosk No. CHW11, Chai Wan MTR Station, Chai Wan, HK\n","zh-hant":"香港柴灣港鐵站CHW11號舖"}},{"name_translations":{"en":"Kiosk No. CHW12, Chai Wan MTR Station, Chai Wan, HK\n","zh-hant":"香港柴灣港鐵站CHW12號舖"}},{"name_translations":{"en":"Shop 3A, 5/F, Commerce Block, 16 Tai Man Street, Greenwood Terrace, Chai Wan, HK\n","zh-hant":"香港柴灣泰民街16號康翠臺商場L5樓3A號舖"}},{"name_translations":{"en":"Shop 209-210, Wo Hing House, Hing Wah Estate (II), Chai Wan, Chai Wan, HK\n","zh-hant":"香港柴灣興華村和興樓209至210號舖"}},{"name_translations":{"en":"Kiosk No. HFC 5\u0026 6, Heng Fa Chuen MTR Station, Chai Wan, HK\n","zh-hant":"香港杏花村港鐵站HFC5及6號舖"}},{"name_translations":{"en":"Shop 47-48, Harmony Garden, 9 Siu Sai Wan Road, Chai Wan, HK\n","zh-hant":"香港柴灣小西灣道9號富欣花園地下第47及48號舖"}}]},"Happy Valley":{"district_translations":{"en":"Happy Valley","zh-hant":"跑馬地"},"locations":[{"name_translations":{"en":"G/F, Winner House,15 Wong Nei Chung Road, Happy Valley, HK\n","zh-hant":"香港跑馬地黃泥涌道15號常德樓地下"}},{"name_translations":{"en":"Shop B, G/F, Holley Mansion, 21-23 Wong Nai Chung Road, Happy Valley, HK\n","zh-hant":"香港跑馬地黃泥涌道21-23號浩利大廈地下B號舖"}}]},"North Point":{"district_translations":{"en":"North Point","zh-hant":"北角"},"locations":[{"name_translations":{"en":"Unit 2, G/F, Block 1-3 Podium, City Garden, 233 Electric Road, North Point, HK\n","zh-hant":"香港北角電器道233號城市花園1,2及3座平台地下2號舖"}},{"name_translations":{"en":"G/F, 92 Java Road, North Point, HK\n","zh-hant":"香港北角渣華道92號地下"}},{"name_translations":{"en":"Kiosk No. NOP 1, North Point MTR Station, North Point, HK\n","zh-hant":"香港北角港鐵站NOP1號舖"}},{"name_translations":{"en":"Shop A, G/F, Healthy Village, 180-182 Tsat Tsz Mui Road, North Point, HK\n","zh-hant":"香港北角七姊妹道180-182號健康村地下A號舖"}},{"name_translations":{"en":"Shop 4, G/F, Cheong Yuen Apartments, 2-8 Tsat Tsz Mui Road, North Point, HK\n","zh-hant":"香港北角七姊妹道2,4,6,8及8A昌苑大廈地下4號舖"}},{"name_translations":{"en":"Unit 5, G/F, Block 1-3 Podium, City Garden, 233 Electric Road, North Point, HK\n","zh-hant":"香港北角電器道233號城市花園1,2及3座平台地下5號舖"}},{"name_translations":{"en":"Shop 25-27, G/F, King's Centre, 193-209 King's Road, North Point, HK\n","zh-hant":"香港北角英皇道193-209號英皇中心地下25-27號舖"}},{"name_translations":{"en":"G/F, 22 Fort Street, North Point, HK\n","zh-hant":"香港北角堡壘街22號地下"}},{"name_translations":{"en":"Shop C, G/F, Scala Mansion, 25-31 Tsat Tsz Mui Road, North Point, HK\n","zh-hant":"香港北角琴行街6及6A,七姊妹道25,27及31號嘉蘭大廈地下C號舖"}},{"name_translations":{"en":"Shop A \u0026 B , G/F, Fu Kar Court Fortress Garden, 32 Fortress Hill Road, North Point, H.K.\n","zh-hant":"香港北角炮臺山道32號富嘉閣地下A\u0026B號舖"}},{"name_translations":{"en":"Shop 6, G/F, Home World, Provident Centre, 21-53 Wharf Road, North Point, HK\n","zh-hant":"香港北角和富道21-53號家居庭地下6號舖位"}}]},"Pok Fu Lam":{"district_translations":{"en":"Pok Fu Lam","zh-hant":"薄扶林"},"locations":[{"name_translations":{"en":"555 Victoria Road, Pok Fu Lam, HK\n","zh-hant":"香港薄扶林域多利道555號(近碧瑤灣)"}},{"name_translations":{"en":"Stalls 7-8, Shop 503, 5/F, Chi Fu Landmark, Pok Fu Lam, HK\n","zh-hant":"香港薄扶林置富南區廣場5樓503號舖7-8號檔"}}]},"Quarry Bay ":{"district_translations":{"en":"Quarry Bay ","zh-hant":"鰂魚涌"},"locations":[{"name_translations":{"en":"Shop 12-13, G/F., Block C, Model Housing Estate., 774 King's Road, Quarry Bay, HK\n","zh-hant":"香港英皇道774號模範村C座地下12-13號舖"}}]},"Sai Wan":{"district_translations":{"en":"Sai Wan","zh-hant":"西環"},"locations":[{"name_translations":{"en":"G/F, 88 High Street, Sai Wan, HK\n","zh-hant":"香港西環高街88號地下"}},{"name_translations":{"en":"Shop 1, G/F, Kwun Lung Lau Shuttle Lift Complex, Kennedy Town, Sai Wan, HK\n","zh-hant":"香港西環堅尼地城觀龍樓電梯穿梭大樓地下1號舖"}},{"name_translations":{"en":"G/F, Harbour View GDN, Tower III, 2 Catchick Street, Kennedy Town, Sai Wan, HK\n","zh-hant":"香港西環堅尼地城吉席街2號海怡花園二期三座地下"}},{"name_translations":{"en":"G/F, 333 \u0026 335 Des Voeux Road West, Sai Wan, HK\n","zh-hant":"香港西環德輔道西333及335號地下"}},{"name_translations":{"en":"Shop 3, 3/F, Hing Hon Building, 63B-F Bonham Road, Mid-level, Sai Wan, HK\n","zh-hant":"香港西環般咸道63B-F號興漢大廈三樓3號舖"}},{"name_translations":{"en":"G/F, 232 Des Voeux Road West, Sai Wan, HK\n","zh-hant":"香港西環德輔道西232號地下"}},{"name_translations":{"en":"Shop 2B, G/F, Kam Ho Court, 144-148 Belcher's Street, Sai Wan, HK\n","zh-hant":"香港西環卑路乍街144-148號金豪閣地下2B號舖"}},{"name_translations":{"en":"Shop B2 \u0026 C, G/F, Luen Wai Apartments, 7 Davis Street, Sai Wan, HK\n","zh-hant":"香港西環卑路乍街136,138,140\u0026142號及爹核士街7號聯威新樓地下B2及C號舖"}},{"name_translations":{"en":"G/F, 14 North Street, Sai Wan, HK\n","zh-hant":"香港西環北街14號地下"}},{"name_translations":{"en":"Shop 2, G/F, Hong Kong Plaza, 188 Connaught Road West, Sai Wan, HK\n","zh-hant":"香港西環干諾道西188號香港商業中心地下2號舖"}},{"name_translations":{"en":"Shop 3, G/F, Joy Fat House, 522-530 Queen's Road West, Sai Wan, HK\n","zh-hant":"香港西環皇后大道西522-530號再發大廈地下3號舖"}},{"name_translations":{"en":"Shop A, G/F , 64 Centre Street, Sai Wan, HK\n","zh-hant":"香港西環正街64號地下A號舖"}},{"name_translations":{"en":"385-387 Queen's Road West, Sai Wan, HK\n","zh-hant":"香港西環皇后大道西385-387號"}}]},"Shau Kei Wan":{"district_translations":{"en":"Shau Kei Wan","zh-hant":"筲箕灣"},"locations":[{"name_translations":{"en":"Shop 23-28, G/F, 62-74 Shau Kei Wan Main East Road, Shau Kei Wan, HK\n","zh-hant":"香港筲箕灣東大街62-74號泰安閣地下23-28號舖"}},{"name_translations":{"en":"Shop E, G/F, Hing Cheung Building, 15-31 Shau Kei Wan Road, Shau Kei Wan, HK\n","zh-hant":"香港筲箕灣筲箕灣道15-31號興祥大廈地下E號舖"}},{"name_translations":{"en":"Shop 14, G/F, Oi Tung Shopping Centre, Shau Kei Wan, HK\n","zh-hant":"香港筲萁灣愛東商場地下14號舖"}},{"name_translations":{"en":"Shop B, G/F, 106-108 Shau Kei Wan Road, Shau Kei Wan, HK\n","zh-hant":"香港筲箕灣筲箕灣道106-108號地下B號舖"}},{"name_translations":{"en":"Shop 56, G/F, Aldrich Garden, 2 Oi Lai Street, Shau Kei Wan, HK\n","zh-hant":"香港筲箕灣愛禮街2號愛蝶灣商場地下56號舖"}},{"name_translations":{"en":"Shop H1, G/F, Fung Yuen Bldg, 388-414 Shau Kei Wan Road, Shau Kei Wan, HK\n","zh-hant":"香港筲箕灣筲箕灣道388-414號逢源大廈地下H1號舖"}},{"name_translations":{"en":"Shop B, G/F, The Eastborne, 51 Shau Kei Wan Main St East, Shau Kei Wan, HK\n","zh-hant":"香港筲箕灣東大街51號東灣閣地下B號舖"}},{"name_translations":{"en":"G/F, 98-100 Main Street East, Shau Kei Wan, HK\n","zh-hant":"香港筲箕灣東大街98-100號地下"}}]},"Sheung Wan":{"district_translations":{"en":"Sheung Wan","zh-hant":"上環"},"locations":[{"name_translations":{"en":"Shop 7, G/F, Fairview Height, 1 Seymour Road, Sheung Wan, HK\n","zh-hant":"香港上環西摩道1號輝煌臺7號舖"}},{"name_translations":{"en":"Shop 3, G/F, Hollywood Terrace, 123 Hollywood Road, Sheung Wan, HK\n","zh-hant":"香港上環荷李活道123號荷李活華庭地下3號舖"}},{"name_translations":{"en":"Shop 11, 12 and 13, G/F, Western Market, 323 Des Voeux Road, Sheung Wan, HK\n","zh-hant":"香港上環德輔道中323號西港城地下11,12及13號舖"}},{"name_translations":{"en":"Shop D, G/F, Wing Hing House, 476-482 Queen's Road West, Sheung Wan, HK\n","zh-hant":"香港上環皇后大道西476-482號永興樓地下D號舖"}},{"name_translations":{"en":"Shop D \u0026 H, G/F, Sea View Mansion,  21-27 Sutherland Street, Sheung Wan, HK\n","zh-hant":"香港上環修打蘭街21-27號海景大廈地下D及H號舖"}},{"name_translations":{"en":"G/F, 21 Hillier Street, Sheung Wan, HK\n","zh-hant":"香港上環禧利街21號地下"}}]},"Siu Sai Wan":{"district_translations":{"en":"Siu Sai Wan","zh-hant":"小西灣"},"locations":[{"name_translations":{"en":"Shop 401, 4/F, Siu Sai Wan Shopping Centre, Siu Sai Wan, HK\n","zh-hant":"香港小西灣小西灣商場四樓401號舖"}},{"name_translations":{"en":"Shop 18, G/F, Island Resort Mall, 28 Siu Sai Wan Road, Siu Sai Wan, HK\n","zh-hant":"香港小西灣小西灣道28號藍灣半島地下18號舖"}},{"name_translations":{"en":"Shop 6A, G/F, Siu Sai Wan Shopping Centre, Siu Sai Wan, HK\n","zh-hant":"香港小西灣小西灣商場地下6A號舖"}}]},"Tai Koo":{"district_translations":{"en":"Tai Koo","zh-hant":"太古"},"locations":[{"name_translations":{"en":"Shop G506-G507, Ning On Mansion, Stage V, Tai Koo Shing, Tai Koo, HK\n","zh-hant":"香港太古太古城第5期寧安閣G506至G507號舖"}},{"name_translations":{"en":"Shop H1 \u0026 H2, G/F, Blk 1, Kornhill, Tai Koo, HK\n","zh-hant":"香港太古康山花園第一座地下H1-H2號舖"}},{"name_translations":{"en":"Shop 1 \u0026 2, 4/F, Kornhill Plaza (South), Tai Koo, HK\n","zh-hant":"香港太古康怡廣場南翼4樓1至2號舖"}},{"name_translations":{"en":"Shop 4 \u0026 5, G/F, Tai Kut House, 7 Greig Road, Tai Koo, HK\n","zh-hant":"香港太古基利路7號太吉樓地下4及5號舖"}}]},"Tin Hau":{"district_translations":{"en":"Tin Hau","zh-hant":"天后"},"locations":[{"name_translations":{"en":"Shop 9 \u0026 9A, G/F, Kam Tao Building, 2-10B Whitfield Road, Tin Hau, HK\n","zh-hant":"香港天后威非路2-10B號金都洋樓9及9A號舖"}},{"name_translations":{"en":"Shop H, G/F, Kiu Hing Mansion, 14 King's Road, Tin Hau, HK\n","zh-hant":"香港天后英皇道14號僑興大廈地下1H號舖"}}]},"Wan Chai":{"district_translations":{"en":"Wan Chai","zh-hant":"灣仔"},"locations":[{"name_translations":{"en":"G/F \u0026 M/F, 38 Hennessy Road, Wan Chai, HK\n","zh-hant":"香港灣仔軒尼詩道38號地下"}},{"name_translations":{"en":"Shop 1, G/F, Tung Wah Mansion, 199-203 Hennessy Road, Wan Chai, HK\n","zh-hant":"香港灣仔軒尼詩道199-203號東華大廈地下1號舖"}},{"name_translations":{"en":"G/F, 89 Wan Chai Road, Wan Chai, HK\n","zh-hant":"香港灣仔灣仔道89號地下"}},{"name_translations":{"en":"G/F, Warner Building, 91 Hennessy Road, Wan Chai, HK\n","zh-hant":"香港灣仔軒尼詩道91號華寧大廈地下"}},{"name_translations":{"en":"Shop 10, Expo Galleria, HKCEC, Expo Drive, Wan Chai, HK\n","zh-hant":"香港灣仔博覽道1號香港會議展覽中心博覽商場10號舖"}},{"name_translations":{"en":"Flat B, G/F, Sun Hey Mansion, 68-76 Hennessy Road, Wan Chai, HK\n","zh-hant":"香港灣仔軒尼詩道68-76號新禧大樓地下B號舖"}},{"name_translations":{"en":"Shop E, G/F, Lee Wing Building, 156, 160 \u0026 162 Hennessy Road, 7A \u0026 7B O'Brien Road, Wan Chai, HK\n","zh-hant":"香港灣仔柯布連道7A至7B號及軒尼詩道156、160至162號利榮大樓地下E號舖"}}]},"Cheung Chau":{"district_translations":{"en":"Cheung Chau","zh-hant":"長洲"},"locations":[{"name_translations":{"en":"G/F \u0026 2/F, 36 Praya Street, Cheung Chau\n","zh-hant":"長洲海傍道36號地下及二樓"}},{"name_translations":{"en":"G/F, 107 San Hing Street, Cheung Chau\n","zh-hant":"長洲新興街107號地下"}},{"name_translations":{"en":"G/F \u0026 Cockloft, 34-35 Praya Street., Cheung Chau\n","zh-hant":"長洲海傍路34-35號地下"}}]},"Lamma Island":{"district_translations":{"en":"Lamma Island","zh-hant":"南丫島"},"locations":[{"name_translations":{"en":"G/F, 27 Yung Shue Wan Main Street, Lamma Island\n","zh-hant":"南丫島榕樹灣大街27號地下"}},{"name_translations":{"en":"G/F, 5 First Street, Sok Kwu Wan, Lamma Island\n","zh-hant":"南丫島索罟灣第一街5號地下"}}]},"Cheung Sha Wan":{"district_translations":{"en":"Cheung Sha Wan","zh-hant":"長沙灣"},"locations":[{"name_translations":{"en":"Shop 19 \u0026 20, Paid Concourse, Nam Cheong MTR Station, Cheung Sha Wan, KLN\n","zh-hant":"九龍南昌港鐵站19及20號舖(繳費區)"}},{"name_translations":{"en":"Shop 17, G/F, Fortune Shopping Centre, Cheung Sha Wan, KLN\n","zh-hant":"九龍長沙灣幸福村商場地下17號舖"}}]},"Choi Hung":{"district_translations":{"en":"Choi Hung","zh-hant":"彩虹"},"locations":[{"name_translations":{"en":"Shop 6, G/F, Kam Wah House, Choi Hung Estate, Choi Hung, KLN\n","zh-hant":"九龍彩虹彩虹村金華樓地下6號舖"}},{"name_translations":{"en":"Kiosk No. CHH18 \u0026 CHH19, Choi Hung MTR Station , Choi Hung, KLN\n","zh-hant":"九龍彩虹港鐵站CHH18及19號舖"}},{"name_translations":{"en":"G/F, Kam Pik House, Choi Hung Estate, Choi Hung, KLN\n","zh-hant":"九龍彩虹彩虹村金碧樓地下"}}]},"Diamond Hill":{"district_translations":{"en":"Diamond Hill","zh-hant":"鑽石山"},"locations":[{"name_translations":{"en":"Shop 101, Lung Poon Court Commerce Centre, Lung Poon Court, Diamond Hill, KLN\n","zh-hant":"九龍鑽石山龍蟠苑龍蟠苑商場中心101號舖"}},{"name_translations":{"en":"Shop 3C, G/F, Fu Shun Hse, Fu Shan Est, Diamond Hill, KLN\n","zh-hant":"九龍鑽石山富山村富信樓地下3C號舖"}},{"name_translations":{"en":"Kiosk No. DIH 20, Diamond Hill MTR Station, Diamond Hill, KLN\n","zh-hant":"九龍鑽石山港鐵站DIH20號舖"}},{"name_translations":{"en":"Kiosk No. DIH 17, Diamond Hill MTR Station, Diamond Hill, KLN\n","zh-hant":"九龍鑽石山港鐵站DIH17號舖"}}]},"Hung Hom":{"district_translations":{"en":"Hung Hom","zh-hant":"紅磡"},"locations":[{"name_translations":{"en":"Shop C210, 2/F, Shaw's Amenities Bldg, HK Polytechnic University, Hung Hom, KLN\n","zh-hant":"九龍紅磡育才道香港理工學院邵逸夫綜合大樓二字樓C210號舖"}},{"name_translations":{"en":"Shop B2A, 2-32 Man Tai Street, Wing Wah Building, Whampoa Estate, Hung Hom, KLN\n","zh-hant":"九龍紅磡黃埔新村民泰街2-32永華及達華樓地下B2A-B2B號舖"}},{"name_translations":{"en":"Shop 2A-2B, G/F, Wisdom Building, 17-19 Station Lane, Hung Hom, KLN\n","zh-hant":"九龍紅磡差館里17-19號聚賢大廈地下2A-2B號舖"}},{"name_translations":{"en":"Shop 5, G/F, Hung Hom Bay Centre, 38-42 Fuk Chi Street, Hung Hom, KLN\n","zh-hant":"九龍紅磡福至街38至42號紅磡灣中心地下5號舖"}},{"name_translations":{"en":"Shop 43 \u0026 44, G/F, Hung Hom Commerce Square, 37-39 Ma Tau Wai Road, Hung Hom, KLN\n","zh-hant":"九龍紅磡馬頭圍道37-39號紅磡商業廣場地下43-44號舖"}},{"name_translations":{"en":"Unit CD1, G/F, Hang Fung Industrial Bldg Phase 1, 2G Hok Yuen St, Hung Hom, KLN\n","zh-hant":"九龍紅磡鶴園街2G號恆豐工業大廈第一期地下CD1號舖"}},{"name_translations":{"en":"Shop H3 \u0026 H12, Unpaid Concourse, Hung Hom MTR Station, Hung Hom, KLN\n","zh-hant":"九龍紅磡港鐵站大堂H3及H12號舖"}},{"name_translations":{"en":"G/F, 52 Ma Tau Chung Road, Hung Hom, KLN\n","zh-hant":"九龍紅磡馬頭涌道52號地下"}},{"name_translations":{"en":"Shop 111, Geranium House, Ma Tau Wai Estate, Hung Hom, KLN\n","zh-hant":"九龍紅磡馬頭圍村洋葵樓地下111號舖"}},{"name_translations":{"en":"Shop 3A, 1/F, Harbour Place, 8 Oi King Street, Hung Hom, KLN\n","zh-hant":"九龍紅磡愛景街8號海濱南岸1樓商場3A號舖"}},{"name_translations":{"en":"Shop 17F, G/F, United Building, 1-7 Wu Kwong Street, Hung Hom, KLN\n","zh-hant":"九龍紅磡湖光街1-7號聯盛大廈地下17F號舖"}},{"name_translations":{"en":"Shop 3 \u0026 4, Ka Yee Lau, Ka Wai Chuen, Hung Hom, KLN\n","zh-hant":"九龍紅磡家維村家義樓3-4號舖"}},{"name_translations":{"en":"69 Gillies Ave South, Hung Hom, KLN\n","zh-hant":"九龍紅磡機利士南路69號"}},{"name_translations":{"en":"57-61 Winslow Street, Hung Hom, KLN\n","zh-hant":"九龍紅磡溫思勞街57A-61號"}}]},"Jordan":{"district_translations":{"en":"Jordan","zh-hant":"佐敦"},"locations":[{"name_translations":{"en":"Shop 88, Kowloon MTR Station (Tung Chung Line), Jordan, KLN\n","zh-hant":"九龍九龍港鐵站(東涌線)88號舖(近機場快線月台)"}},{"name_translations":{"en":"Shop 4, G/F, Ko Kie Building, 9-11 Jordan Road, Jordan, KLN\n","zh-hant":"九龍佐敦佐敦道9-11號高基大廈地下4號舖"}},{"name_translations":{"en":"Shop B, G/F, Dao Hing Building, 34 Jordan Road, Jordan, KLN\n","zh-hant":"九龍佐敦佐敦道34號道興樓地下B號舖"}},{"name_translations":{"en":"Shop B, G/F, Heep Cheung Building, 249-251 Temple Street, Jordan, KLN\n","zh-hant":"九龍佐敦廟街249-251號協祥大廈地下B號舖"}},{"name_translations":{"en":"Shop 6B, Chung Wo Commercial Center, 42-46 Shang Hai Street, Jordon, KLN\n","zh-hant":"九龍佐敦上海街42-46號忠和商業中心地下6B號鋪 - 榮發書報雜誌"}},{"name_translations":{"en":"G/F, 48-50 Bowring Street, Jordan, KLN\n","zh-hant":"九龍佐敦寶靈街48-50號地下"}},{"name_translations":{"en":"Shop 1, G/F., Cheung Wah Commercial Building, 3-5 Saigon Street, Jordan, KLN\n","zh-hant":"九龍佐敦西貢街3-5號昌華商業大廈地下1號舖"}}]},"Kowloon Bay":{"district_translations":{"en":"Kowloon Bay","zh-hant":"九龍灣"},"locations":[{"name_translations":{"en":"Shop P40, Telford Plaza 1, Kowloon Bay, KLN\n","zh-hant":"九龍九龍灣德福商場1期P40號舖"}},{"name_translations":{"en":"Shop 3C, 1/F, Telford House, 18 Wang Hoi Road, Kowloon Bay, KLN\n","zh-hant":"九龍九龍灣宏開道18號德福大廈1樓3C舖"}},{"name_translations":{"en":"Shop 27-30, G/F, Amoy Plaza Phase 1, Ngau Tau Kok Road, Kowloon Bay, KLN\n","zh-hant":"九龍九龍灣淘大花園第一期商場27-30號舖"}},{"name_translations":{"en":"Shop B1, G/F, Block B, Tonic Industrial Ctr, 19 Lam Hing St, Kowloon Bay, KLN\n","zh-hant":"九龍九龍灣臨興街19號同力工業中心地下B1號舖"}},{"name_translations":{"en":"Shop A, G/F, Shui Hing Centre, 13 Sheung Yuet Road, Kowloon Bay, KLN\n","zh-hant":"九龍九龍灣常悅道13號瑞興中心地下A號單位之B部份"}}]},"Kowloon City":{"district_translations":{"en":"Kowloon City","zh-hant":"九龍城"},"locations":[{"name_translations":{"en":"G/F, 87 Lion Rock Road, Kowloon City, KLN\n","zh-hant":"九龍九龍城獅子石道87號地下"}},{"name_translations":{"en":"G/F, Camay House, 3A Junction Road and 4A Grampian Road, Kowloon City, KLN\n","zh-hant":"九龍九龍城嘉林邊道4A號嘉美大廈地下"}},{"name_translations":{"en":"Flat C, G/F, 47 Nga Tsin Wai Road, Kowloon City, KLN\n","zh-hant":"九龍九龍城衙前圍道47號地下C單位"}},{"name_translations":{"en":"Shop B002, G/F, Ching Long Shopping Centre, Kowloon City, KLN\n","zh-hant":"九龍九龍城晴朗商場地下B002號舖"}},{"name_translations":{"en":"14-18 Sung Wong Toi Road, Kowloon City, KLN\n","zh-hant":"九龍九龍城宋皇台道14-18號"}}]},"Kowloon Tong":{"district_translations":{"en":"Kowloon Tong","zh-hant":"九龍塘"},"locations":[{"name_translations":{"en":"Shop 9, G/F, Yau Fat Buil, 28 Tat Chee Ave, Yau Yat Chuen, Kowloon Tong, KLN\n","zh-hant":"九龍九龍塘又一村達之路28號又發樓地下9號舖"}}]},"Kwun Tong":{"district_translations":{"en":"Kwun Tong","zh-hant":"觀塘"},"locations":[{"name_translations":{"en":"Shop 102, M2/F, Tsui Lau Hse, Tsui Ping North Shopping Circuit, Kwun Tong, KLN\n","zh-hant":"九龍觀塘翠屏北村翠屏北商場翠柳樓M2樓102號舖"}},{"name_translations":{"en":"Shop B01, Lee Yat House, Shun Lee Estate, Kwun Tong, KLN\n","zh-hant":"九龍觀塘順利村利溢樓B01號舖"}},{"name_translations":{"en":"Shop 7, G/F, Hip Wo House, 143-167 Hip Wo Street, Kwun Tong, KLN\n","zh-hant":"九龍觀塘協和街143-167號協和大廈地下7號舖"}},{"name_translations":{"en":"Flat B, G/F, Grandeur Factory Buliding, 34 Chong Yip Street, Kwun Tong, KLN\n","zh-hant":"九龍觀塘創業街34號創紀之城英亞工業大廈地下B號舖"}},{"name_translations":{"en":"G/F, Draco Industrial Building, 46 Lai Yip Street, Kwun Tong, KLN\n","zh-hant":"九龍觀塘勵業街46號天輝工業大廈地下"}},{"name_translations":{"en":"Shop 1 Carpark Building, Sau Mau Ping Estate Phase 15, Kwun Tong, KLN\n","zh-hant":"九龍觀塘秀茂坪十五期停車場大廈地下1號舖"}},{"name_translations":{"en":"Shop 205, 2/F, Po Tat Shopping Centre, Sau Mau Ping, Kwun Tong, KLN\n","zh-hant":"九龍觀塘秀茂坪寶達村寶達商場二樓205號舖"}},{"name_translations":{"en":"Shop H G/F, Kin Tak House, 101 Hip Wo Street, Kwun Tong, KLN\n","zh-hant":"九龍觀塘協和街101號地下H號舖"}},{"name_translations":{"en":"Factory A3, G/F, Howard Factory Building, 66 Tsun Yip Street, Kwun Tong, KLN\n","zh-hant":"九龍觀塘駿業街66號巧運工業大廈地下A3號單位"}},{"name_translations":{"en":"Shop G25, Centre de Laguna Phase3, Laguna City, 93 ChaKwoLing Rd, KwunTong, KLN\n","zh-hant":"九龍觀塘茶果嶺道93號麗港城第三期麗港城中薈地下25及26B號舖"}},{"name_translations":{"en":"Shop K, G/F, Kwun Tong Lap Shing Buil, 305-325 \u0026 325A Ngau Tau Kok Rd, Kwun Tong, KLN\n","zh-hant":"九龍牛頭角道305-325及325A號觀塘立成大廈地下K號舖"}},{"name_translations":{"en":"Shop 1, Sau Tak House, Sau Mau Ping (South) Estate, Kwun Tong, KLN\n","zh-hant":"九龍觀塘秀茂坪(南)秀德樓1號舖"}},{"name_translations":{"en":"Shop 6, G/F, Bo Fung Building, 5 Horse Shoe Lane, Kwun Tong, KLN\n","zh-hant":"九龍觀塘馬蹄徑5號寶峰大廈地下6號舖"}},{"name_translations":{"en":"Shop 2, G/F, Wah On Building, 45 Mut Wah Street, Kwun Tong, KLN\n","zh-hant":"九龍觀塘物華街45號華安大樓地下2號舖"}},{"name_translations":{"en":"239, G/F, Hay Cheuk Lau, KwunTong Garden EST, 239 NgauTauKok Rd, Kwun Tong, KLN\n","zh-hant":"九龍觀塘牛頭角道239號觀塘花園大廈喜鵲樓地下239號舖"}},{"name_translations":{"en":"Kiosks No. KWT 33-34, Kwun Tong MTR Station, Kwun Tong, KLN\n","zh-hant":"九龍觀塘港鐵站KWT33-34號舖"}},{"name_translations":{"en":"Shop 6, Tsui Ping Shopping Circuit, Kwun Tong, KLN\n","zh-hant":"九龍觀塘翠屏商場6號舖"}},{"name_translations":{"en":"Shop 10, G/F, Wo Hang House, Hip Wo Street, Kwun Tong, KLN\n","zh-hant":"九龍觀塘協和街祥和苑和亨閣地下10號舖"}},{"name_translations":{"en":"Stall 47, G/F, Tsui Ping Market, Tsui Ping Estate, Kwun Tong, KLN\n","zh-hant":"九龍觀塘翠屏村街市地下47號舖 - 黃啟發報紙雜誌"}},{"name_translations":{"en":"Stall NK1, G/F, Shun On Shopping Centre, Shun On Estate, Kwun Tong, KLN\n","zh-hant":"九龍觀塘順安村順安商場地下NK1號舖 - 華記報紙檔"}},{"name_translations":{"en":"Stall SS2, G/F, Shun Lee Commercial Complex, Shun Lee Estate, Kwun Tong, KLN\n","zh-hant":"九龍觀塘順利村街市地下SS2號舖 - 順利報紙雜誌社"}}]},"Lai Chi Kok":{"district_translations":{"en":"Lai Chi Kok","zh-hant":"荔枝角"},"locations":[{"name_translations":{"en":"Shop 8, G/F, Hoi Lai Shopping Centre, Hoi Lai Estate, Lai Chi Kok, KLN\n","zh-hant":"九龍荔枝角海麗村海麗商場地下8號舖"}},{"name_translations":{"en":"G/F, Li Fung Tower, 868 Cheung Sha Wan Road, Lai Chi Kok, KLN\n","zh-hant":"九龍荔枝角長沙灣道868號利豐大廈地下"}},{"name_translations":{"en":"G/F, HK Spinners Ind Bldg(Phase I\u0026II), 800 Cheung Sha Wan Rd, Lai Chi Kok, KLN\n","zh-hant":"九龍荔枝角長沙灣道800號香港紗廠工業大廈一及二期地下"}},{"name_translations":{"en":"Shop 126, 1/F, Liberte Place, 833 Lai Chi Kok Road, Lai Chi Kok, KLN\n","zh-hant":"九龍荔枝角荔枝角道833號昇悅商場一樓126號舖"}},{"name_translations":{"en":"G/F, 176 Lai Chi Kok Road, Lai Chi Kok, KLN\n","zh-hant":"九龍荔枝角荔枝角道176號地下"}},{"name_translations":{"en":"Unit G03, G/F, Cheung Sha Wan Plaza, 833 Cheung Sha Wan Road, Lai Chi Kok, KLN\n","zh-hant":"九龍荔枝角長沙灣道833號長沙灣廣場地下G03號舖"}}]},"Lam Tin":{"district_translations":{"en":"Lam Tin","zh-hant":"藍田"},"locations":[{"name_translations":{"en":"Shop 2 G/F, Lei On Court, Car park, Lam Tin, KLN\n","zh-hant":"九龍藍田鯉安苑停車場大樓地下2號舖"}},{"name_translations":{"en":"Shop 2D Sceneway Garden, 8 Sceneway Road, Lam Tin, KLN\n","zh-hant":"九龍藍田匯景道8號匯景花園2D號舖"}},{"name_translations":{"en":"Kiosk No. LAT 2, Lam Tin MTR Station, Lam Tin, KLN\n","zh-hant":"九龍藍田港鐵站LAT2號舖"}}]},"Lok Fu":{"district_translations":{"en":"Lok Fu","zh-hant":"樂富"},"locations":[{"name_translations":{"en":"Shop 5, 6, 7 \u0026 8, Level 3, Wang Fai Centre, Wang Tau Hom Estate, Lok Fu, KLN\n","zh-hant":"九龍樂富橫頭磡村宏暉中心第三層單位5,6,7,8號舖"}},{"name_translations":{"en":"Shop 6, L/G, Lok Fu Plaza, Wang Tau Hom, Lok Fu, KLN\n","zh-hant":"九龍樂富樂富中心LG6號舖"}}]},"Mei Foo":{"district_translations":{"en":"Mei Foo","zh-hant":"美孚"},"locations":[{"name_translations":{"en":"Shop N32, G/F, Stage Via 2 Humbert Street, Mei Foo Sun Chuen, Mei Foo, KLN\n","zh-hant":"九龍美孚新村恆柏街2號地下N32號舖"}}]},"Mong Kok":{"district_translations":{"en":"Mong Kok","zh-hant":"旺角"},"locations":[{"name_translations":{"en":"Shop 32 \u0026 33, G/F, Site 2 Charming Garden, 8 Hoi Ting Road, Mong Kok, KLN\n","zh-hant":"九龍旺角海泓道富榮花園地下32-33號舖"}},{"name_translations":{"en":"G/F, 43 Bute Street, Mong Kok, KLN\n","zh-hant":"九龍旺角弼街43號地下"}},{"name_translations":{"en":"G/F, No. 166 Sai Yeung Choi Street South, Mong Kok, KLN\n","zh-hant":"九龍旺角西洋菜南街166號地下及閣樓"}},{"name_translations":{"en":"G/F, No. 92 Sai Yee Street, Mong Kok, KLN\n","zh-hant":"九龍旺角洗衣街92號地下"}},{"name_translations":{"en":"Shop 1, G/F, Manly Commercial Building, 15 Soy Street, Mong Kok, KLN\n","zh-hant":"九龍旺角豉油街15號萬利商業大廈地下1號舖"}},{"name_translations":{"en":"Kiosk No. MOK 21, Mong Kok MTR Station, Mong Kok, KLN\n","zh-hant":"九龍旺角港鐵站MOK21號舖"}},{"name_translations":{"en":"Stall NP1, G/F, Fa Yuen Street Municipal Services Building, Fa Yuen Street, Mong Kok, KLN\n","zh-hant":"九龍旺角花園街市政大廈地下NP1號舖 - 恩記報社"}}]},"Ngau Chi Wan":{"district_translations":{"en":"Ngau Chi Wan","zh-hant":"牛池灣"},"locations":[{"name_translations":{"en":"Shop 2 , G/F, Shopping CTR, Kingsford TER, 8 King Tung ST, Ngau Chi Wan, KLN\n","zh-hant":"九龍牛池灣瓊東街8號嘉峰臺地下2號舖"}}]},"Ngau Tau Kok":{"district_translations":{"en":"Ngau Tau Kok","zh-hant":"牛頭角"},"locations":[{"name_translations":{"en":"Shop D, G/F, Lap Hing Building., 37-43 Ting On Street, Ngau Tau Kok, KLN\n","zh-hant":"九龍牛頭角定安街37-43號立興大廈地下D號舖"}},{"name_translations":{"en":"Shop 3, Choi Ying Place, Choi Ying Estate, Ngau Tau Kok, KLN\n","zh-hant":"九龍牛頭角彩盈村彩盈坊3號舖"}},{"name_translations":{"en":"Shop G04, G/F, Choi Tak Shopping Centre, Ngau Tau Kok, KLN\n","zh-hant":"九龍牛頭角彩德商場地下G04號舖"}},{"name_translations":{"en":"Shop 13, G/F, Lotus Tower 3, Kwun Tong Garden Estate, Kwun Tong, KLN\n","zh-hant":"九龍牛頭角觀塘花園大廈玉蓮臺第三座地下13號舖"}}]},"Prince Edward":{"district_translations":{"en":"Prince Edward","zh-hant":"太子"},"locations":[{"name_translations":{"en":"Shop A, G/F, 22, 24 \u0026 28, Nullah Road, Prince Edward, KLN\n","zh-hant":"九龍太子水渠道22,24,28號安豪樓地下A號舖"}},{"name_translations":{"en":"Shop C \u0026 D, G/F, 96-100 Prince Edward Road West, Prince Edward, KLN\n","zh-hant":"九龍太子太子道西96-100號地下C及D號舖"}},{"name_translations":{"en":"G/F, Merlin Building, 181-183 Prince Edward Road West, Prince Edward, KLN\n","zh-hant":"九龍太子太子道西181-183號美輪大廈地下"}}]},"San Po Kong":{"district_translations":{"en":"San Po Kong","zh-hant":"新蒲崗"},"locations":[{"name_translations":{"en":"Unit D, G/F, Wong King Industrial Building, 2-4 Tai Yau St, San Po Kong, KLN\n","zh-hant":"九龍新蒲崗大有街2-4號旺景工業大廈地下D號舖"}},{"name_translations":{"en":"Shop E, G/F, Chartered Bank Buil,10-20 Ning Yuen Street, San Po Kong, KLN\n","zh-hant":"九龍新蒲崗寧遠街10-20號渣打銀行大廈地下E號舖"}},{"name_translations":{"en":"Shop 1A, G/F, 35-49 Hong Keung Street, San Po Kong, KLN\n","zh-hant":"九龍新蒲崗康強街35-49號地下連天井1A號舖"}}]},"Sham Shui Po":{"district_translations":{"en":"Sham Shui Po","zh-hant":"深水埗"},"locations":[{"name_translations":{"en":"Shop E, G/F, \u0026 C/L., 42-44 Kweilin Street, Sham Shui Po, KLN\n","zh-hant":"九龍深水埗桂林街42-44號地下E號舖"}},{"name_translations":{"en":"Shop 18 G/F, Fu Cheong Shopping Centre, Sham Shui Po, KLN\n","zh-hant":"九龍深水埗富昌商場地下18號舖"}},{"name_translations":{"en":"G/F, 128 Fuk Wing Street, Sham Shui Po, KLN\n","zh-hant":"九龍深水埗福榮街128號地下"}},{"name_translations":{"en":"Shop A, G/F \u0026 C/L, 68 Fuk Wing Street, Sham Shui Po, KLN\n","zh-hant":"九龍深水埗福榮街68號地下A舖"}},{"name_translations":{"en":"G/F, Pak Far Building, 156 Tai Po Road, Sham Shui Po, KLN\n","zh-hant":"九龍深水埗大埔道156號白花大廈地下"}},{"name_translations":{"en":"Shop C, G/F, Yuen Cheong Court, 65-69 Un Chau Street, Sham Shui Po, KLN\n","zh-hant":"九龍深水埗元州街65-69號元昌閣地下C舖"}}]},"Shek Kip Mei":{"district_translations":{"en":"Shek Kip Mei","zh-hant":"石硤尾"},"locations":[{"name_translations":{"en":"Shop 15-17, G/F, Block 9, Pak Tin Estate, Shek Kip Mei, KLN\n","zh-hant":"九龍石硤尾白田村第九座地下15-17號舖"}},{"name_translations":{"en":"G/F, Nam Shan Estate Commerce Building, Nam Shan Estate, Shek Kip Mei, KLN\n","zh-hant":"九龍石硤尾南山村南山商場大廈地下"}},{"name_translations":{"en":"Shop 80, G/F, Pak Tin Shopping Centre, Shek Kip Mei, KLN\n","zh-hant":"九龍石硤尾偉智里白田購物中心地下80號舖 - 長發報社"}}]},"Tai Kok Tsui":{"district_translations":{"en":"Tai Kok Tsui","zh-hant":"大角咀"},"locations":[{"name_translations":{"en":"Shop 7, G/F, Hing Wong Mansion, 79 Tai Kok Tsui Road, Tai Kok Tsui, KLN\n","zh-hant":"九龍大角咀大角咀道79號興旺大廈地下7號舖"}},{"name_translations":{"en":"Shop G10, G/F, Metro Harbour Plaza, Tai Kok Tsui, KLN\n","zh-hant":"九龍大角咀港灣豪庭地下G10號舖"}},{"name_translations":{"en":"Shop 10, G/F, Chung Wo Building, No. 13 Chung Wui Street, Tai Kok Tsui, KLN\n","zh-hant":"九龍大角咀中匯街13號中和樓地下10號舖"}},{"name_translations":{"en":"8 Anchor Street, Tai Kok Tsui, KLN\n","zh-hant":"九龍大角咀晏架街8號"}},{"name_translations":{"en":"36-38 Li Tak Street, Tai Kok Tsui, KLN\n","zh-hant":"九龍大角咀利得街36-38號"}}]},"To Kwa Wan":{"district_translations":{"en":"To Kwa Wan","zh-hant":"土瓜灣"},"locations":[{"name_translations":{"en":"G/F, 273 To Kwa Wan Road, To Kwa Wan, KLN\n","zh-hant":"九龍土瓜灣土瓜灣道273號地下"}},{"name_translations":{"en":"Shop A-B, G/F, Yuet Fai House, 450 Ma Tau Wai Road, 50 Tin Kwong Road, To Kwa Wan, KLN\n","zh-hant":"九龍土瓜灣馬頭圍道450號及天光道50號悅輝大廈地下A及B號舖"}},{"name_translations":{"en":"G/F, 356 Ma Tau Wai Road, To Kwa Wan, KLN\n","zh-hant":"九龍土瓜灣馬頭圍道356號地下"}},{"name_translations":{"en":"Shop G06, G/F, Grand Waterfront Plaza, 38 San Ma Tau Street, To Kwa Wan, KLN\n","zh-hant":"九龍土瓜灣馬頭角新馬頭街38號翔龍灣廣場地下G06號舖"}},{"name_translations":{"en":"G/F, Cheong Shing Court, 669 Gillies Rd, To Kwa Wan, To Kwa Wan, KLN\n","zh-hant":"九龍土瓜灣機利士路669號昌盛金舖大廈地下"}},{"name_translations":{"en":"G/F \u0026 Cockloft, 1C Mok Cheong Street, To Kwa Wan, KLN\n","zh-hant":"九龍土瓜灣馬頭圍木廠街1C號地下及閣樓"}}]},"Tsim Sha Tsui":{"district_translations":{"en":"Tsim Sha Tsui","zh-hant":"尖沙咀"},"locations":[{"name_translations":{"en":"Shop G08, G/F, Toyo Mall, 94 Granville Road, Tsim Sha Tsui, KLN\n","zh-hant":"九龍尖沙咀加連威老道94號尖東廣場地下G08號舖"}},{"name_translations":{"en":"Shop A \u0026 B, G/F, Rose Mansion, 1 Prat Avenue, Tsim Sha Tsui, KLN\n","zh-hant":"九龍尖沙咀寶勒巷1號玫瑰大廈地下A及B號舖"}},{"name_translations":{"en":"Shop 3, East Tsim Sha Tsui MTR Station, Tsim Sha Tsui, KLN\n","zh-hant":"九龍尖東港鐵站3號舖"}}]},"Tsz Wan Shan":{"district_translations":{"en":"Tsz Wan Shan","zh-hant":"慈雲山"},"locations":[{"name_translations":{"en":"Shop 324-325, Tsz Wan Shan Shopping Ctr, 23 Yuk Wah St, Tsz Wan Shan, KLN\n","zh-hant":"九龍慈雲山毓華街23號慈雲山中心商場3樓324-325號新界"}},{"name_translations":{"en":"Shop 1, Tsz Ching Shopping Centre, 1 Tsz Ching Est., Tsz Wan Shan, KLN\n","zh-hant":"九龍慈雲山慈正村慈正商場1號舖"}},{"name_translations":{"en":"Shop 2, G/F, Tsz Ching Shopping Centre II, Tsz Ching EST, Tsz Wan Shan, KLN\n","zh-hant":"九龍慈雲山慈正村慈正商場2期地下2號舖"}}]},"Wong Tai Sin":{"district_translations":{"en":"Wong Tai Sin","zh-hant":"黃大仙"},"locations":[{"name_translations":{"en":"Shop S4, Chuk Yuen Shopping Centre, Chuk Yuen South Estate, Wong Tai Sin, KLN\n","zh-hant":"九龍黃大仙竹園村竹園商場S4號舖"}},{"name_translations":{"en":"Shop 1, Lung Lok House, Lower Wong Tai Sin Estate II, Wong Tai Sin, KLN\n","zh-hant":"九龍黃大仙黃大仙下村二期龍樂樓地下1號舖"}},{"name_translations":{"en":"Shop 1 G/F, Carpark Building, Ying Fuk Court, Wong Tai Sin, KLN\n","zh-hant":"九龍黃大仙盈福苑停車場大樓地下1號舖"}},{"name_translations":{"en":"Kiosks No. WTS 12, Wong Tai Sin MTR Station, Wong Tai Sin, KLN\n","zh-hant":"九龍黃大仙港鐵站WTS12號舖"}},{"name_translations":{"en":"G/F, Hsin Kuang Centre, 120 Lung Cheung Road, Wong Tai Sin, KLN\n","zh-hant":"九龍黃大仙龍翔道120號新光中心地下"}},{"name_translations":{"en":"Shop B G/F, Ho King Building, 35 \u0026 37 Po Kong Village Road, Wong Tai Sin, KLN\n","zh-hant":"九龍黃大仙蒲崗村道35-37號好景樓地下B號舖"}},{"name_translations":{"en":"Shop 11, Chuk Yuen Shopping Centre, Chuk Yuen Estate, Wong Tai Sin, KLN\n","zh-hant":"九龍黃大仙竹園村竹園商場11號舖"}}]},"Yau Ma Tei":{"district_translations":{"en":"Yau Ma Tei","zh-hant":"油麻地"},"locations":[{"name_translations":{"en":"Shop H1, G/F, Prosperous Garden, 3 Public Square Street, Yau Ma Tei, KLN\n","zh-hant":"九龍油麻地眾方街3號駿發花園戲院大樓地下H1號舖"}},{"name_translations":{"en":"Shop 13\u002619, G/F, Man Wai Building, 5 \u0026 11 Man Cheong Street, Yau Ma Tei, KLN\n","zh-hant":"九龍油麻地文昌街5 及11號文尉樓地下13及19號舖"}},{"name_translations":{"en":"Shop B, G/F, Tung Nam Comm. Building, 68 Portland Street, Yau Ma Tei, KLN\n","zh-hant":"九龍油麻地砵蘭街68號東南商業大廈地下B號舖"}},{"name_translations":{"en":"Shop 2, G/F, Arts Mansion, 4\u00266 Man Ming Lane, Yau Ma Tei, KLN\n","zh-hant":"九龍油麻地文明里4-6號地下2號舖"}},{"name_translations":{"en":"G/F, 50 \u0026 52 Pitt Street, Yau Ma Tei, KLN\n","zh-hant":"九龍油麻地碧街50號地下"}},{"name_translations":{"en":"Shop A, G/F, 150 Shanghai Street, Yau Ma Tei, KLN\n","zh-hant":"九龍油麻地上海街150號地下A號舖"}},{"name_translations":{"en":"6-8 Arthur Street, Yau Ma Tei, KLN\n","zh-hant":"九龍油麻地鴉打街6號"}}]},"Yau Tong":{"district_translations":{"en":"Yau Tong","zh-hant":"油塘"},"locations":[{"name_translations":{"en":"Shop 1, Carpark Building, Ko Chun Court, Yau Tong, KLN\n","zh-hant":"九龍油塘高俊苑停車場大廈1號舖"}},{"name_translations":{"en":"Shop 1, G/F, Lei Yue Mun Plaza, Yau Tong Estate, Yau Tong, KLN\n","zh-hant":"九龍油塘油塘村鯉魚門廣場地下1號舖"}},{"name_translations":{"en":"Shop 7, Yau Lai Shopping Centre, Yau Tong, KLN\n","zh-hant":"九龍油塘油麗商場7號舖"}},{"name_translations":{"en":"Shop M05, MTR Floor, Domain, Yau Tong, KLN\n","zh-hant":"九龍油塘大本型港鐵樓層M05號舖"}}]},"Discovery Bay":{"district_translations":{"en":"Discovery Bay","zh-hant":"愉景灣"},"locations":[{"name_translations":{"en":"Shop G38B \u0026 G39, G/F, Block C, DB Plaza, Discovery Bay, Lantau Island, N.T.\n","zh-hant":"新界大嶼山愉景灣愉景灣廣場C座地下G38B及G39號舖"}}]},"Fanling":{"district_translations":{"en":"Fanling","zh-hant":"粉嶺"},"locations":[{"name_translations":{"en":"Shop B, G/F, Louver Mansion, 9 Luen On Street, Fanling, N.T.\n","zh-hant":"新界粉嶺聯安街9號聯發大廈地下B號舖"}},{"name_translations":{"en":"Shop G31, G/F, Avon Park, 15 Yat Ming Road, Fanling, N.T.\n","zh-hant":"新界粉嶺一鳴路15號碧湖商場地下G31號舖"}},{"name_translations":{"en":"G/F, 10A On Lok Mun Street, On Lok Tsuen, Fanling, N.T.\n","zh-hant":"新界粉嶺安樂村安樂門街10A號舖"}},{"name_translations":{"en":"Shop 6, Ka Fuk Shopping Centre, Ka Fuk Estate, Fanling, N.T.\n","zh-hant":"新界粉嶺嘉福村商場中心6號舖"}},{"name_translations":{"en":"Shop 12, G/F, Yung Shing Shopping Centre, Yung Shing Court, Fanling, N.T.\n","zh-hant":"新界粉嶺雍盛苑雍盛商場地下12號舖"}},{"name_translations":{"en":"Shop 39A, 2/F., Fanling Town Centre, 18 Fanling Station Road, Fanling, N.T.\n","zh-hant":"新界粉嶺粉嶺車站路18號粉嶺名都商場2樓39A號舖"}},{"name_translations":{"en":"Shop 1, G/F, Carpark Building, Yan Shing Court, Fanling, N.T.\n","zh-hant":"新界粉嶺欣盛苑停車場大廈地下1號舖"}},{"name_translations":{"en":"Shop 233E, 1/F, Fanling Centre, Fanling, N.T.\n","zh-hant":"新界粉嶺粉嶺中心商場1樓233E號舖"}},{"name_translations":{"en":"Shop 112, Wah Ming Shopping Centre, Fanling, N.T.\n","zh-hant":"新界粉嶺華明村華明商場112號舖"}},{"name_translations":{"en":"Shop G1, G/F, Dawning Views, 23 Yat Ming Road, Fanling, N.T.\n","zh-hant":"新界粉嶺一鳴路23號牽晴間商場地下G1號舖"}}]},"Fo Tan":{"district_translations":{"en":"Fo Tan","zh-hant":"火炭"},"locations":[{"name_translations":{"en":"Workshop B, G/F, On Shing Industrial Building, 2-16 Wo Liu Hang Road, Fo Tan, N.T.\n","zh-hant":"新界火炭禾寮坑路2-16號安盛工業大廈地下部份B號單位"}},{"name_translations":{"en":"Workshop I, G/F, Universal Industrial Centre, 19-25 Shan Mei Street, Fo Tan, N.T.\n","zh-hant":"新界火炭山尾街19-25號宇宙工業中心地下I號單位"}}]},"Kwai Chung":{"district_translations":{"en":"Kwai Chung","zh-hant":"葵涌"},"locations":[{"name_translations":{"en":"Shop 2, G/F, Tin On House, 78-84 \u0026 88-96 Shek Yam Road, Kwai Chung, N.T.\n","zh-hant":"新界葵涌石蔭路78至84及88至96號天安樓地下2號舖"}},{"name_translations":{"en":"Shop 1, G/F, Kwai Chung Shopping Centre, Kwai Chung, N.T.\n","zh-hant":"新界葵涌葵涌商場地下1號舖"}},{"name_translations":{"en":"Shop 1-2 \u0026 12-13, Kwai Kin House, Kwai Fong Estate, Kwai Chung,, N.T.\n","zh-hant":"新界葵涌葵芳村葵健樓第1-2及12-13號舖"}},{"name_translations":{"en":"Shop 1, G/F, Kwai Shing East Estate Shopping Centre,Kwai Chung, N.T.\n","zh-hant":"新界葵涌葵盛東村葵盛東商場地下1號舖"}},{"name_translations":{"en":"Shop 1, On Yam Shopping Centre, On Yam Estate, Kwai Chung, N.T.\n","zh-hant":"新界葵涌安蔭村安蔭商場1號舖"}},{"name_translations":{"en":"7/F, CTR A, Asia Terminals CTR, KwaiChung Container Terminal, Kwai Chung, N.T.\n","zh-hant":"新界葵涌貨櫃碼頭亞洲貨運大廈第三期A座7樓"}},{"name_translations":{"en":"Shop 1 \u0026 2, G/F, Yam Hing House, Shek Yam East Estate., Kwai Chung, N.T.\n","zh-hant":"新界葵涌石蔭東村蔭興樓1及2號舖"}},{"name_translations":{"en":"Shop 6, G/F, Chau Kwai House, Kwai Chung Estate Phase 1,Kwai Chung, N.T.\n","zh-hant":"新界葵涌葵涌村第一期秋葵樓地下6號舖"}},{"name_translations":{"en":"Shop 2, G/F, Wing Fong Heights, 180 Hing Fong Road, Kwai Chung, N.T.\n","zh-hant":"新界葵涌盛芳街15號運芳樓地下2號舖"}},{"name_translations":{"en":"Shop G-04, G/F, Household Centre, 8 King Lai Path, Kwai Chung, N.T.\n","zh-hant":"新界葵涌景荔徑8號盈暉薈地下G-04號舖"}},{"name_translations":{"en":"Shop LG1, Lei Muk Shue Shopping Centre, Lei Muk Shue Estate, Kwai Chung, N.T.\n","zh-hant":"新界葵涌梨木樹村梨木商場LG1號舖"}},{"name_translations":{"en":"G/F, Prosperity Centre, 77-81 Container Port Road, Kwai Chung, N.T.\n","zh-hant":"新界葵涌貨櫃碼頭路77-81號大鴻輝(葵涌)中心第一期地下"}},{"name_translations":{"en":"Unit B, G/F, Mai Wah Industrial Bulding, 1-7 Wah Sing Street,Kwai Chung, N.T.\n","zh-hant":"新界葵涌華星街1至7號美華工業大廈地下B號舖"}},{"name_translations":{"en":"Shop A, G/F Kwai Fung House, 456/458 Castle Peak Road, Kwai Chung, N.T.\n","zh-hant":"新界葵涌青山公路456/458號葵豐樓地下A1號舖"}},{"name_translations":{"en":"Shop 1, Highland Park, 11 Lai Kong Street, Kwai Chung, N.T.\n","zh-hant":"新界葵涌荔崗街浩景臺1號舖"}}]},"Ma On Shan":{"district_translations":{"en":"Ma On Shan","zh-hant":"馬鞍山"},"locations":[{"name_translations":{"en":"Shop 201-202, Level 2, Ma On Shan Plaza, Bayshore Towers, Ma On Shan, N.T.\n","zh-hant":"新界馬鞍山海柏花園馬鞍山廣場第二層201-202號舖"}},{"name_translations":{"en":"Shop 2150, 2152 \u0026 2153, 2/F, Sunshine City Plaza, Ma On Shan, N.T.\n","zh-hant":"新界馬鞍山新港城中心2樓2150、2152及2153號舖"}},{"name_translations":{"en":"Shop 235, 2/F, Commercial Centre, Heng On Estate, Ma On Shan, N.T.\n","zh-hant":"新界馬鞍山恆安村商場商業中心二層235號舖"}},{"name_translations":{"en":"Shop G3, Lee On Shopping Centre, Lee On Estate, Ma On Shan, N.T.\n","zh-hant":"新界馬鞍山利安村商場G3號舖"}},{"name_translations":{"en":"Shop 1, Chung On Shopping Centre, Chung On Estate, Ma On Shan, N.T.\n","zh-hant":"新界馬鞍山頌安村頌安商場1號舖"}},{"name_translations":{"en":"Shop 2, G/F, Kam Tai Shopping Centre, Ma On Shan, N.T.\n","zh-hant":"新界馬鞍山錦泰苑錦泰商場地下2號舖"}},{"name_translations":{"en":"Shop 2, Unpaid Concourse, Wu Kai Sha MTR Station, Ma On Shan, N.T.\n","zh-hant":"新界烏溪沙港鐵站大堂2號舖"}},{"name_translations":{"en":"Shop 2221-22, 2/F., Sunshine City Plaza, Ma On Shan, N.T.\n","zh-hant":"新界馬鞍山新港城2樓2221-22號舖"}},{"name_translations":{"en":"Shop 22, G/F, Chevalier Garden Shopping Centre, Ma On Shan, N.T.\n","zh-hant":"新界馬鞍山富安花園商場中心22號舖"}},{"name_translations":{"en":"Shop 116, G/F, Yiu On Shopping Centre, Yiu On Estate, Ma On Shan, N.T.\n","zh-hant":"新界馬鞍山耀安村耀安商場116號舖"}},{"name_translations":{"en":"Shop 2, Lower G/F, 1 Kam Ying Court Shopping Centre, Ma On Shan, N.T.\n","zh-hant":"新界馬鞍山錦英苑商場中心低層地下2號舖"}},{"name_translations":{"en":"21 On Shan Lane, Ma On Shan, N.T.\n","zh-hant":"新界馬鞍山鞍山里21號"}}]},"Ma Wan":{"district_translations":{"en":"Ma Wan","zh-hant":"馬灣"},"locations":[{"name_translations":{"en":"G/F, 23 Pak Lam Road, Ma Wan, N.T.\n","zh-hant":"新界馬灣珀林路23號地下"}}]},"Mui Wo":{"district_translations":{"en":"Mui Wo","zh-hant":"梅窩"},"locations":[{"name_translations":{"en":"Shop 13, G/F, Mui Wo Centre, 3 Ngan Wan Road, Mui Wo, Lantau Island, N.T.\n","zh-hant":"新界大嶼山梅窩銀運路3號梅窩中心地下13號舖"}},{"name_translations":{"en":"Shop 2, Sliver Pearl Mansion, 14 Mui Wo Ferry Pier Road, Lantau Island, N.T.\n","zh-hant":"新界大嶼山梅窩梅窩碼頭路銀寶大廈2號舖"}}]},"Sai Kung":{"district_translations":{"en":"Sai Kung","zh-hant":"西貢"},"locations":[{"name_translations":{"en":"Shop 12, G/F, Kam Po Court, Lot No. 939 in DD215, Sai Kung, N.T.\n","zh-hant":"新界西貢海傍廣場金寶閣地下12號舖"}},{"name_translations":{"en":"Shop 23, G/F,Sai Kung Building, Lot No.985 in DD215, Sai Kung, N.T.\n","zh-hant":"新界西貢西貢大廈地下23號舖"}},{"name_translations":{"en":"233 Clearwater Bay Road, Sai Kung, N.T.\n","zh-hant":"新界西貢清水灣道233號井欄樹"}}]},"Sham Tseng":{"district_translations":{"en":"Sham Tseng","zh-hant":"深井"},"locations":[{"name_translations":{"en":"Shop 2, G/F, Lido Garden, Sham Tseng, N.T.\n","zh-hant":"新界深井麗都花園地下2號舖"}},{"name_translations":{"en":"Shop 10, 3/F, Bellagio Mall, 33 Castle Peak Road, Sham Tseng, N.T.\n","zh-hant":"新界深井青山公路33號碧堤坊三樓10號舖"}}]},"Shatin":{"district_translations":{"en":"Shatin","zh-hant":"沙田"},"locations":[{"name_translations":{"en":"Shop 14-15, Osprey House, Sha Kok Estate, Shatin, N.T.\n","zh-hant":"新界沙田沙角村漁鷹樓地下14-15號舖"}},{"name_translations":{"en":"Shop 11-12, Sun Tin Wai Shopping Centre, Sun Tin Wai Estate, Shatin, N.T.\n","zh-hant":"新界沙田新田圍村新田圍商場11-12號舖"}},{"name_translations":{"en":"Shop CC01 \u0026 CC02, 2/F, Wo Che Shopping Centre, Shatin, N.T.\n","zh-hant":"新界沙田禾輋商場2樓CC01-CC02號舖"}},{"name_translations":{"en":"Shop 114, Shopping Centre, Hin Keng Estate, Shatin, N.T.\n","zh-hant":"新界沙田顯徑村商場114號舖"}},{"name_translations":{"en":"Shop 36, P/F, Garden Rivera, Shatin, N.T.\n","zh-hant":"新界沙田河畔花園一期地下36號舖"}},{"name_translations":{"en":"Shop 7, Commercial Block 4, Kwong Yuen Estate, Shatin, N.T.\n","zh-hant":"新界沙田廣源村商場第四座7號舖"}},{"name_translations":{"en":"Shop G6, G/F, Commerece Centre, Sui Wo Court, Shatin, N.T.\n","zh-hant":"新界沙田穗禾苑商場中心地下G6號舖"}},{"name_translations":{"en":"G/F, Li Fung Centre, 2 On Ping Street, Siu Lek Yuen, Shatin, N.T.\n","zh-hant":"新界沙田小瀝源安平街2號利豐中心地下"}},{"name_translations":{"en":"Shop 7 \u0026 9, G/F, Ming Yiu Lau, Jat Min Chuen, Shatin, N.T.\n","zh-hant":"新界沙田乙明村明耀樓地下7至9號舖"}},{"name_translations":{"en":"Shop 5-8, G/F, Building 1, 1 Science Park East Avenue, HK Science Park, Shatin, N.T.\n","zh-hant":"新界沙田白石角香港科學園科技大道東1號1座地下5-8號舖"}},{"name_translations":{"en":"Shop 33 \u0026 89, G/F, Ngan Shing Commercial Centre, City One, Shatin, N.T.\n","zh-hant":"新界沙田第一城置富第一城樂薈地下33及89號舖(銀城)"}},{"name_translations":{"en":"Shop 6, G/F, Grandeur Garden, 55-65 Tai Wai Road, Shatin, N.T.\n","zh-hant":"新界沙田大圍道55-65號積輝街14-18號金禧花園地下6號舖"}},{"name_translations":{"en":"Shop 2, Mei Chuen House, Mei Tin Estate, Shatin, N.T.\n","zh-hant":"新界沙田美田村美全樓地下2號舖"}},{"name_translations":{"en":"Shop 28, Level 1, Garden Rivera, 20-30 Tai Chung Kiu Road, Shatin, N.T.\n","zh-hant":"新界沙田大涌橋路20-30號，河畔花園地下28號舖"}},{"name_translations":{"en":"Shop 3, G/F, Belair Garden, Tai Chung Kiu Road, Shatin, N.T.\n","zh-hant":"新界沙田大涌橋路富豪花園商場地下3號舖"}}]},"Sheung Shui":{"district_translations":{"en":"Sheung Shui","zh-hant":"上水"},"locations":[{"name_translations":{"en":"G/F, 25-27 San Tsoi Street, Sheung Shui, N.T.\n","zh-hant":"新界上水新財街25-27號新財樓地下"}},{"name_translations":{"en":"Shop B, G/F, 76-86 Lung Sum Avenue, Sheung Shui, N.T.\n","zh-hant":"新界上水龍琛路76-86號地下B號舖"}},{"name_translations":{"en":"Shop 110A, G/F, Ping Hay House, Tai Ping Estate, Sheung Shui, N.T.\n","zh-hant":"新界上水太平村平熙樓地下110A號舖"}},{"name_translations":{"en":"G/F \u0026 Cockloft, 182 Jockey Club Road, Shueng Shui, N.T.\n","zh-hant":"新界上水馬會道182號地下及閣樓舖位"}},{"name_translations":{"en":"Shop 1005-1006, G/F, Sheung Shui Centre Shopping Arcade, Sheung Shui, N.T.\n","zh-hant":"新界上水上水中心商場地下1005-1006號舖"}},{"name_translations":{"en":"Shop 301 \u0026 302, Choi Wah House, Choi Yuen Estate, Sheung Shui, N.T.\n","zh-hant":"新界上水彩園村彩華樓地下301至302號舖"}},{"name_translations":{"en":"Shop 13, Ching Ho Shopping Centre, Sheung Shui, N.T.\n","zh-hant":"新界上水清河村商場13號舖"}}]},"Tai Po":{"district_translations":{"en":"Tai Po","zh-hant":"大埔市中心"},"locations":[{"name_translations":{"en":"Shop 11, G/F, Wan Tau Tong Shopping Centre, Wan Tau Tong Estate, Tai Po, N.T.\n","zh-hant":"新界大埔運頭塘村運頭塘商場地下11號舖"}},{"name_translations":{"en":"G/F, Tung Fuk Building, 148 Kwong Fuk Road, Tai Po, N.T.\n","zh-hant":"新界大埔廣福道148號同福樓地下"}},{"name_translations":{"en":"Shop 1, G/F, Greenery Plaza, 3 Chui Yi Street, Tai Po, N.T.\n","zh-hant":"新界大埔翠怡街3號翠怡花園地下1號舖"}},{"name_translations":{"en":"Shop G10, Fu Shin Shopping Centre, Fu Shin Estate, Tai Po, N.T.\n","zh-hant":"新界大埔富善村商場G10號舖"}},{"name_translations":{"en":"Shop 101 \u0026 109, Commercial Centre, Tai Yuen Estate, Tai Po, N.T.\n","zh-hant":"新界大埔大元村商場101-109號舖"}},{"name_translations":{"en":"Shop P102 \u0026 103, Commercial Centre, Kwong Fuk Estate, Tai Po, N.T.\n","zh-hant":"新界大埔廣福村商場P102-103號舖"}},{"name_translations":{"en":"Shop 355A, 2/F., Zone E, Tai Po Mega Mall, 9 On Pong Road, Tai Po, N.T.\n","zh-hant":"新界大埔安邦路9號大埔超級城E區三樓355A號舖"}},{"name_translations":{"en":"Unit A1, G/F, Ching Fat Building, 23 Kwong Fuk Lane, Tai Po, N.T.\n","zh-hant":"新界大埔廣福里23號正發樓地下A1號舖"}},{"name_translations":{"en":"Shop G19A \u0026 G20, G/F, Fu Shin Shopping Centre, Fu Shin Estate, Tai Po, N.T.\n","zh-hant":"新界大埔富善村富善商場地下G19A及G20號舖"}},{"name_translations":{"en":"Shop 4, 10B, 10C \u0026 10D, G/F, Elegance Garden, 1-7 Nam Wan Road, Tai Po, N.T.\n","zh-hant":"新界大埔南運路1-7號富雅花園地下4號舖,10B號舖,10C及10D號舖"}},{"name_translations":{"en":"Unit 11, 1/F., Tai Po Plaza, No. 1 On Tai Road, Tai Po, N.T.\n","zh-hant":"新界大埔安泰路1號大埔廣場地下11號舖"}},{"name_translations":{"en":"Shop A, G/F, 26 Tai Wing Lane, Tai Po, N.T.\n","zh-hant":"新界大埔大榮里26號地下A號舖"}},{"name_translations":{"en":"Shop 23 \u0026 24, Fu Heng Shopping Centre, Tai Po, N.T.\n","zh-hant":"新界大埔富亨村富亨商場中心23-24號舖"}},{"name_translations":{"en":"Shop 1, Wan Tau Tong Shopping Centre, Tai Po, N.T.\n","zh-hant":"新界大埔運頭塘村商場1號舖"}},{"name_translations":{"en":"Lot 1945 in DD7, Hong Lok Yuen, Tai Po, N.T.\n","zh-hant":"新界大埔康樂園7號地段1945號"}}]},"Tai Wai":{"district_translations":{"en":"Tai Wai","zh-hant":"大圍"},"locations":[{"name_translations":{"en":"Shop 15, Grandeur Garden, 2 -18 Chai Fai Street, Tai Wai, N.T.\n","zh-hant":"新界大圍積輝街2-18號金禧花園地下15號舖"}},{"name_translations":{"en":"Shop 10A-C, 19A, G/F, Carado Garden, 10-18 Tin Sam Street, Tai Wai, N.T.\n","zh-hant":"新界大圍田心街10-18號雲疊花園地下10A-C,19A號舖"}},{"name_translations":{"en":"Shop 30, Unpaid Concourse, Tai Wai MTR Station, Tai Wai, N.T.\n","zh-hant":"新界大圍港鐵站大堂30號舖"}},{"name_translations":{"en":"Shop 6, G/F, Commerce Centre, Sun Chui Estate, Tai Wai, N.T.\n","zh-hant":"新界大圍新翠村新翠商場地下6號舖"}},{"name_translations":{"en":"8500 Tai Po Road, Shatin Heights, Tai Wai, N.T.\n","zh-hant":"新界大圍大埔道8500號沙田嶺"}}]},"Tin Shui Wai":{"district_translations":{"en":"Tin Shui Wai","zh-hant":"天水圍"},"locations":[{"name_translations":{"en":"Shop L032, G/F, Tin Yiu Plaza, Tin Yiu Estate, Tin Shui Wai, N.T.\n","zh-hant":"新界天水圍天耀村天耀廣場地下L032號舖"}},{"name_translations":{"en":"Shop 8, Tin Tsz Shopping Centre, Tin Tsz Estate, Tin Shui Wai, N.T.\n","zh-hant":"新界天水圍天慈村天慈商場8號舖"}},{"name_translations":{"en":"Shop 11, G/F, Tin Chak Shopping Centre, Tin Chak Estate, Tin Shui Wai, N.T.\n","zh-hant":"新界天水圍天澤村天澤商場地下11號舖"}},{"name_translations":{"en":"Shop G73B, Fortune Kingswood Phase 1, 12-18 Tin Yan Road, Tin Shui Wai, N.T.\n","zh-hant":"新界天水圍天恩路12至18號置富嘉湖1期地下G73B號舖"}},{"name_translations":{"en":"Shop 35, G/F, Chung Fu Shopping Centre (Stage II), Tin Shui Wai, N.T.\n","zh-hant":"新界天水圍頌富商場地下35號舖"}},{"name_translations":{"en":"Shop 109 \u0026 110, Tin Yan Shopping Centre, Tin Shui Wai, N.T.\n","zh-hant":"新界天水圍天恩商場109-110號舖"}},{"name_translations":{"en":"Shop L30, G/F, Grandeur Terr, Tin Shui Wai Town Lot 28, Tin Shui Wai, N.T.\n","zh-hant":"新界天水圍俊宏軒俊宏廣場地下L30號舖"}},{"name_translations":{"en":"Shop L026, Tin Shui Shopping Centre, 9 Tin Shui Road, Tin Shui Wai, N.T.\n","zh-hant":"新界天水圍天瑞路9號天瑞廣場地下L026號舖"}},{"name_translations":{"en":"Shop A97, G/F, Kingswood Richly Plaza, Tin Shui Wai, N.T. \n","zh-hant":"新界天水圍新北江商場地下A97號舖 - 壹報社"}},{"name_translations":{"en":"Shop 7, G/F, Chung Fu Market, Chung Fu Plaza, Tin Shui Wai, N.T.\n","zh-hant":"新界天水圍頌富廣場地下頌富現代街市7號鋪 - 富華便利店"}},{"name_translations":{"en":"Shop L117A, 1/F, Chung Fu Market, Chung Fu Plaza, Tin Shui Wai, N.T.\n","zh-hant":"新界天水圍頌富廣場1樓L117A號舖"}}]},"Tseung Kwan O":{"district_translations":{"en":"Tseung Kwan O","zh-hant":"將軍澳"},"locations":[{"name_translations":{"en":"Shop 237, Level 2, Metro City Phase I, 1 Wan Hang Road, Tseung Kwan O, N.T.\n","zh-hant":"新界將軍澳運亨路1號新都城中心一期2樓237號舖"}},{"name_translations":{"en":"Shop 2, King Lam Shopping Centre, King Lam Estate, Tseung Kwan O, N.T.\n","zh-hant":"新界將軍澳景林村景林商場地下2號舖"}},{"name_translations":{"en":"Shop 206, 2/F, Po Lam Shopping Centre, Po Lam Estate, Tseung Kwan O, N.T.\n","zh-hant":"新界將軍澳寶林村寶林購物中心2樓206號舖"}},{"name_translations":{"en":"Shop LHP 1, LOHAS Park MTR Station, Tseung Kwan O, N.T.\n","zh-hant":"新界康城港鐵站LHP1號舖"}},{"name_translations":{"en":"Shop 1, G/F, Shin Chi House, Shin Ming Estate, Tseung Kwan O, N.T.\n","zh-hant":"新界將軍澳善明村善智樓地下1號舖"}},{"name_translations":{"en":"G/F \u0026 1/F, 1 Tai Po Tsai Village, Clear Water Bay Road, Tseung Kwan O, N.T.\n","zh-hant":"新界將軍澳清水灣道大埔仔村1號地下舖及1樓"}},{"name_translations":{"en":"Shop 19, Ming Tak Shopping Centre, Ming Tak Estate, Tseung Kwan O, N.T.\n","zh-hant":"新界將軍澳明德村明德商場19號舖"}},{"name_translations":{"en":"Shop 8, G/F, Sheung Tak Shopping Centre, Tseung Kwan O, N.T.\n","zh-hant":"新界將軍澳尚德村尚德商場地下8號舖"}},{"name_translations":{"en":"Shop B04 G/F, Park Central, Tong Tak Street, Tseung Kwan O, N.T.\n","zh-hant":"新界將軍澳唐德街將軍澳中心地下B04號舖"}},{"name_translations":{"en":"Shop 244, Choi Ming Shopping Centre (Extension), Tseung Kwan O, N.T.\n","zh-hant":"新界將軍澳彩明商場擴展部份二樓244號舖"}},{"name_translations":{"en":"Shop 209, 2/F, Metro City Phase III, The Metropolis, Tsueng Kwan O, N.T.\n","zh-hant":"新界將軍澳新都城中心三期都會豪庭商場2樓209號舖"}},{"name_translations":{"en":"Shop 16, G/F, Metro Town Shopping Mall, 8 King Ling RD, Tseung Kwan O, N.T.\n","zh-hant":"新界將軍澳景嶺路八號都會駅商場地下16號舖"}},{"name_translations":{"en":"Shop 39, 2/F, Metro Town Shopping Mall, 8 King Ling RD, Tseung Kwan O, N.T.\n","zh-hant":"新界將軍澳景嶺路八號都會駅商場2樓39及40號舖"}},{"name_translations":{"en":"Shop G11, Hau Tak Shopping CTR(West Wing), Hau Tak Est, Tseung Kwan O, N.T.\n","zh-hant":"新界將軍澳厚德村商場(西翼)地下G11及G12號舖"}},{"name_translations":{"en":"Shop 10, G/F, Comm. Ctr, Fu Ning Gdn, 25 Po Ning Rd, Tsueng Kwan O, N.T.\n","zh-hant":"新界將軍澳寶寧路25號富寧花園商場地下10及11A號舖"}},{"name_translations":{"en":"Shop 105, Tsui Lam Shopping Centre, Tsui Lam Estate, Tseung Kwan O, N.T.\n","zh-hant":"新界將軍澳翠琳購物中心105號舖"}},{"name_translations":{"en":"Shop 6, King Lam Shopping Centre, King Lam Estate, Tseung Kwan O, N.T.\n","zh-hant":"新界將軍澳景林村景林商場地下6號舖"}},{"name_translations":{"en":"Shop 1-007, Level 1 , Commercial Portion of Tseung Kwan O Plaza, 1 Tong Tak Street, Tseung Kwan O, N.T.\n","zh-hant":"新界將軍澳唐德街1號將軍澳廣場1樓1-007號舖"}},{"name_translations":{"en":"Shop 110-112, Po Kan House, Po Lam Estate, Tsueng Kwan O, N.T.\n","zh-hant":"新界將軍澳寶琳村寶勤樓110-112號舖"}},{"name_translations":{"en":"Shop 1, G/F, Carpark Building, Yan Ming Court, Tseung Kwan O, N.T.\n","zh-hant":"新界將軍澳欣明苑停車場大廈地下1號舖"}},{"name_translations":{"en":"100 Po Hong Road, Tseung Kwan O, N.T.\n","zh-hant":"新界將軍澳寶康路100號"}},{"name_translations":{"en":"Shop 16, G/F, Fu Ning Garden Commercial Centre, Tseung Kwan O, N.T.\n","zh-hant":"新界將軍澳富寧花園商場地下16號舖"}},{"name_translations":{"en":"G/F., 4A Hang Hau Village, Tseung Kwan O, N.T.\n","zh-hant":"新界將軍澳坑口村地下4號A舖"}}]},"Tsing Yi":{"district_translations":{"en":"Tsing Yi","zh-hant":"青衣"},"locations":[{"name_translations":{"en":"Shop 1, Cheung Hang Shopping Centre, Cheung Hang Estate, Tsing Yi, N.T.\n","zh-hant":"新界青衣長亨村商場地下1號舖"}},{"name_translations":{"en":"Shop 3-4 \u0026 17-20, Central Block, Mayfair Garden, Tsing Yi, N.T.\n","zh-hant":"新界青衣美景花園中座第3-4\u002617-20號舖"}},{"name_translations":{"en":"Shop 9\u00269A, 2/F, Cheung Ching Shopping Centre, Cheung Ching Estate, Tsing Yi, N.T.\n","zh-hant":"新界青衣長青村長青商場平台2樓9\u00269A舖"}},{"name_translations":{"en":"G/F, Carpark Building, Ching Wah Court, Tsing Yi, N.T.\n","zh-hant":"新界青衣青華苑停車場地下"}},{"name_translations":{"en":"Kiosk No. TSY 211, Tsing Yi MTR Station, Tsing Yi, N.T.\n","zh-hant":"新界青衣港鐵站TSY211號舖"}},{"name_translations":{"en":"Kiosk No. TSY 306, Tsing Yi MTR Station, Tsing Yi, N.T.\n","zh-hant":"新界青衣港鐵站TSY306號舖"}},{"name_translations":{"en":"Shop 134, Cheung Fat Plaza, Cheung Fat Estate,  Tsing Yi, N.T.\n","zh-hant":"新界青衣擔桿山路6號長發廣場地下134號舖"}},{"name_translations":{"en":"Shop 97 \u0026 98, Level 3, Shopping Arcade of Mayfair Gardens, Tsing Yi, N.T.\n","zh-hant":"新界青衣美景花園商場L3平台97及98號舖"}},{"name_translations":{"en":"Shop 6, G/F, Carpark Building Phase I, Tsing Yi Estate, Tsing Yi, N.T.\n","zh-hant":"新界青衣青衣村一期停車場大廈地下6號舖"}},{"name_translations":{"en":"173 Tsing Yi Road West, Tsing Yi, N.T.\n","zh-hant":"新界青衣青衣西路173號"}}]},"Tsuen Wan":{"district_translations":{"en":"Tsuen Wan","zh-hant":"荃灣"},"locations":[{"name_translations":{"en":"Shop G1A, G/F, Block 2, Waterside Plaza, 38 Wing Shun Street, Tsuen Wan, N.T.\n","zh-hant":"新界荃灣永順街38號海灣花園2座地下G1A舖"}},{"name_translations":{"en":"Shop 18, G/F, Tsuen Wan West MTR Station, Tsuen Wan, N.T.\n","zh-hant":"新界荃灣西港鐵站18號舖"}},{"name_translations":{"en":"Shop 1, Commercial Centre 2, Tai Wo Hau Estate, Tsuen Wan, N.T.\n","zh-hant":"新界荃灣大窩口村購物中心第二期1號舖"}},{"name_translations":{"en":"Shop UG10, Blk 15-17, TsuenWan CTR Phase2, 94 TsuenKing Circuit, Tsuen Wan, N.T.\n","zh-hant":"新界荃灣荃景圍94-98號荃灣中心2期15-17座高層地下10號"}},{"name_translations":{"en":"Shop A, G/F \u0026 C/L, Yen Ya Bulding, 15-17 Tai Ha Street, Tsuen Wan, N.T.\n","zh-hant":"新界荃灣大廈街15-17號仁雅大廈地下A號舖及閣樓"}},{"name_translations":{"en":"Shop 6C, G/F, Indihome, 138 Yeung Uk Road, Tsuen Wan, N.T.\n","zh-hant":"新界荃灣楊屋道138號樂悠居地下6C號舖"}},{"name_translations":{"en":"Shop 101, GF, Riviera Gardens, 1-5 Yi Lok Street, Tsuen Wan, N.T.\n","zh-hant":"新界荃灣怡樂街1-5號海濱花園E座地下101號舖"}},{"name_translations":{"en":"Shop A, G/F, Tai Yuen House, 59-61 Yuen Tun Circuit, Tsuen Wan, N.T.\n","zh-hant":"新界荃灣圓墩圍59-61號地下A號舖"}},{"name_translations":{"en":"Shop A2, G/F, Victory Court, 185-187 Castle Peak Road, Tsuen Wan, N.T.\n","zh-hant":"新界荃灣青山道185-187號荃勝大廈地下A2號舖"}},{"name_translations":{"en":"Shop C6, G/F, Shek Pik Resettlement Blk C, 61-75 Ham Tin Street, Tsuen Wan, N.T.\n","zh-hant":"新界荃灣鹹田街61號石壁新村遊樂場C座地下C6號舖 "}},{"name_translations":{"en":"Shop C9 \u0026 C10, Tai Wo Hau Estate, Tsuen Wan, N.T.\n","zh-hant":"新界荃灣大窩口村商場C9至10號舖"}},{"name_translations":{"en":"Shop 4, G/F, Chau's Building, ,2 \u0026 4A Shiu Wo Street, Tsuen Wan, N.T.\n","zh-hant":"新界荃灣兆和街2至4A號周氏大廈地下4號舖"}},{"name_translations":{"en":"G/F, 102B Hoi Pa Street, Cheuk Ming Building, Tsuen Wan, N.T.\n","zh-hant":"新界荃灣海壩街102B號卓明大廈地下地舖"}},{"name_translations":{"en":"Kiosk No. TWH 7 \u0026 10 , Tai Wo Hau MTR Station, Tsuen Wan, N.T.\n","zh-hant":"新界大窩口港鐵站TWH7及TWH10號舖"}},{"name_translations":{"en":"Shop C8, C10, C12, UG/F, Tsuen Wan Centre Phase I, Tsuen Wan, N.T.\n","zh-hant":"新界荃灣中心第一期高層平台C8,C10,C12舖"}},{"name_translations":{"en":"Shop 2, G/F, Belvedere Square, Belvedere Garden Phase III, Tsuen Wan, N.T.\n","zh-hant":"新界荃灣麗城花園第三期麗城商場地下2號舖"}},{"name_translations":{"en":"18 Hoi Pa Street, Fuk Lok Estate, Tsuen Wan, N.T.\n","zh-hant":"新界荃灣海壩街18號舖"}},{"name_translations":{"en":"731-737 Castle Peak Road (Towards Tuen Mun), Tai Wo Hau, Tsuen Wan, N.T.\n","zh-hant":"新界荃灣(新)大窩口青山公路731-737號(西行)"}},{"name_translations":{"en":"G/F, On Foo building, 32C Lo Tak Circuit,Tsuen Wan, N.T.\n","zh-hant":"新界荃灣南路德圍32號C安富大廈地下 - 彩虹圖書"}}]},"Tuen Mun":{"district_translations":{"en":"Tuen Mun","zh-hant":"屯門市中心"},"locations":[{"name_translations":{"en":"Shop 71, G/F, Melody Garden, 2 Wu Chui Road, Tuen Mun, N.T.\n","zh-hant":"新界屯門湖翠路2號美樂花園地下71號舖"}},{"name_translations":{"en":"Shop 113-114, G/F, Kin Sang Shopping Centre, 3 Leung Wan Street, Tuen Mun, N.T.\n","zh-hant":"新界屯門良運街3號建生商場地下113及114號舖"}},{"name_translations":{"en":"Shop A\u0026B, G/F, Golden Court, 42-58 Yan Oi Tong Circuit, Tuen Mun, N.T.\n","zh-hant":"新界屯門仁愛堂圍42-58號金滿閣地下A\u0026B舖"}},{"name_translations":{"en":"Shop 21, G/F, Kam Men Mansion, 15 Tseng Choi Street, Tuen Mun, N.T.\n","zh-hant":"新界屯門井財街15號金銘大廈地下21號舖"}},{"name_translations":{"en":"Shop 4, G/F, Hong Tak Gardens, 11 Shek Pai Tau Road, Tuen Mun, N.T.\n","zh-hant":"新界屯門石排頭路11號康德花園地下4號舖"}},{"name_translations":{"en":"Shop S \u0026 R, G/F, The Sherwood, 8 Fuk Hang Tsuen Road, Lam Tei, Tuen Mun, N.T.\n","zh-hant":"新界屯門藍地福亨村路8號豫豐花園S\u0026R號舖"}},{"name_translations":{"en":"Shop 2-3, G/F, Tuen Mun Paris London New York Cinema Shopping CTR, Tuen Mun, N.T.\n","zh-hant":"新界屯門海旁街交界巴黎倫敦紐約戲院購物中心地下2-3號舖"}},{"name_translations":{"en":"Shop 12 \u0026 13, G/F, Tsui Ning Garden, Tuen Mun, N.T.\n","zh-hant":"新界屯門翠寧花園地下12-13號舖"}},{"name_translations":{"en":"Shop 53-57, 81-85, G/F, Yuet Wu Villa Commerce Block, Tuen Mun, N.T.\n","zh-hant":"新界屯門悅湖商場53-57及81-85號舖"}},{"name_translations":{"en":"Shop 23-23A, G/F, Blossom Garden, Tuen Mun, N.T.\n","zh-hant":"新界屯門寶怡花園商場地下23-23A號舖"}},{"name_translations":{"en":"Shop 129, Chi Lok Fa Yuen Shopping Centre, Tuen Mun, N.T.\n","zh-hant":"新界屯門置樂花園商場地下129號舖"}},{"name_translations":{"en":"Shop 105 \u0026 106, Oi Yung House, Yau Oi Estate, Tuen Mun, N.T.\n","zh-hant":"新界屯門友愛村愛勇樓地下105至106號舖"}},{"name_translations":{"en":"Shop 6, G/F, Fu Tai Shopping Centre, Tuen Mun, N.T.\n","zh-hant":"新界屯門富泰商場地下6號舖"}},{"name_translations":{"en":"Shop 217 \u0026 218, 1/F., Ting Cheung House, On Ting Estate, Tuen Mun, N.T.\n","zh-hant":"新界屯門安定村定祥樓217至218號舖"}},{"name_translations":{"en":"Shop 16-17, G/F, Oceania Heights, No.2 Hoi Chu Road, Tuen Mun, N.T.\n","zh-hant":"新界屯門海珠路2號海典軒地下16-17號舖"}},{"name_translations":{"en":"Shop 2 G/F, Park Court, 15\u002619 Kai Fat Path, 31-43 Tak Ching Court, Tuen Mun, N.T.\n","zh-hant":"新界屯門啟發徑15及19號德政圍31-33,37-43號柏苑地下2號舖"}},{"name_translations":{"en":"Shop 87, G/F, Glorious Garden, 45 Lung Mun Road, Tuen Mun, N.T.\n","zh-hant":"新界屯門龍門路45號富健花園地下87號舖"}},{"name_translations":{"en":"Shop 6, G/F, Po Tin Shopping Centre, Tuen Mun, N.T.\n","zh-hant":"新界屯門寶田商場地下6號舖"}},{"name_translations":{"en":"Shop L106, Level 1,Leung King Estate, 31 Tin King Road, Tuen Mun, N.T.\n","zh-hant":"新界屯門良景商場L106號舖"}},{"name_translations":{"en":"Cooked Food Stall C13-16, Butterfly Estate, Tuen Mun, N.T.\n","zh-hant":"新界屯門蝴蝶村熟食市場13至16號檔"}},{"name_translations":{"en":"Shop 213B-213C, 2/F., Leung King Shopping Centre, Tuen Mun, N.T.\n","zh-hant":"新界屯門良景商場213B-213C號舖"}},{"name_translations":{"en":"Shop 54, Tai Hing Estate Commerce Centre, Tuen Mun, N.T.\n","zh-hant":"新界屯門大興村大興商場1樓54號舖"}},{"name_translations":{"en":"Shop 122, Shan King Estate Commerce Centre, Tuen Mun, N.T.\n","zh-hant":"新界屯門山景村山景商場地下122號舖"}},{"name_translations":{"en":"Shop 81 \u0026 82, G/F, Melody Garden Commerce Complex, Melody Garden, Tuen Mun, N.T.\n","zh-hant":"新界屯門美樂花園商場地下81至82號舖"}},{"name_translations":{"en":"Shop 104, Siu Hong Court Commerce Centre, Tuen Mun, N.T.\n","zh-hant":"新界屯門兆康苑商場中心104號舖"}},{"name_translations":{"en":"Shop D, UG/F, Nam Kwong Building, Tsing Choi Street, San Hui, Tuen Mun, N.T.\n","zh-hant":"新界屯門青翠徑南光樓高層地下D號舖"}},{"name_translations":{"en":"Shop 102, Commerce Centre, Kin Sang Estate, Tuen Mun, N.T.\n","zh-hant":"新界屯門建生村建生商場102號舖"}},{"name_translations":{"en":"(T.M.T.L 402) Area 30A, San Hui, Tuen Mun, N.T.\n","zh-hant":"新界屯門新墟30號A區"}},{"name_translations":{"en":"1/F, Carport Block, Lung Mun Oasis, 43 Lung Mun Road, Tuen Mun, N.T.\n","zh-hant":"新界屯門龍門路43號龍門居停車場大樓一樓"}},{"name_translations":{"en":"Shop 5, G/F, Kar Wah Building, 11-17 Castle Peak Road, Tuen Mun, N.T.\n","zh-hant":"新界屯門青山公路11-17號嘉華大厦地下5號鋪 - 博勝士多"}},{"name_translations":{"en":"Shop 1, Po Tin Estate Market, Tuen Mun, N.T.\n","zh-hant":"新界屯門寶田村街市地下1號舖 - 安定村報社"}}]},"Tung Chung":{"district_translations":{"en":"Tung Chung","zh-hant":"東涌"},"locations":[{"name_translations":{"en":"Shop 13, G/F, Tower 6, Tung Chung Crescent, Tung Chung, Lantau Island, N.T.\n","zh-hant":"新界大嶼山東涌東堤灣畔第六座地下13號舖"}},{"name_translations":{"en":"Shop 1, 1/F, Caribbean Bazaar, 1 Kin Tung Rd, Tung Chung, Lantau Island, N.T.\n","zh-hant":"新界大嶼山東涌健東路1號映灣園映灣薈地面1號舖"}},{"name_translations":{"en":"Kiosk No. TUC 21, Tung Chung MTR Station, Tung Chung, Lantau Island, N.T.\n","zh-hant":"新界大嶼山東涌港鐵站TUC21號舖"}}]},"Yuen Long":{"district_translations":{"en":"Yuen Long","zh-hant":"元朗市中心"},"locations":[{"name_translations":{"en":"Shop 2, G/F, Beauty Court, Hung Shui Kiu, Hung Shui Kiu, Yuen Long, N.T.\n","zh-hant":"新界元朗洪水橋第4280號地段麗珊園地下2號舖"}},{"name_translations":{"en":"Shop 57, G/F, Hop Yick Centre, 31 Hop Yick Road, Yuen Long, N.T.\n","zh-hant":"新界元朗合益路31號合益中心地下57號舖"}},{"name_translations":{"en":"Shop 36-38, G/F, Palm Springs Comm. Centre, Palm Springs, Yuen Long, N.T.\n","zh-hant":"新界元朗加洲花園商場地下36-38號舖"}},{"name_translations":{"en":"Shop F \u0026 G, 3-19 Hong King Street, Lee King Building, Yuen Long, N.T.\n","zh-hant":"新界元朗康景街3-19號利景樓地下F及部份G舖"}},{"name_translations":{"en":"Shop E, G/F, Man Cheong Building, 239-247A Castle Peak Road, Yuen Long, N.T.\n","zh-hant":"新界元朗青山公路239-247A號萬昌樓地下E號舖"}},{"name_translations":{"en":"G/F, 84 Kam Tin Road, Kam Tin, Yuen Long, N.T.\n","zh-hant":"新界元朗錦田錦田公路84號地下"}},{"name_translations":{"en":"Shop A, G/F, \u0026 M/F., Kit Man House, 1 Kuk Ting Street, Yuen Long, N.T.\n","zh-hant":"新界元朗谷亭街1號傑文樓地下A號舖"}},{"name_translations":{"en":"Shop 103 \u0026 105, Hong Shui House, Shui Pui Wai Estate, Yuen Long, N.T.\n","zh-hant":"新界元朗水邊圍村康水樓地下103至105號舖"}},{"name_translations":{"en":"Shop 4, G/F, Kwong Wah Plaza, 11 Tai Tong Road, Yuen Long, N.T.\n","zh-hant":"新界元朗大棠路11號光華廣場地下4號舖"}},{"name_translations":{"en":"Shop 1, G/F, Yuk Ping House, Long Ping Estate, Yuen Long, N.T.\n","zh-hant":"新界元朗朗屏村玉屏樓地下1號舖"}},{"name_translations":{"en":"Shop A, G/F, Fu Hing Bldg,  218, 222 \u0026 226-230 Castle Peak Rd, Yuen Long, N.T.\n","zh-hant":"新界元朗青山道218,222,226-230號富興大廈地下A號舖"}},{"name_translations":{"en":"Shop 4 \u0026 11, G/F, Yuen Sun Mansion, 7-25 Yau San Street, Yuen Long, N.T.\n","zh-hant":"新界元朗又新街7-25號元新大廈地下4號及11號舖"}},{"name_translations":{"en":"Shop M009, Keung Ping House, Long Ping Estate, Yuen Long, N.T.\n","zh-hant":"新界元朗朗屏村鏡屏樓M009號舖"}},{"name_translations":{"en":"Shop 4, G/F, Yuk Lung Mansion, 18 Fung Kam Street, Yuen Long, N.T.\n","zh-hant":"新界元朗鳳琴街18號玉龍樓地下4號舖"}},{"name_translations":{"en":"Shop 4, G/F, Block C, Town Centre, Fairview Park, Yuen Long, N.T.\n","zh-hant":"新界元朗錦繡花園商業中心C座地下4號舖"}},{"name_translations":{"en":"Shop E, G/F, Golden Hall Building, 49-63 Castle Peak Road, Yuen Long, N.T.\n","zh-hant":"新界元朗青山公路49-63號金豪大廈地下E號舖"}},{"name_translations":{"en":"Shop 7, G/F, Yuen Long Trade Centre, 99-109 Castle Peak Road, Yuen Long, N.T.\n","zh-hant":"新界元朗青山公路99-109號元朗貿易中心地下7號舖"}},{"name_translations":{"en":"Shop A, G/F Hung Min Building, 35/39 Tai Tong Road, Yuen Long, N.T.\n","zh-hant":"新界元朗大棠路35/39號紅棉洋樓地下A號舖"}},{"name_translations":{"en":"Shop 13A \u0026 13E, G/F, Fu Shing Building, 9 Sai Ching Street, Yuen Long, N.T.\n","zh-hant":"新界元朗西菁街9號富盛大廈地下13A及13E號舖"}},{"name_translations":{"en":"Shop 2 G/F, Coronet Court, 2 Hung Tai Road, Hung Shui Kiu, Yuen Long, N.T.\n","zh-hant":"新界元朗洪水橋洪堤路2號錦珊園地下2號舖"}},{"name_translations":{"en":"G/F, 32 Castle Peak Road, Yuen Long, N.T.\n","zh-hant":"新界元朗青山公路32號地下"}},{"name_translations":{"en":"Shop 6, G/F, Hung Fuk Shopping Centre, Hung Fuk Estate, Hung Shui Kiu, Yuen Long, N.T.\n","zh-hant":"新界元朗洪水橋洪福村洪福商場地下6號舖"}},{"name_translations":{"en":"Lot 2293 in DD106, Kam Sheung Road, Pat Heung, Yuen Long, N.T.\n","zh-hant":"新界元朗錦上路(八鄉路交界)"}},{"name_translations":{"en":"Shop D4A, D4b \u0026 D5A, G/F, Block D, Town Centre, Fairview Park, Yuen Long, N.T.\n","zh-hant":"新界元朗錦綉花園商場D座地下D4a,D4b及D5a號舖位"}},{"name_translations":{"en":"Shop 261-262, 2/F, Yuen Long Plaza, 249-251 Castle Peak Road, Yuen Long, N.T.\n","zh-hant":"新界元朗青山道249-251號元朗廣場2樓261至262號舖"}}]},"Airport":{"district_translations":{"en":"Airport","zh-hant":"機場"},"locations":[{"name_translations":{"en":"Shop 305, 3/F, Comm. Bldg., Airport Freight Forwarding Ctr., 2 Chun Wan Road, Lantau, HK\n","zh-hant":"香港大嶼山駿運路2號機場空運中心商業中心305室"}},{"name_translations":{"en":"Shop at 3/F, Multi-level truck park, Tower 2, Asia Airfreight Terminal, 10 Chun Ping Road, Lantau, HK\n","zh-hant":"香港大嶼山駿坪路10號亞洲空運中心第二期貨車停車場3樓舖"}},{"name_translations":{"en":"RMA 304, Level 3, Office Block, Cathay Pacific Cargo Terminal, HK International Airport, Lantau, HK","zh-hant":"香港大嶼山香港國際機場國泰航空貨運站辦公大樓RMA304室"}}]}});
+</script>
+
+<div ng-controller="CheckoutController" ng-init='loadCheckoutOptions()'>
+  <div ng-cloak  ng-class="{show: empty_cart_saw, hidden: !empty_cart_saw}">
+    <!-- Show cart empty message  -->
+    <div class="large-message"> 
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12" >
+          <div class="content">      
+            <h2 class="global-primary dark-primary">你的購物車是空的</h2>
+            <p class="global-secondary dark-secondary" style="padding-left:0px;">記得加入商品到你的購物車</p>
+            <a href="/products" class="btn btn-custom-large btn-color-primary">繼續購物！</a>
+          </div>
+        </div> <!--col-sm-12-->
+      </div> <!--row-->
+      <div class="clear"></div>
+    </div><!--container-->
+  </div><!--large-message-->
+  <!-- End cart empty message -->
+    
+    <!-- <div style="height: 300px;"></div> -->
+  </div><!--cart empty -->
+  
+
+  <div class="content-controller" ng-cloak ng-class="{show: cart_saw, hidden: !cart_saw}"> 
+    <div class="loading-container text-center padding-md container" ng-hide="finishedLoading" >
+      <img src="https://s3-ap-southeast-1.amazonaws.com/static.shoplineapp.com/web/v1/img/loaders/loader1.gif">
+    </div>
+    <div class="container animate-show" ng-cloak ng-show="finishedLoading"> 
+      
+      <h2 class="global-primary dark-primary">訂單結帳</h2>
+
+      <div class="checkout-instructions">
+          <p class="global-secondary dark-secondary">訂單資料</p>
+      </div>
+
+      <div class="checkout-tabletop"><!-- items -->
+      
+       <div class="row" ng-repeat="item in currentCart.getItems()" ng-init="itemPrice = item.quantity*currentCart.getItemPrice(item).cents/mainConfig.merchantData.base_currency.subunit_to_unit">
+
+
+          <div class="checkout-prod-photo col-md-2">
+            <a href="/products/{{item.item_id}}" target="_blank" class="product-link">
+              <img ng-src="{{item.data.cover_media.images.thumb.url}}"/>
+            </a>
+          </div>
+
+          <div class="checkout-prod-info col-md-4">
+            <!-- variation -->
+            <div class="checkout-prod-title global-primary dark-primary">{{item.data.title_translations|translateModel}}</div>
+            <div ng-repeat="field in item.variation.fields">
+                <div class="variation">{{ field.name_translations | translateModel }}</div>
+            </div>
+            <!-- preorder -->
+            <div class="label label-default checkout-label" ng-show="item.data.is_preorder&& !((item.data.preorder_note_translations | translateModel).length >0)">預購商品</div>
+            <div class="label label-default checkout-label" ng-show="item.data.is_preorder && (item.data.preorder_note_translations | translateModel).length >0">{{item.data.preorder_note_translations | translateModel}}</div>
+            <!-- coupon label -->
+            <div class="label label-warning checkout-label" ng-if="item.coupon && item.coupon.coupon_value">{{item.coupon.title_translations | translateModel}}</div>
+          </div>
+
+          <div class="checkout-prod-info col-md-2">
+            <span ng-bind-html="currentCart.getItemPrice(item).label"></span>
+          </div>
+
+          <div class="checkout-item-price col-md-2">
+            <div class="checkout-price-details global-secondary dark-secondary">
+              <!-- quantity input -->
+              <form name="item_quantity_form" id="itemQuantityForm" ng-submit="updateQuantity(item, mutableItemQuantity, this)" class="form-inline">
+                <div class="input-group">
+                  <span class="input-group-btn"><button type="button" class="btn btn-default btn-checkout" ng-click="decQuantity(item)"><i class="fa fa-minus"></i></button></span>
+                  <input type="number"
+                    pattern="[0-9]*" 
+                    inputmode="numeric"
+                    name="mutable_item_quantity"
+                    class="form-control hide-input-number-spinner"
+                    ng-init="mutableItemQuantity = item.quantity"
+                    ng-model="mutableItemQuantity"
+                    min="0"
+                    max="99999"
+                    step="1" 
+                    ng-required="true"
+                    ng-blur="updateQuantity(item, mutableItemQuantity, this)"
+                    style="text-align:center;"/>
+                  <span class="input-group-btn"><button type="button" class="btn btn-default btn-checkout" ng-click="incQuantity(item)"><i class="fa fa-plus"></i></button></span>
+                </div>                
+              </form>
+              <!-- logic for displaying out of stock item -->
+              <div>
+                <span class="text-danger checkout-label" ng-if="(productOutOfStockData | filter: {item_id: item.item_id, variation_id: item.variation_id})[0].quantity ==0">庫存不足</span>
+                <span class="text-danger checkout-label" ng-if="(productOutOfStockData | filter: {item_id: item.item_id, variation_id: item.variation_id})[0].quantity > 0">庫存不足</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="checkout-item-price col-md-2">
+            <div class="checkout-prod-price global-primary dark-primary" ng-class="{'price price-crossed': item.coupon && item.coupon.coupon_value}" ng-bind-html="mainConfig.merchantData.base_currency.alternate_symbol+itemPrice"></div>
+            <!--<div class="checkout-prod-price global-primary dark-primary" ng-if="item.coupon && item.coupon.coupon_value">{{item.coupon.title_translations | translateModel}}: -{{mainConfig.merchantData.base_currency.alternate_symbol}}{{Math.ceil(item.coupon.coupon_value * itemPrice)}}</div> -->
+            <div class="checkout-prod-price global-primary dark-primary price-sale" ng-if="item.coupon && item.coupon.coupon_value" ng-bind-html="mainConfig.merchantData.base_currency.alternate_symbol+Math.floor((1 - item.coupon.coupon_value) * itemPrice)"></div>
+            <div class="checkout-prod-remove sl-checkout-list-prod-remove"><a ng-click="removeItemFromCart(item.item_id,item.variation_id,$event)" class="text-danger"><i class="fa fa-trash"></i></a></div>
+            
+          </div>
+
+        </div><!--row-->
+
+        <div id="campaign_container">
+          <div class="row" ng-repeat="coupon in order.coupons | filter:{campaign_id: '!null'}">
+            <div class="col-md-10">{{coupon.title_translations|translateModel}}</div>
+            <div class="col-md-2">折扣: <span ng-bind-html="coupon.coupon_item.discounted_amount.label"></span></div>
+          </div>
+        </div>
+      </div><!-- items -->
+      
+
+      <div class="checkout-tablebottom">
+        <div class="">
+          <div class="row" style="">
+            <div class="col-md-12">
+              <div class="checkout-container " ng-hide="currentCart.isCartEmpty() && finishedLoading" >
+                
+                  <div class="row">
+                    <div class="col-md-6">
+<form ng-submit="processOrder()" name="orderForm" id="new_order" novalidate method="POST">
+                        <input class="hidden" id="order_seller_id" name="order_seller_id" ng-model="order.seller_id" type="hidden" value="{{currentMerchant.merchantId}}"/>
+                        
+                        <h3 class="sl-section-title"><i class="fa fa-info-circle fa-lg sl-checkout-section-icon"></i>購買人資料</h3>
+                        
+                        <div class="alert alert-info" ng-if="!isUserLoggedIn"><a href="/users/sign_up" class="alert-link">新用戶註冊</a>可以更方便下單! 已經是會員?<a href="/users/sign_in" class="alert-link">會員登入.</a>
+                        </div>
+                        <div control-group label="電子信箱" data-field-name="電子信箱" ng-init="currentUser.email == null ? '' : order.customer_email = currentUser.email ">
+                          <input class="form-control" name="customer_email" ng-model="order.customer_email" placeholder="電子信箱"  type="email" value="" ng-required="true" 
+                          ng-show='!isUserLoggedIn || !order.customer_email' ng-pattern="/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,4}/">
+                          <div ng-show='!isUserLoggedIn || !order.customer_email' class="help-block">
+                            {{'checkout.fields.email.hint'|translate}}
+                          </div>
+                          <div ng-hide='!isUserLoggedIn || !order.customer_email'> 
+                            {{currentUser.email}}
+                          </div>
+
+                        </div>          
+                        
+                        <div control-group label="電話號碼" data-field-name="電話號碼" ng-if="isUserLoggedIn">
+                          <select class= "selectpicker form-control" name="user_phone" placeholder=""
+                            ng-model="order.customer_phone"
+                            ng-required="isUserLoggedIn && !addNewSavedInfo.phone" 
+                            ng-change="onSelectedPhone()"
+                            ng-init="currentUser.phones[0] == null ? '' : order.customer_phone = currentUser.phones[0] ">
+                            <option value="">{{'checkout.fields.select'|translate}}</option>
+                            <option ng-repeat="number in currentUser.phones">{{number}}</option>
+                            <option value="new_phone">{{'checkout.fields.add_new'|translate}}</option>
+                          </select>
+                          <!-- <a ng-click="addNewPhone()">{{'checkout.fields.add_new'|translate}}</a> -->
+                        </div>
+                        
+                        <div control-group label="" data-field-name="電話號碼" ng-if="!isUserLoggedIn || addNewSavedInfo.phone">
+                          <label class="control-label" ng-if="!isUserLoggedIn">電話號碼</label>
+                          <div ng-class="{'input-group': isSevenEleven() }">
+                            <div class="input-group-addon" ng-show="isSevenEleven()">+886</div>
+                            <input class="form-control" name="customer_phone" ng-model="order.customer_phone" placeholder="此處輸入電話號碼" ng-required="!isUserLoggedIn || addNewSavedInfo.phone" ng-pattern="/^\+?[\-,\s]*[\d]+[\-,\s,\d]*$/" ng-minlength="6">
+                          </div>
+                          <div ng-show='isSevenEleven()' class="help-block">
+                            {{'checkout.fields.phone.hint'|translate}}
+                          </div>
+                        </div>
+                        <div class="help-block" ng-if="isUserLoggedIn && addNewSavedInfo.phone"><input type="checkbox" name="save_phone" ng-model="save_fields.phone" ng-disabled="currentUser.phones.indexOf(order.customer_phone)>=0"/> 儲存這個電話號碼</div>
+
+                        <!-- <div class="help-block" ng-if="isUserLoggedIn&&currentUser.phones.length>0">Pick a saved phone number above or add a new one below</div> -->
+                        
+                        <!-- user_settings custom_fields start -->
+                        <div>
+                          <div ng-repeat="field in userSettings.general_fields" ng-switch="field.type">
+                            <span ng-switch-when="gender">
+                              <div control-group label="性別"  ng-show="field.options.order.include=='true'">
+                                <select type="text"
+                                  name="user_gender"
+                                  class="form-control"
+                                  ng-required="field.options.order.required=='true'" 
+                                  ng-model="save_user_fields.gender">
+                                  <option value="male">男</option>
+<option value="female">女</option>
+<option value="other">其他</option>
+                                </select>
+                              </div>
+                            </span>
+                            <span ng-switch-when="birthday">
+                              <div control-group label="生日" data-field-name="生日"  ng-show="field.options.order.include=='true'">
+                                  <div class="input-group">
+                                    <input type="text" 
+                                      name="user_birthday" 
+                                      class="form-control" 
+                                      datepicker-popup="yyyy/MM/dd" 
+                                      ng-model="save_user_fields.birthday"
+                                      is-open="datepicker.open"
+                                      show-button-bar="false" 
+                                      datepicker-options="datepickerOptions"
+                                      show-weeks="false" 
+                                      ng-required="field.options.order.required=='true'" 
+                                    />
+                                    <span class="input-group-btn">
+                                      <button type="button" class="btn btn-default" ng-click="open($event)"><i class="fa fa-calendar"></i></button>
+                                    </span>
+                                  </div>
+                                  <div class="help-block">YYYY/MM/DD</div>
+                                </div>
+                            </span>
+                          </div>
+                          <div ng-repeat="field in userSettings.custom_fields">
+                            <div control-group label="{{field.name_translations|translateModel}}" data-field-name="{{field.name_translations|translateModel}}" ng-show="field.options.order.include=='true'">
+                              <input type="text" dynamic-name="'user_custom_field_'+$index" class="form-control"
+                              placeholder="" ng-required="field.options.order.required=='true'" ng-model="save_user_fields.customer_info[field.field_id]">
+                              <div class="help-block" ng-show="field.hint_translations">{{field.hint_translations|translateModel}}</div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- user_settings custom_fields end -->
+
+
+
+                        <div control-group label="訂單備註" data-field-name="訂單備註">
+                          <textarea class="form-control text optional" name="order_remarks" placeholder="有什麼想告訴賣家嗎？" rows="5"  ng-model="order.order_remarks" ng-maxlength="1000">
+                          </textarea>
+                        </div>
+
+
+                        <h3 class="sl-section-title"><i class="fa fa-truck fa-lg sl-checkout-section-icon"></i>送貨及物流資訊</h3>
+
+
+                        <div control-group label="送貨方式" data-field-name="送貨方式">
+                          <select  class= "selectpicker form-control" name="order_delivery_option" 
+                            ng-model="order.delivery_option" 
+                            ng-options="option as (option.name_translations|translateModel) for option in deliveryOptions"
+                            ng-change="onDeliveryOptionChanged()"
+                            ng-required="true">
+                          </select> 
+                          <div ng-show="order.delivery_option.show_description_on_checkout &&  descriptionExists" class="help-block" ng-bind-html="order.delivery_option.description_translations|translateModel"></div> 
+                        </div>
+
+                        <div ng-show="true">
+                          <div ng-repeat="field in order.delivery_option.form_fields" ng-switch="field.type"> 
+                            <span ng-switch-when="text">
+                              <div control-group label="{{field.label}}" data-field-name="{{field.name}}">
+                                <input class="form-control" dynamic-name="field.key" ng-model="order['delivery_data'][field.key]" placeholder="{{field.placeholder}}"  type="text" value="" ng-required="{{field.required}}"/>
+                                <div class="help-block" ng-bind-html="trustAsHtml(field.hint)"></div>
+                              </div>
+                            </span>
+                            <span ng-switch-when="button">
+                              <div control-group label="{{field.label}}" data-field-name="{{field.name}}" style="position: relative;">
+                                <input class="form-control" dynamic-name="field.key" ng-model="order['delivery_data'][field.key]" placeholder="{{field.placeholder}}"  type="hidden" value="" ng-required="{{field.required}}"/>
+                                <div class="btn-block btn btn-default" style="padding: 15px;" ng-click="$emit(field.event)">
+                                  <i class='pull-right fa fa-angle-right' style="margin-top: 3px;"></i>
+                                  <div class="pull-left" ng-bind="order['delivery_data'][field.key]" ></div>
+                                  <div class="text-right help-block" style="margin: 0px;" ng-bind-html="trustAsHtml(field.hint)"></div>
+                                </div>
+                              </div>
+                            </span>
+                            <span ng-switch-when="boolean">
+                              <div control-group class="row" label="" data-field-name="{{field_label}}">
+                                <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" dynamic-name="field.key" ng-model="order['delivery_data'][field.key]" ng-readonly="field.readonly"/> {{field.label}}
+                                    </label>
+                                    <div class="help-block" ng-show="field.hint">{{field.hint}}</div>
+                                  </div>
+                              </div>
+                            </span>
+                            <span ng-switch-when="hidden">
+                              <input type="hidden" dynamic-name="field.key" ng-model="order['delivery_data'][field.key]" />
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="seven fields" ng-show="isSevenEleven()">
+                          <div control-group label="收件人中文全名" data-field-name="收件人中文全名" >
+                              <input class="form-control" name="delivery_data_recipient_name" ng-model="order.delivery_data.recipient_name" placeholder=""  type="text" value="" ng-required="isSevenEleven()">
+                          </div>
+
+                          <div control-group label="7-11 店號" data-field-name="7-11 店號" style="position: relative;" >
+                            <input class="form-control" name="delivery_data_location_code" ng-model="order.delivery_data.location_code" placeholder=""  type="hidden" value="" ng-required="isSevenEleven()"/>
+                            <div class="btn-block btn btn-default" style="padding: 15px;" ng-click="pickStore()">
+                              <i class='pull-right fa fa-angle-right' style="margin-top: 3px;"></i>
+                              <div class="pull-left" ng-bind="order.delivery_data.location_code" ></div>
+                              <div class="text-right" style="margin: 0px;" ng-bind-html="trustAsHtml('搜尋門市')"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="hop fields" ng-show="order.delivery_option.region_type == 'hop'">
+                          <div control-group label="HOP!地址" data-field-name="HOP!地址">
+                            <select  class= "selectpicker form-control" name="hop_locations" 
+                              ng-model="order.delivery_data.location_code" 
+                              ng-options="location.id as (location.name_translations| translateModel) for location in hop_locations"
+                              ng-change="onHopLocationChange()"
+                              ng-required="order.delivery_option.region_type == 'hop'"> 
+                            </select> 
+                          </div>
+                        </div>
+                        <div class="hop fields" ng-show="order.delivery_option.region_type == 'sfexpress'">
+                          <div control-group label="順豐地區" data-field-name="順豐地址">
+                            <select  class= "selectpicker form-control" name="sf_locations" 
+                              ng-model="selectedDistrict" 
+                              ng-options="(value.district_translations| translateModel) for (key, value) in sf_locations"
+                              ng-change="onDistrictChange(selectedDistrict)"
+                              ng-required="order.delivery_option.region_type == 'sfexpress'">
+                            </select> 
+                          </div>
+                          <div control-group label="順豐地址" data-field-name="順豐地址">
+                            <select  class= "selectpicker form-control" name="sf_locations" 
+                              ng-model="order.delivery_data.name_translations" 
+                              ng-options="location.name_translations as (location.name_translations| translateModel) for location in availableLocations"
+                              ng-required="order.delivery_option.region_type == 'sfexpress'"
+                              ng-disabled="!availableLocations">
+                            </select> 
+                          </div>
+                        </div>
+
+                        <div class="address fields" ng-show="order.delivery_option.requires_customer_address"> 
+                          <div control-group label="送貨地址" data-field-name="送貨地址" ng-if="isUserLoggedIn && filtered_delivery_addresses.length>0">
+                            <select class= "selectpicker form-control" name="user_delivery_address" 
+                            ng-model="selectedDeliveryAddress"
+                            ng-change="onSelectedDeliveryAddress(selectedDeliveryAddress)"
+                            ng-options="addr['recipient_name']+' - '+addr['address_1'] for addr in filtered_delivery_addresses">
+                              <option value="">{{'checkout.fields.select'|translate}}</option>
+                            </select>
+                            <!-- <a ng-click="addNewDeliveryAddress()">{{'checkout.fields.add_new'|translate}}</a> -->
+                          </div>
+                          <!-- <div ng-if="!isUserLoggedIn || addNewSavedInfo.delivery_address"> -->
+                            <div control-group label="收件人" data-field-name="收件人" >
+                                <input class="form-control" name="delivery_address_recipient_name" ng-model="order.delivery_address.recipient_name" placeholder=""  type="text" value="" ng-required="order.delivery_option.requires_customer_address">
+                            </div>
+                            <div control-group label="地址" data-field-name="地址" >
+                                <input class="form-control" name="delivery_address_address_1" ng-model="order.delivery_address.address_1" placeholder=""  type="text" value="" ng-required="order.delivery_option.requires_customer_address">
+                            </div>
+                            <div control-group label="" data-field-name="地址" hide-field-by-country="order.delivery_address.country">
+                                <input class="form-control" name="delivery_address_address_2" ng-model="order.delivery_address.address_2" placeholder=""  type="text" value="" ng-required="false">
+                            </div>
+                            <div control-group label="城市" data-field-name="城市" hide-field-by-country="order.delivery_address.country">
+                                <input class="form-control" name="delivery_address_city" ng-model="order.delivery_address.city" placeholder=""  type="text" value="" ng-required="order.delivery_option.requires_customer_address && !fieldHiddenByCountry">
+                            </div>
+                            <div control-group label="地區/州/省份" data-field-name="地區/州/省份" hide-field-by-country="order.delivery_address.country">
+                                <input class="form-control" name="delivery_address_state" ng-model="order.delivery_address.state" placeholder=""  type="text" value="" >
+                            </div>
+                            <div control-group label="郵政編號（如適用)" data-field-name="郵政編號（如適用)" hide-field-by-country="order.delivery_address.country">
+                                <input class="form-control" name="delivery_address_postcode" ng-model="order.delivery_address.postcode" placeholder="" type="text" value="" ng-required="false">
+                            </div>
+
+                            <div control-group label="國家" data-field-name="國家" >
+                              <select class=" selectpicker form-control" name="merchant_delivery_address_country" 
+                                ng-show="order.delivery_option.region_type != 'local'"
+                                ng-model="order.delivery_address.country"
+                                ng-options="country.code as country.name for country in countries"
+                                ng-required="order.delivery_option.requires_customer_address"
+                                > 
+                              </select>
+                              <span ng-if="order.delivery_option.region_type == 'local'">
+                                {{ (countries | filter : { code : order.delivery_address.country})[0].name }}
+                              </span>
+                            </div>
+                            <div class="help-block" ng-if="isUserLoggedIn"><input type="checkbox" name="save_delivery_address" ng-model="save_fields.delivery_address" ng-disabled="currentUser.delivery_addresses.indexOf(order.delivery_address)>=0"/> 儲存這個送貨地址</div>
+                          <!-- </div> -->
+                          <div control-group label="備註" data-field-name="備註" >
+                            <textarea rows="5"  class="form-control required"  name="delivery_address_remarks" ng-model="order.delivery_address.remarks" placeholder=""  type="text" value=""></textarea>
+                          </div> 
+                        </div> <!-- address fields-->
+
+                        <h3 class="sl-section-title"><i class="fa fa-credit-card fa-lg sl-checkout-section-icon"></i>付款資訊</h3>
+                        
+                        <!-- payment section start -->
+                        <div class="divider" ng-show="order.payment_method.type == 'prizm'"></div>
+                        <div control-group label="付款方式" data-field-name="付款方式" >
+                            <select name="order_payment_method_id"
+                            class="selectpicker form-control"
+                            ng-change="updateOrder()"
+                            ng-model="order.payment_method"
+                            ng-options="option as (option.name_translations|translateModel) for option in paymentMethods">
+                           </select>             
+                          {{order.payment_method_selected.instructions}}
+                          <div ng-show="order.payment_method.show_description_on_checkout" class="help-block" ng-bind-html="order.payment_method.instructions_translations|translateModel"></div>
+                          <div class="help-block" ng-if="order.payment_method.type == 'allpay' && order.payment_method.config_data.credit_installment">
+                          
+<!-- Button trigger modal -->
+<a data-toggle="modal" data-target="#allpayCreditInstallmentModal">
+  按此查看提供分期之銀行
+</a>
+<div class="modal fade" id="allpayCreditInstallmentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">提供分期之銀行</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <tr>
+            <th class="col-xs-3"></th>
+            <th style="text-align: center;">3期</th>
+            <th style="text-align: center;">6期</th>
+            <th style="text-align: center;">12期</th>
+            <th style="text-align: center;">18期</th>
+            <th style="text-align: center;">24期</th>
+          </tr>
+          <tr>
+            <td class="col-xs-3">合庫</td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+          </tr>
+          <tr>
+            <td class="col-xs-3">一銀</td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+          </tr>
+          <tr>
+            <td class="col-xs-3">彰銀</td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+          </tr>
+          <tr>
+            <td class="col-xs-3">富邦</td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+          </tr>
+          <tr>
+            <td class="col-xs-3">永豐</td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+          </tr>
+          <tr>
+            <td class="col-xs-3">遠東</td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+          </tr>
+          <tr>
+            <td class="col-xs-3">兆豐</td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+          </tr>
+          <tr>
+            <td class="col-xs-3">新光</td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+          </tr>
+          <tr>
+            <td class="col-xs-3">國泰世華</td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+          </tr>
+          <tr>
+            <td class="col-xs-3">台灣企銀</td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+          </tr>
+          <tr>
+            <td class="col-xs-3">大眾銀行</td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+              </td>
+          </tr>
+          <tr>
+            <td class="col-xs-3">匯豐銀行</td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+          </tr>
+          <tr>
+            <td class="col-xs-3">玉山</td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+          </tr>
+          <tr>
+            <td class="col-xs-3">台新</td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+          </tr>
+          <tr>
+            <td class="col-xs-3">凱基</td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+          </tr>
+          <tr>
+            <td class="col-xs-3">台中商銀</td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+          </tr>
+          <tr>
+            <td class="col-xs-3">渣打</td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+          </tr>
+          <tr>
+            <td class="col-xs-3">日盛</td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+          </tr>
+          <tr>
+            <td class="col-xs-3">澳盛</td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+          </tr>
+          <tr>
+            <td class="col-xs-3">華南(11/22新增)</td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+              <td style="text-align: center;">
+                <i class="fa fa-check"></i>
+              </td>
+          </tr>
+        </table>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+                          </div>
+                        </div>
+
+                        <div ng-show="order.payment_method.type=='braintree'">
+                          <!-- credit card -->
+                          <div class="row" >
+                            <div class="col-xs-12">
+                              <div control-group label="{{'payment.cc.holdername'|translate}}" data-field-name="{{'payment.cc.holdername'|translate}}" >
+                                <input class="form-control" name="creditcard_holdername" ng-model="order.payment_data.holdername" placeholder="{{'payment.cc.holdername.placeholder'|translate}}"  type="text" ng-maxlength="50" ng-required="order.payment_method.type == 'braintree'">
+                              </div>
+                            </div>
+                            <div class="col-xs-12">
+                              <div control-group label="{{'payment.cc.number'|translate}}" data-field-name="{{'payment.cc.number'|translate}}" >
+                                <input credit-card-number class="form-control" name="creditcard_number" ng-model="order.payment_data.credit_card_number" placeholder="{{'payment.cc.number.placeholder'|translate}}"  type="text" ng-maxlength="16" ng-minlength="16" ng-required="order.payment_method.type == 'braintree'">
+                              </div>
+                            </div>
+                            <div class="col-xs-6">
+                              <div control-group label="{{'payment.cc.expirydate'|translate}}" data-field-name="{{'payment.cc.expirydate'|translate}}" >
+                                <input credit-card-expiry-date  class="form-control" name="creditcard_expirydate" ng-model="order.payment_data.expiry_date" placeholder="{{'payment.cc.expirydate.placeholder'|translate}}"  type="text" ng-required="order.payment_method.type == 'braintree'">
+                              </div>
+                            </div>
+                            <div class="col-xs-6">
+                              <div control-group  label="{{'payment.cc.cvc'|translate}}" data-field-name="{{'payment.cc.cvc'|translate}}" >
+                                <input credit-card-cvc class="form-control" name="creditcard_cvc" ng-model="order.payment_data.cvc" placeholder="{{'payment.cc.cvc.placeholder'|translate}}"  type="text" ng-maxlength="3"
+                                 ng-minlength="3" ng-required="order.payment_method.type == 'braintree'">
+                              </div>
+                            </div>
+                          </div> 
+                          <!-- End of credit card -->
+                        </div>
+
+
+                        <!-- Prizm start -->
+                        <div id="prizm" ng-if="order.payment_method.type == 'prizm'"> 
+                          <div class="checkout-section-header global-primary dark-primary">
+                            {{'checkout.payment_method.title'|translate}}
+                          </div>
+                          <!-- credit card -->
+                          <!-- <div class="row" >
+                            <div class="col-xs-12">
+                              <div control-group label="{{'payment.cc.holdername'|translate}}" data-field-name="{{'payment.cc.holdername'|translate}}" >
+                                <input class="form-control" name="creditcard_holdername" ng-model="order.payment_data.holdername" placeholder="{{'payment.cc.holdername.placeholder'|translate}}"  type="text" ng-maxlength="50" ng-required="order.payment_method.type == 'prizm'">
+                              </div>
+                            </div>
+                            <div class="col-xs-12">
+                              <div control-group label="{{'payment.cc.number'|translate}}" data-field-name="{{'payment.cc.number'|translate}}" >
+                                <input credit-card-number class="form-control" name="creditcard_number" ng-model="order.payment_data.credit_card_number" placeholder="{{'payment.cc.number.placeholder'|translate}}"  type="text" ng-maxlength="16" ng-minlength="16" ng-required="order.payment_method.type == 'prizm'">
+                              </div>
+                            </div>
+                            <div class="col-xs-6">
+                              <div control-group label="{{'payment.cc.expirydate'|translate}}" data-field-name="{{'payment.cc.expirydate'|translate}}" >
+                                <input credit-card-expiry-date  class="form-control" name="creditcard_expirydate" ng-model="order.payment_data.expiry_date" placeholder="{{'payment.cc.expirydate.placeholder'|translate}}"  type="text" ng-required="order.payment_method.type == 'prizm'">
+                              </div>
+                            </div>
+                            <div class="col-xs-6">
+                              <div control-group  label="{{'payment.cc.cvc'|translate}}" data-field-name="{{'payment.cc.cvc'|translate}}" >
+                                <input credit-card-cvc class="form-control" name="creditcard_cvc" ng-model="order.payment_data.cvc" placeholder="{{'payment.cc.cvc.placeholder'|translate}}"  type="text" ng-maxlength="3"
+                                 ng-minlength="3" ng-required="order.payment_method.type == 'prizm'">
+                              </div>
+                            </div>
+                          </div>  -->
+                          <!-- End of credit card -->
+                          
+                          <div class="divider"></div>
+                          <div class="checkout-section-header global-primary dark-primary">
+                            {{'orders.fields.billing_address'|translate}}
+                          </div>
+
+                          <div style="margin-bottom: 20px" class="" ng-show="order.delivery_option.requires_customer_address">
+                            <input type="checkbox" name="order.billing_address_same" ng-model="order.billing_address_same" ng-init="order.billing_address_same=true" />
+                            {{'order.billing_address.same'|translate}}
+                          </div>
+
+                          <div class="prizm" ng-show="!order.billing_address_same || !order.delivery_option.requires_customer_address ">
+                            <div control-group label="{{'address.fields.address'|translate}}" data-field-name="{{'address.fields.address'|translate}}" >
+                                <input class="form-control" name="billing_address_address_1" ng-model="order.billing_address.address_1" placeholder=""  type="text" value="" ng-required="(!order.billing_address_same || !order.delivery_option.requires_customer_address) && order.payment_method.type == 'prizm' ">
+                            </div>
+                            <div control-group label="" data-field-name="{{'address.fields.address'|translate}}"  hide-field-by-country="order.billing_address.country">
+                                <input class="form-control" name="billing_address.address_2" ng-model="order.billing_address.address_2" placeholder=""  type="text" value="" ng-required="false" ng-required="">
+                            </div>
+                            <div control-group label="{{'address.fields.address.city'|translate}}" data-field-name="{{'address.fields.address.city'|translate}}" hide-field-by-country="order.billing_address.country">
+                                <input class="form-control" name="billing_address_city" ng-model="order.billing_address.city" placeholder=""  type="text" value="" ng-required="(!order.billing_address_same || !order.delivery_option.requires_customer_address) && order.payment_method.type == 'prizm'">
+                            </div>
+                            <div control-group label="{{'address.fields.address.state'|translate}}" data-field-name="{{'address.fields.address.state'|translate}}" hide-field-by-country="order.billing_address.country">
+                                <input class="form-control" name="billing_address_state" ng-model="order.billing_address.state" placeholder=""  type="text" value="" ng-required="(!order.billing_address_same || !order.delivery_option.requires_customer_address) && order.payment_method.type == 'prizm'">
+                            </div>
+                            <div control-group label="{{'address.fields.address.postcode'|translate}}" data-field-name="{{'address.fields.address.postcode'|translate}}"  hide-field-by-country="order.billing_address.country">
+                                <input class="form-control" name="billing_address_postcode" ng-model="order.billing_address.postcode" placeholder=""  type="text" value="" ng-required="false">
+                            </div>
+                            <div control-group label="{{'address.fields.address.country'|translate}}" data-field-name="{{'address.fields.address.country'|translate}}" >                      
+                                <select  class=" selectpicker form-control" name="merchant_billing_address_country" 
+                                  ng-model="order.billing_address.country"
+                                  ng-options="country.code as country.name for country in countries"
+                                  ng-required="(!order.billing_address_same || !order.delivery_option.requires_customer_address) && order.payment_method.type == 'prizm'"> 
+                                </select>
+                            </div> 
+                             
+
+                          </div> 
+                          <!-- billing address-->
+                        <!-- payment section end -->
+                        </div>
+
+                        <!-- Prizm end -->
+
+                        <!-- order_settings custom_fields start -->
+                        <div>
+                            <div ng-repeat="field in orderSettings.custom_fields">
+                              <div ng-switch on="field.type">
+                                  <span ng-switch-when="text">
+                                    <div control-group label="{{field.name_translations|translateModel}}" data-field-name="{{field.name}}">
+                                      <input type="text" dynamic-name="'order_custom_field_'+$index" class="form-control" ng-model="order.custom_fields_translations[$index].value"
+                                      placeholder="{{field.placeholder}}" ng-required="field.required">
+                                      <div class="help-block" ng-show="isEmptyObject(field)">{{field.hint_translations|translateModel}}</div>
+                                    </div>
+                                  </span>
+                                  <span ng-switch-when="textarea">
+                                    <label class="custom-field-note" ng-bind-html="field.name_translations|translateModel"></label>
+                                  </span>
+                                  <span ng-switch-when="select">
+                                    <div control-group label="{{field.label}}" data-field-name="{{field_label}}">
+                                      <select  class= "form-control"  
+                                        dynamic-name="field.key"
+                                        ng-model="order.custom_fields[field.key]" 
+                                        ng-options="item.code as item.label for item in field.options"> 
+                                      </select> 
+                                      <div class="help-block" ng-show="field.hint">{{field.hint}}</div>
+                                    </div>
+                                  </span>
+
+                                  <span ng-switch-when="checkbox">
+                                    <div control-group label="" data-field-name="{{field_label}}">
+                                      <div class="checkbox">
+                                          <label>
+                                            <input type="checkbox" dynamic-name="field.key" ng-model="order.custom_fields[field.key]"> {{field.label}}
+                                          </label>
+                                          <div class="help-block" ng-show="field.hint">{{field.hint}}</div>
+                                        </div>
+                                    </div>
+                                  </span>
+                                  <span ng-switch-when="select_image">
+                                    <div control-group label="{{field.label}}" data-field-name="{{field_label}}">
+                                      <span ng-repeat="item in field.options">
+                                        <div  class="btn inline-block" ng-class="{'btn-default': order.custom_fields[field.key] == item.code}" ng-click="order.custom_fields[field.key] = item.code">
+                                          <img ng-src="{{item.thumb_url}}" />
+                                        </div>
+                                      </span>
+                                      
+                                      <div class="help-block" ng-show="field.hint">{{field.hint}}</div>
+                                    </div>
+                                  </span>
+                                  
+                                  <span ng-switch-default>
+                                  </span>
+                              </div>
+                          </div>
+                        </div>
+                        <!-- order_settings custom_fields end -->
+                        <div>
+                        </div>
+                      </form>
+                    </div> 
+
+                    <div class="col-md-6 ">
+<div class=" padding-bottom-md">
+<h3 class="sl-section-title">&nbsp;<!-- <i class="fa fa-ticket fa-lg sl-checkout-section-icon"></i>優惠券代碼 --></h3>
+                        <form class="checkout-coupon-form" ng-submit="submitCoupon()" name="couponForm" novalidate method="POST">
+                          <div control-group label="{{'orders.coupons.label'|translate}}" data-field-name="{{'orders.coupons.label'|translate}}" >
+                            <input class="form-control" placeholder="{{'orders.coupons.placeholder'|translate}}" name="coupon_code" type="text" 
+                              ng-model="coupon.code"
+                              ng-maxlength="255"
+                              ng-change="couponCodeChanged()"
+                                />
+                          </div>
+                          <div ng-show="couponErrorMessage" class="alert alert-danger">
+                            {{couponErrorMessage}}
+                          </div>
+
+                          <div ng-show="hasCoupons()">
+                            <div field-group label="{{'orders.coupons'|translate}}">
+                              <!-- <div class="name">{{coupon.name}}</div> -->
+                              <!-- <div class="description">{{coupon.description}}</div> -->
+                              <div ng-repeat="coupon in order.coupons| filter:{campaign_id: 'null'}">
+                                <div class="name">{{ coupon.title_translations |translateModel}}</div>
+                                <div class="description">{{ coupon.description }}</div>
+                                <div class="checkout-prod-remove">
+                                  <a ng-click="removeCouponFromCart(coupon._id,$event)">{{'cart.items.remove'|translate}}</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="text-right">
+                            <button type="submit" 
+                              class="btn btn-custom-small btn-color-primary ladda-button "  data-style="slide-down" ladda="couponLoading || updatingCart">
+                                使用優惠卷
+                            </button>
+                          </div>
+                        </form>
+                        
+                      </div>
+   
+
+
+                      <div class="row">
+                        <div class="col-xs-8" style="text-align:right"> 
+                          <div class="tally-label dark-secondary">小計:</div>
+                        </div>
+                        <div class="col-xs-4" style="text-align:right">
+                          <div class="tally-price dark-secondary" ng-bind-html="currentCart.getSubtotal().label"></div>
+                        </div>
+                      </div>
+                      <div class="row" ng-show="currentCart.getOrderDiscount().cents">
+                        <div class="col-xs-8" style="text-align:right"> 
+                          <div class="tally-label dark-secondary">折扣:</div>
+                        </div>
+                        <div class="col-xs-4" style="text-align:right">
+                          <div class="tally-price dark-secondary">-<span ng-bind-html="currentCart.getOrderDiscount().label"></span></div>
+                        </div>
+                      </div>
+                      
+                      <div class="row">
+                        <div class="col-xs-8" style="text-align:right"> 
+                          <div class="tally-label dark-secondary">運費:</div>
+                        </div>
+                        <div class="col-xs-4" style="text-align:right">
+                          <div class="tally-price dark-secondary" ng-bind-html="currentCart.getDeliveryFee().label"></div>
+                        </div>
+                      </div>
+
+                      <div class="row" ng-show="currentCart.getPaymentFee().label">
+                        <div class="col-xs-8" style="text-align:right"> 
+                          <div class="tally-label dark-secondary">附加費:</div>
+                        </div>
+                        <div class="col-xs-4" style="text-align:right">
+                          <div class="tally-price dark-secondary" ng-bind-html="currentCart.getPaymentFee().label"></div>
+                        </div>
+                      </div>
+                      
+                      <div class="row">
+                        <div class="col-xs-8" style="text-align:right"> 
+                          <div class="tally-label dark-secondary"><strong>合計:</strong></div>
+                        </div>
+                        <div class="col-xs-4" style="text-align:right">
+                           <strong class="tally-price dark-secondary" ng-bind-html="total.label"></strong>
+                        </div>
+                      </div>
+
+                      <div class="row" ng-if="order.payment_method.config_data.credit_installment">
+                        <div class="col-xs-12">
+                          <span class="alert alert-warning pull-right" translate="checkout.instalment_amount" translate-value-amount="{{total.cents / order.payment_method.config_data.credit_installment / mainConfig.merchantData.base_currency.subunit_to_unit | currency:mainConfig.merchantData.base_currency.alternate_symbol:0}}" translate-value-period="{{order.payment_method.config_data.credit_installment}}"></span>
+                        </div>
+                      </div>  
+                      
+
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div  label="" data-field-name="terms" class="text-right">
+                            <div class="">
+                              <label style="font-weight: 400;font-size: 14px;">
+                                <input type="checkbox" name="order_terms" ng-model="order.terms"> 我同意<a class='agree-highlight' href=/about/terms target='_blank'>服務條款</a>和<a class='agree-highlight' href=/about/policy target='_blank'>退換貨政策</a>
+                              </label>
+                            </div>
+                            <div class="" ng-if="!isUserLoggedIn">
+                              <label style="font-weight: 400;font-size: 14px;">
+                                <input type="checkbox" name="save_all" ng-model="save_fields.all"> 成為 Mia cake 米亞手工蛋糕 的會員
+                              </label>
+                            </div>
+                            <div class="" ng-if="!isUserLoggedIn">
+                              <label style="font-weight: 400;font-size: 14px;">
+                                <input type="checkbox" name="save_marketing" ng-model="save_fields.marketing"> 我想收到最新資訊及優惠方案
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12" style="text-align:right;margin-top:20px">
+                          <button id="btn-form-submit-process-order"  type="submit" src="" border="0" name="submit" alt=""
+                            class="btn btn-custom-large btn-color-primary ladda-button"  data-style="slide-down" ladda="checkoutLoading || updatingCart || couponLoading" ng-click="processOrder()">
+                            {{'orders.action.checkout'|translate}}
+                          </button>
+                        </div>
+                        <div class="col-xs-12" style="text-align:right">
+                          <div ng-show="couponErrorMessage && orderForm.submitted" class="help-block text-danger">
+                           {{'orders.coupons.invalid.order'|translate}}
+                          </div>
+                          <div class="help-block text-danger" ng-show="errorMessage"  style="">
+                            {{errorMessage}}
+                          </div>
+
+                        </div>
+                      </div> <!--row-->
+                    </div> <!--col-md-6-->
+                  </div> <!--row-->    
+                
+              </div> <!--checkout-container-->
+            </div><!--col-md-12-->
+          </div><!--row-->
+        </div> <!-- container -->
+      </div><!--container-wrapper-->
+
+      <div id='paypal_form_container' >
+          <form id="paypal_form" accept-charset="UTF-8" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="display:none">
+        
+         
+          <input type="hidden" name="cmd" value="_cart">
+          <input type="hidden" name="business" value="{{order.payment_method.config_data.email}}">
+          
+          <input type="hidden" name="upload" value="1">
+
+          <input type="hidden" name="amount" value="{{createdOrder.total.dollars}}">
+          <input type="hidden" name="currency_code" value="{{createdOrder.total.currency_iso}}">
+          
+          <input type="hidden" name="first_name" value="">
+          <input type="hidden" name="last_name" value="">
+          <input type="hidden" name="address1" value="">
+          <input type="hidden" name="address2" value="">
+          <input type="hidden" name="city" value="">
+          <input type="hidden" name="state" value="">
+          <input type="hidden" name="zip" value="">
+          <input type="hidden" name="email" value="">
+          <input name="bn" value="Shopline_SP" type=" hidden">
+
+          <input type="hidden" name="return" value="{{mainConfig.merchantData.shop_default_home_url}}/orders/{{createdOrder._id}}/confirm?authorization_token={{createdOrder.authorization_token}}">
+          <input type="hidden" name="cancel_return" value="{{mainConfig.merchantData.shop_default_home_url}}/orders/{{createdOrder._id}}/cancel?authorization_token={{createdOrder.authorization_token}}">
+          <input type="hidden" name="notify_url" value="{{mainConfig.merchantData.shop_default_home_url}}/api/orders/{{createdOrder._id}}/payment_ack?ack_token={{createdOrder.authorization_token}}">
+          <input TYPE="hidden" name="charset" value="utf-8">
+          <div ng-repeat="item in createdOrder.subtotal_items" on-finish-render-filters>
+              <input type="hidden" name="item_name_{{$index+1}}" value="{{item.object_data.title_translations|translateModel}}">
+              <input type="hidden" name="amount_{{$index+1}}" value="{{item.item_price.dollars}}">
+              <input type="hidden" name="quantity_{{$index+1}}" value="{{item.quantity}}">
+          </div>   
+          <input TYPE="hidden" name="discount_amount_cart" value="{{createdOrder.order_discount.total.dollars}}"/>
+          
+          <input type="hidden" name="handling_cart" value="{{createdOrder.handling_fee.dollars}}">
+          <!-- <input type="hidden" name="handling_cart" value="{{createdOrder.delivery_option.total.dollars}}"> -->
+          <input type="image" name="submit" border="0"
+          src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif"
+          alt="PayPal - The safer, easier way to pay online">
+        </form>
+      </div><!--paypal_form_container-->
+      <!-- allpay_form -->
+      <form id="allpay_form" accept-charset="UTF-8" action="https://payment.allpay.com.tw/Cashier/AioCheckOut" accept-charset="UTF-8" method="post" style="display: none;">
+        <input ng-repeat="(key, val) in createdOrder.allpay_form" name='{{key}}' type='hidden' value='{{val}}'/>
+        <input value="Submit" type="submit" />
+      </form><!-- allpay_form -->
+
+
+      <!-- asiapay form -->
+      <form id="asiapay_form" accept-charset="UTF-8" action="https://www.paydollar.com/b2c2//eng/payment/payForm.jsp
+" accept-charset="UTF-8" method="post" style="display: none;">
+        <input ng-repeat="(key, val) in createdOrder.asiapay_form" name='{{key}}' type='hidden' value='{{val}}'/>
+        <input value="Submit" type="submit" />
+      </form><!-- allpay_form -->
+
+      <!-- esun form -->
+          <form id="esun_form" accept-charset="UTF-8" action="https://acq.esunbank.com.tw/acq_online/online/sale42.htm" method="post" style="display: none;">
+          <input ng-repeat="(key, val) in createdOrder.esun_form" name='{{key}}' type='hidden' value='{{val}}'/>
+            <input value="Submit" type="submit">
+          </form>
+      <!-- esun form -->
+      <!-- seven_eleven_map_selector -->
+      <form action="http://emap.shopping7.com.tw/emap/c2cemap.ashx" method="POST" id="seven_eleven_map_selector" name="seven_eleven_map_selector">
+        <input type="hidden" name="url" value="http://www.miacake2008.com/callback?isSameTab=true">
+      </form>
+      <!-- seven_eleven_map_selector -->
+    </div><!--container animate-show-->
+  </div><!-- cart not empty -->
+</div><!--CheckoutController-->
+ 
+      </div><!--yield-wrapper-->
+      <!-- main Content end-->
+    </div><!-- body-content-->
+    
+     <!---footer -->
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+
+            <!-- Footer Links -->
+            <ul>
+                  <li class="">
+                    <a class="" href="/about" target="">商店介紹</a>
+                  </li>
+            </ul>
+            <!-- End Footer Links -->
+
+          </div>
+
+          <div class="col-sm-6 sociallinks">
+            
+            <!-- Payment Social Networks -->
+            <ul>
+                <li class="global-secondary icon-footer_email">
+                  <li class="">
+                    <a class="" href="https://www.facebook.com/miacake2008" target="_blank">Facebook 專頁</a>
+                  </li>
+                </li>
+            </ul>
+            <!-- End Social Networks -->
+
+          </div>
+
+
+          <div class="col-sm-12 badges">
+
+            <div class="credit-cards">
+              <!--render logo by type ["visa", "master", "amex", "paypal","prizm"]-->
+            </div>  
+            
+            
+          </div>
+
+
+        </div><!--row-->
+      </div>
+    </div>
+    <!---footer end-->
+   
+ </div> <!--body-wrapper-->
+	 		
+
+  <!-- start countly -->
+  <script type="text/javascript">
+    //initializing countly with params
+    // var Countly = Countly || {};
+    // Countly.q = Countly.q || [];
+    //provide countly initialization parameters
+    // Countly.app_key = "234f6523d0d1a8b430364ea094e191a767f86b06";
+    // Countly.url = "http://dc1.shoplinedev.com"; //or none for default countly cloud
+
+
+    // Countly.init({
+    //   app_key: "dd1896ed6ed2ec72b22854a4fbebbd8712ec4d36",
+    //   url: "http://count.shoplineapp.com",
+    // })
+
+    
+//    Countly.begin_session(true);
+    // Countly.add_event({
+    //   "key": "pageView",
+    //   "device_id":" 1e4312a9c5193f0a6cdaddc80b507b68",
+    //   "session_duration": 30,
+    //   "segmentation": {
+    //     "url": window.location.pathname,
+    //     merchantId: '55f23f06e36c8e916c000071'
+    //   }
+    // });
+    //end session on leaving page
+
+    // Countly.q.push(['session_duration', 1800]);
+    // Countly.q.push(['add_event',{
+    //   key:"asyncPageView", 
+    //   "segmentation": {
+    //     "url": window.location.pathname
+    //   }
+    // }]);
+
+
+  </script>
+  <!-- end countly-->
+
+
+    <!-- start Mixpanel -->
+    <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+      for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+      mixpanel.init("7fa402cb00bfbd58e93b2ab7c641880d");</script>
+    <!-- end Mixpanel -->
+
+    
+
+
+        <script type="text/javascript">
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-42689846-6', 'auto');
+          //ga('create', 'UA-42689846-1', 'auto');
+          ga('send', 'pageview');
+        </script>      
+
+    
+
+      <script type="text/javascript">
+        
+      </script>
+      
+
+
+   
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+      //NOTE: temporarily hack to make boxify work, boxify should be replaced by using other tools and techniques 
+      $.boxify({});
+    });
+  </script>
+
+
+</body>
+</html>

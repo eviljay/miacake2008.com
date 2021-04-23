@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html ng-app="shop_app">
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"aa0d8411ae","applicationID":"5470801","transactionName":"ewxaQUoKDQ0DQRhAQFcHQVZMFk4ICFdSSA==","queueTime":0,"applicationTime":192,"agent":"js-agent.newrelic.com/nr-768.min.js"}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwAPUFFTGwYEU1FaBwA="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:26,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:12,4:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:24,2:25,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:24,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
+    
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  
+    
+      <title>客製餐盒</title>
+
+      <meta name="description" content="">
+
+
+
+  <meta name="google" value="notranslate">
+    <link rel="shortcut icon" type="image/png" href="http://img-shoplineapp-com.s3.amazonaws.com/media/image_clips/55f3acc869702d6fc7fd3d00/original.jpg?1442032840">
+
+  <!-- styles-->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+  <link href="/assets/application-b450a4ce1115207f9189c84f68a8db1e.css" media="all" rel="stylesheet" />
+  <link rel="stylesheet" href="/themes/v1/lace/assets/css/lace.css?modified=2015-11-18">
+  <!-- styles-->
+
+
+  <script src="https://cdn.shopify.com/s/javascripts/currencies.js"></script>
+  <script src="/assets/application-277723b2f3ddb805e5df2d7448b14aa3.js"></script>
+
+
+
+
+
+  <script type="text/javascript">
+    app.value('mainConfig', {
+      merchantId: '55f23f06e36c8e916c000071',
+      sessionId: "ee7eee55be7787d5145ea15bf3e19791",
+      appCoreHost: "shoplineapp.com",
+      apiBaseUrl: "http://shoplineapp.com",
+      counterApiHost: "http://count.shoplineapp.com/",
+      appendToUrl:'',
+      env: 'production',
+      merchantData: {"_id":"55f23f06e36c8e916c000071","emails":{"order":"","message":"","comment":""},"features":[],"opensrs_login":"miacake2008com","base_country_code":"TW","default_language_code":"zh-hant","instagram_id":null,"instagram_info":null,"owner_type":"User","status":"active","shop_status":"open","profile_image":null,"facebook_page_id":"319074308138528","current_plan_key":"pro_month","current_theme_key":"lace","connect_features":[],"signup_ref":{"utm_source":"fbpost","utm_campaign":"hketnews2015","utm_medium":"facebook","utm_content":"tw"},"phones":{"main":"02-22453579"},"remarks":{},"tags_s":"","tags":[],"owner_id":"55f23f06e36c8e916c000070","owner_id_s":"55f23f06e36c8e916c000070","name":"Mia cake 米亞手工蛋糕","email":"mia@miacake.com.tw","handle":"mia126","updated_at":"2015-11-11T08:07:34.689Z","created_at":"2015-09-11T02:40:06.725Z","base_currency_code":"TWD","custom_domain":"www.miacake2008.com","custom_domain_requested":"miacake2008.com","favicon_media_id":"55f3acc869702d6fc7fd3d00","invoice_activation":"inactive","domain_remarks":"","brand_home_url":"http://www.miacake2008.com","logo_media_url":"http://img-shoplineapp-com.s3.amazonaws.com/media/image_clips/55f3ad5069702d6a541a3d00/original.jpg?1442032975","base_currency":{"id":"twd","iso_code":"TWD","alternate_symbol":"NT$","name":"New Taiwan Dollar","symbol_first":true,"subunit_to_unit":1},"shop_default_home_url":"http://mia126.shoplineapp.com","payment_method_count":2,"delivery_option_count":6,"favicon_media_url":"http://img-shoplineapp-com.s3.amazonaws.com/media/image_clips/55f3acc869702d6fc7fd3d00/original.jpg?1442032840"},
+      themeBasePath: '/themes/v1/default',
+      // loadedLanguage:'zh-hant',
+      localeData: {"loadedLanguage":{"name":"中文(繁)","code":"zh-hant"},"supportedLocales":[{"name":"EN","code":"en"}]},
+      currentUser:null,
+      themeSettings:{"theme_color":"mint.sea","categories_collapsed":true,"image_fill":true,"is_multicurrency_enabled":false},
+      requestCountry: "US",
+      trackerEventData: {},
+      currencyData: {"displayedCurrency":{"name":"$ TWD","iso_code":"TWD"},"supportedCurrencies":[{"name":"$ HKD","iso_code":"hkd"},{"name":"¥ CNY","iso_code":"cny"},{"name":"$ USD","iso_code":"usd"},{"name":"$ SGD","iso_code":"sgd"},{"name":"€ EUR","iso_code":"eur"},{"name":"$ AUD","iso_code":"aud"},{"name":"£ GBP","iso_code":"gbp"},{"name":"₱ PHP","iso_code":"php"},{"name":"RM MYR","iso_code":"myr"},{"name":"฿ THB","iso_code":"thb"},{"name":"د.إ AED","iso_code":"aed"},{"name":"¥ JPY","iso_code":"jpy"},{"name":"K MMK","iso_code":"mmk"},{"name":"$ BND","iso_code":"bnd"},{"name":"₩ KRW","iso_code":"krw"}]}
+    });
+
+    app.value('flash', {
+    });
+
+    app.value('flash_data', {});
+    app.value('routeParams', {"controller":"products","action":"index","category_id":"客製餐盒"});
+  </script>
+
+
+
+
+  <!-- GLOBAL CONTENT FOR HTML HEAD START-->
+<link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="/themes/v1/lace/assets/css/lace.css?modified=2015-11-18">
+	
+		
+<!-- GLOBAL CONTENT FOR HTML HEAD END -->
+      <style>
+      .boxify-image {
+        background-size: cover;
+      }
+      </style>
+    <style>
+      
+    </style>
+    
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="IxN5R5hKpbVj1FZ1bsJKgcWmEt3kqgl+BKQCFwHxR+Y=" name="csrf-token" />
+      
+      <meta property="og:title" content="客製餐盒"/>
+    
+      <meta property="og:url" content="http://www.miacake2008.com//categories/客製餐盒"/>
+      <meta property="og:description" content=""/>
+  <meta property="og:image" content="http://img-shoplineapp-com.s3.amazonaws.com/media/image_clips/55f3ad5069702d6a541a3d00/original.jpg?1442032975"/>
+
+  
+
+</head>
+
+<body class="products index" ng-controller="MainController"  ng-cloak>
+	<div id="left-panel" style="display:none">  
+<div class="language-switcher">
+  <!-- <select ng-change="changeLanguage(currentLanguage)" ng-model="currentLanguage">
+      <option value="en">
+         English
+      </option>
+      <option value="zh-hant">
+         中文(繁) 
+      </option>
+  </select> -->
+</div>
+
+<div class="clear"></div>
+<!-- <div style="float: left;width: 100%;background-color:#262d36;" ng-show='isUserLoggedIn'>
+  <div class="sidr-photo">
+    <div class="sidr-photo-ring">
+      <img class="img-circle sidr-chat-head" ng-src="{{currentUser.profile_image_url}}"/>
+    </div>
+  </div>
+</div>
+<div style="float: left;width: 100%;background-color:#262d36;" ng-show='!isUserLoggedIn'>
+  <div style="height: 1px;background-color:#232a32;"></div>
+</div> -->
+
+
+<div class="clear"></div>
+<div ng-show='isUserLoggedIn' class="hello" style="padding: 25px 15px;word-wrap:break-word;">
+  你好, {{currentUser.name}}
+</div>
+<div ng-show='!isUserLoggedIn' class="hello"></div>
+<div class="clear"></div>
+<div class="visible-sm visible-xs">
+  <div class="section-header">
+     目錄
+  </div>
+  <ul>
+    <li>
+      <a href="/products">所有商品</a>
+    <li>
+      <a href="/categories/生日造型蛋糕">造型蛋糕</a>
+    <li>
+      <a href="/categories/戚風蛋糕">低溫點心</a>
+    <li>
+      <a href="/categories/手工麵包">手工麵包</a>
+    <li>
+      <a href="/categories/客製餐盒">客製餐盒</a>
+    <li>
+      <a href="/categories/季節限定"></a>
+  </ul>
+</div>
+
+  
+<div class="clear"></div>
+  <div class="visible-sm visible-xs">
+    <div class="section-header">
+      分類
+    </div>
+    <ul>
+        <li class=" text-secondary-color">
+          
+          <a href="/categories/55f23f07e36c8e916c000082">精選商品<!-- <span class="catcount"></span> --></a>
+        </li>
+        <li class=" text-secondary-color">
+          
+          <a href="/categories/55f3eb18e36c8e1fbc00000a">造型蛋糕<!-- <span class="catcount"></span> --></a>
+        </li>
+        <li class=" text-secondary-color">
+          
+          <a href="/categories/55f582bce37ec6e695000034">低溫點心<!-- <span class="catcount"></span> --></a>
+        </li>
+        <li class=" text-secondary-color">
+          
+          <a href="/categories/55f584f3039055afc0000003">常溫點心<!-- <span class="catcount"></span> --></a>
+        </li>
+    </ul>
+  </div>
+
+  <div style="" ng-show='isUserLoggedIn'>
+    <div class="section-header">
+        帳戶
+    </div>
+     <div collapse="isProfileSectionCollapsed">
+      <ul >
+        <li> <a ng-href="/users/{{currentUser._id}}/edit" target="_self">個人資訊</a></li>
+        <li> <a href="/messages" >訊息</a></li>  
+        <li> <a href="/orders" >訂單</a></li>
+
+        <li><a data-method="delete" href="/users/sign_out" rel="nofollow">登出</a>
+         
+         </li>
+      </ul>
+    </div>
+   </div>
+    <div style="" ng-show='!isUserLoggedIn'>
+    <div>
+    <div class="section-header">
+        帳戶
+    </div>  
+    <ul>
+      <li><a class="" href="/users/sign_in" >會員登入</a></li> 
+      <li><a class="" href="/users/sign_up">新用戶註冊</a></li>
+    </ul>
+    </div>
+  </div>
+</div> 
+<!--left-panel-->
+
+
+<div id="cart-panel" style="display:none">
+  <!-- cart Start -->
+   <div ng-controller="CartsController">
+    <div class="cart-header">
+      購物車
+    </div>
+    <!-- cart items start-->
+    <div class="clear"></div>
+    <div class="" ng-show="currentCart.isCartEmpty()">
+      <div style="display:block;padding:15px">
+        你的購物車是空的
+      </div>
+    </div>
+    <div class="" ng-hide="currentCart.isCartEmpty()">
+      <div id="" style="" class="cart-items">
+        <div class="cart-item" ng-repeat="item in currentCart.getItems()" style=""> 
+          <a href="/products/{{item.item_id}}" target="_blank" class="product-link">
+            <img class="" style="margin-right:10px;width:50px;height:50px;float:left;" ng-src="{{item.data.cover_media.images.thumb.url}}"/>
+          </a>
+          <div class="cart-item-content" style="float:left;width:130px;">
+            <div class="title">{{item.data.title_translations|translateModel}}</div>
+            <div ng-repeat="field in item.variation.fields">
+              <div class="variation">{{ field.name_translations | translateModel }}</div>
+            </div>
+            <div class="variation" ng-hide="item.variation.fields">{{item.variation.name}}</div>
+            <div class="price-details">
+              {{item.quantity}}<span style=";margin:0 3px;">x</span>
+              <span ng-bind-html="currentCart.getItemPrice(item).label | changeCurrency"></span>
+            </div>  
+          </div><!--cart-item-content-->
+            <div class="remove"><a ng-click="removeItemFromCart(item.item_id,item.variation_id,$event)" >刪除</a></div>
+          <div class="clear"></div>
+        </div><!-- cart-item-->
+        <div class="clear"></div>
+      </div> <!--cart-items-->
+      <!-- cart items end -->
+      <div class="clear"></div>
+      <div class="cart-chkt-btn-cont">
+        <button id="btn-checkout" class="cart-chkt-btn ladda-button" data-style="slide-down" ladda="checkoutButtonLoading" ng-click="onCheckoutClicked($event)">
+          訂單結帳
+        </button>
+      </div>
+    </div>
+  </div> 
+</div> <!--cart-panel-->
+
+<!-- cart End -->
+<script type="text/javascript">
+$(function() {
+  $('.left-panel-button').sidr({
+    name: 'left-panel',
+    side: 'left',
+    body: ".body-wrapper"
+  });
+  $('.cart-panel-button').sidr({
+    name: 'cart-panel',
+    side: 'left',
+    body: ".body-wrapper"
+  });
+  $( ".body-wrapper" ).click(function() {
+    $.sidr('close','left-panel');
+    $.sidr('close','cart-panel');
+  });
+});
+</script>
+
+  <div id="fixed-menu-container" ui-scrollfix ng-cloak class='ng-cloak'>
+  <a class="menu-button cog-button" id="" href="/admin" ng-show="currentUser && mainConfig.merchantData.owner_id == currentUser._id"  ng-cloak target="_blank">
+    <span class="fa fa-cog"> </span>
+  </a>
+  
+  <a class="left-panel-button menu-button" id="" href="#left-panel" ng-class="{'ie-hack':!mainConfig.themeSettings.is_multicurrency_enabled}">
+    <span class="fa fa-bars"> </span><span class="menu-words" style="padding-left:6px;">目錄</span>
+  </a>
+
+  <a class="cart-panel-button menu-button" id="" href="#cart-panel" ng-class="{'ie-hack':!mainConfig.themeSettings.is_multicurrency_enabled}">
+    <span class="fa fa-shopping-cart"> </span><span class="menu-words" style="padding-left:6px;">購物車</span>
+     <span class="cart-count" ng-show="currentCart.getItemCount()>0">({{currentCart.getItemCount()}})</span>
+  </a>
+
+  <a class="menu-button message-button" ng-click="showMessageForm()" ng-class="{'ie-hack':!mainConfig.themeSettings.is_multicurrency_enabled}">
+    <span class="fa fa-comment"></span><span class="menu-words" style="padding-left:6px;">聯絡店主</span>
+  </a>
+
+  <div class="dropdown" dropdown ng-class="{'ie-hack':!mainConfig.themeSettings.is_multicurrency_enabled}">
+    <span class="menu-button dropdown-toggle" dropdown-toggle>
+      <span class="fa fa-globe"> </span>
+      <span class="menu-words" style="padding-left:5px;padding-right:5px;">中文(繁)</span>
+      <span class="caret menu-words" style="float: right;position: relative;top: 7px;"></span>
+    </span>
+    <ul class="dropdown-menu menu-button">
+        <li ng-click="changeLanguage('en')"><span>EN</span></li>
+    </ul>
+  </div>
+
+  <div class="dropdown" dropdown ng-show="mainConfig.themeSettings.is_multicurrency_enabled" ng-class="{'ie-hack':!mainConfig.themeSettings.is_multicurrency_enabled}">
+    <span class="menu-button dropdown-toggle" dropdown-toggle>
+      <span class="fa menu-words-reversed">$</span>
+      <span class="menu-words" style="padding-left:5px;padding-right:5px;">$ TWD</span>
+      <span class="caret menu-words" style="float: right;position: relative;top: 7px;"></span>
+    </span>
+    <ul class="dropdown-menu menu-button">
+      <li ng-click="changeCurrency('hkd')"><span>$ HKD</span></li>
+      <li ng-click="changeCurrency('cny')"><span>¥ CNY</span></li>
+      <li ng-click="changeCurrency('usd')"><span>$ USD</span></li>
+      <li ng-click="changeCurrency('sgd')"><span>$ SGD</span></li>
+      <li ng-click="changeCurrency('eur')"><span>€ EUR</span></li>
+      <li ng-click="changeCurrency('aud')"><span>$ AUD</span></li>
+      <li ng-click="changeCurrency('gbp')"><span>£ GBP</span></li>
+      <li ng-click="changeCurrency('php')"><span>₱ PHP</span></li>
+      <li ng-click="changeCurrency('myr')"><span>RM MYR</span></li>
+      <li ng-click="changeCurrency('thb')"><span>฿ THB</span></li>
+      <li ng-click="changeCurrency('aed')"><span>د.إ AED</span></li>
+      <li ng-click="changeCurrency('jpy')"><span>¥ JPY</span></li>
+      <li ng-click="changeCurrency('mmk')"><span>K MMK</span></li>
+      <li ng-click="changeCurrency('bnd')"><span>$ BND</span></li>
+      <li ng-click="changeCurrency('krw')"><span>₩ KRW</span></li>
+    </ul>
+  </div>
+    
+</div>
+	
+	<div class="body-wrapper" >
+    <div class="body-content">
+        
+      
+
+ <!---navigation -->
+<div class="navbar-wrapper " >
+  <div class="navbar" role="navigation" style="">
+  <div class="navbar-header-wrapper">
+    <div class="container" >
+      <div class="navbar-header">
+        <a  href="http://www.miacake2008.com/">
+          <img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&url=http://img-shoplineapp-com.s3.amazonaws.com/media/image_clips/55f3ad5069702d6a541a3d00/original.jpg?1442032975&resize_h=140px"  class="logo-image"/>
+          
+        </a>
+      </div>
+    </div> <!--container-->    
+  </div>
+  <div class="navbar-menu-wrapper">
+    <div class="container" >
+      <div class="navbar-menu hidden-xs">
+        <ul class="text-primary-color">
+            <!-- Has dropdown links -->
+            <!-- doesn't have dropdown links -->
+            <li class="">
+              <a class="" href="/products" target="">所有商品</a>
+            </li>
+            <!-- Has dropdown links -->
+            <!-- doesn't have dropdown links -->
+            <li class="">
+              <a class="" href="/categories/生日造型蛋糕" target="">造型蛋糕</a>
+            </li>
+            <!-- Has dropdown links -->
+            <!-- doesn't have dropdown links -->
+            <li class="">
+              <a class="" href="/categories/戚風蛋糕" target="">低溫點心</a>
+            </li>
+            <!-- Has dropdown links -->
+            <!-- doesn't have dropdown links -->
+            <li class="">
+              <a class="" href="/categories/手工麵包" target="">手工麵包</a>
+            </li>
+            <!-- Has dropdown links -->
+            <!-- doesn't have dropdown links -->
+            <li class="">
+              <a class="" href="/categories/客製餐盒" target="">客製餐盒</a>
+            </li>
+            <!-- Has dropdown links -->
+            <!-- doesn't have dropdown links -->
+            <li class="">
+              <a class="" href="/categories/季節限定" target=""></a>
+            </li>
+        </ul>
+      </div>  
+    </div> <!--container-->    
+  </div>
+</div><!--navbar-->
+</div><!--navbar-wrapper-->
+<!-- navigation end -->
+
+        
+      <!-- main Content -->
+      <div class="yield-wrapper">
+      
+        
+
+<div class="container content-controller" >
+  <div class="row">
+    <form class="mobile-shop-search-bar-form hidden-md hidden-lg" ng-controller="ProductsSearchController" ng-submit="search(searchQuery)">
+      <div class="shop-search-bar mobile-shop-search-bar">
+        <input class="shop-search-input mobile-shop-search-input" name="searchQuery" ng-model="searchQuery">
+        <button class="btn btn-default mobile-shop-search-button"><i class="fa fa-search"></i></button>
+      </div>
+    </form>
+
+    <!-- Side bar -->
+    <div class="col-md-3 animate-show  hidden-xs hidden-sm" id="leftCol">
+      <div class="">
+        <form class="shop-search-bar-form desktop-shop-search-form" ng-controller="ProductsSearchController" ng-submit="search(searchQuery)">
+  <div class="shop-search-bar desktop-shop-search-bar">
+    <input class="shop-search-input desktop-shop-search-input" name="searchQuery" ng-model="searchQuery">
+    <button class="btn btn-default shop-search-button"><i class="fa fa-search"></i></button>
+  </div>
+</form>
+<div class="catmenu"> 
+  <p class="global-primary dark-primary section-title">分類</p>
+  <ul id="sidebar">
+      <li class=" text-secondary-color">
+        <a href="/categories/55f23f07e36c8e916c000082">
+          精選商品
+        </a>
+          <!-- no subcategories -->
+            <span class="catcount">9</span>
+
+      </li>
+      <li class=" text-secondary-color">
+        <a href="/categories/生日造型蛋糕">
+          造型蛋糕
+        </a>
+          <!-- no subcategories -->
+            <span class="catcount">5</span>
+
+      </li>
+      <li class=" text-secondary-color">
+        <a href="/categories/戚風蛋糕">
+          低溫點心
+        </a>
+          <!-- no subcategories -->
+            <span class="catcount">3</span>
+
+      </li>
+      <li class=" text-secondary-color">
+        <a href="/categories/常溫點心">
+          常溫點心
+        </a>
+          <!-- no subcategories -->
+            <span class="catcount">1</span>
+
+      </li>
+  </ul>
+</div>
+
+      </div>
+    </div>
+    <!-- End of Side bar -->
+
+    <div class="col-md-9 animate-show" >
+      <div class="page-bar" style="margin-bottom: 20px;">
+
+        <!-- Number of Items Ori -->
+        <div class="row shop-setting-section" ng-controller="ProductsFetchController">
+          <div class="shop-setting-wrapper">
+            <select class="col-sm-8 col-xs-12 shop-setting" ng-model="fetchQuery">
+              <option value="" selected disabled>每頁顯示數量</option>
+              <option value="24">每頁顯示 24 個</option>
+<option value="48">每頁顯示 48 個</option>
+<option value="72">每頁顯示 72 個</option>
+            </select>
+            <!-- Makes select bar match search bar-->
+            <button class="pull-right" style="height: 27x; opacity: 0;"><i class="fa fa-search"></i></button>
+          </div>
+        </div>
+
+        <!-- Breadcrumb -->
+        <ol class="breadcrumb" style="display: inline;">
+          <li class="text-primary-color dark-primary"><a href="/products">全部商品</a></li>
+          <li class="active">客製餐盒</li>
+        </ol>
+      </div>
+
+      <!-- Main section start -->
+      <div class="">
+        <ul class="boxify-container">
+          <div class="clear"></div>
+        </ul>
+      </div>
+
+      <!-- Pagination -->
+      <div class="row">
+        <div class="text-center">
+          <ul class="pagination text-primary-color dark-primary">
+          </ul>
+        </div>
+      </div>
+      <!-- End of Pagination -->
+    </div>
+
+    <div class="clear"></div>
+
+  </div>
+    <!-- <pagination ng-show="paginationLoaded" boundary-links="true" items-per-page="limit" total-items="totalItems" page="currentPage" on-select-page="onPageSelected(page)" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>-->
+</div>
+ 
+      </div><!--yield-wrapper-->
+      <!-- main Content end-->
+    </div><!-- body-content-->
+    
+     <!---footer -->
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+
+            <!-- Footer Links -->
+            <ul>
+                  <li class="">
+                    <a class="" href="/about" target="">商店介紹</a>
+                  </li>
+            </ul>
+            <!-- End Footer Links -->
+
+          </div>
+
+          <div class="col-sm-6 sociallinks">
+            
+            <!-- Payment Social Networks -->
+            <ul>
+                <li class="global-secondary icon-footer_email">
+                  <li class="">
+                    <a class="" href="https://www.facebook.com/miacake2008" target="_blank">Facebook 專頁</a>
+                  </li>
+                </li>
+            </ul>
+            <!-- End Social Networks -->
+
+          </div>
+
+
+          <div class="col-sm-12 badges">
+
+            <div class="credit-cards">
+              <!--render logo by type ["visa", "master", "amex", "paypal","prizm"]-->
+            </div>  
+            
+            
+          </div>
+
+
+        </div><!--row-->
+      </div>
+    </div>
+    <!---footer end-->
+   
+ </div> <!--body-wrapper-->
+	 		
+
+  <!-- start countly -->
+  <script type="text/javascript">
+    //initializing countly with params
+    // var Countly = Countly || {};
+    // Countly.q = Countly.q || [];
+    //provide countly initialization parameters
+    // Countly.app_key = "234f6523d0d1a8b430364ea094e191a767f86b06";
+    // Countly.url = "http://dc1.shoplinedev.com"; //or none for default countly cloud
+
+
+    // Countly.init({
+    //   app_key: "dd1896ed6ed2ec72b22854a4fbebbd8712ec4d36",
+    //   url: "http://count.shoplineapp.com",
+    // })
+
+    
+//    Countly.begin_session(true);
+    // Countly.add_event({
+    //   "key": "pageView",
+    //   "device_id":" ee7eee55be7787d5145ea15bf3e19791",
+    //   "session_duration": 30,
+    //   "segmentation": {
+    //     "url": window.location.pathname,
+    //     merchantId: '55f23f06e36c8e916c000071'
+    //   }
+    // });
+    //end session on leaving page
+
+    // Countly.q.push(['session_duration', 1800]);
+    // Countly.q.push(['add_event',{
+    //   key:"asyncPageView", 
+    //   "segmentation": {
+    //     "url": window.location.pathname
+    //   }
+    // }]);
+
+
+  </script>
+  <!-- end countly-->
+
+
+    <!-- start Mixpanel -->
+    <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+      for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+      mixpanel.init("7fa402cb00bfbd58e93b2ab7c641880d");</script>
+    <!-- end Mixpanel -->
+
+    
+
+
+
+        <script type="text/javascript">
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-42689846-6', 'auto');
+          //ga('create', 'UA-42689846-1', 'auto');
+          ga('send', 'pageview');
+        </script>      
+
+    
+
+      <script type="text/javascript">
+        
+      </script>
+      
+
+
+   
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+      //NOTE: temporarily hack to make boxify work, boxify should be replaced by using other tools and techniques 
+      $.boxify({});
+    });
+  </script>
+
+
+</body>
+</html>

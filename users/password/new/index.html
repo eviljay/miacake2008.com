@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"aa0d8411ae","applicationID":"5470801","transactionName":"ewxaQUoKDQ0DQRhUV04KR1AXFQASFURYQlZLTFpQTw==","queueTime":0,"applicationTime":166,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwAPUFFTGwYEU1FaBwA="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,n,e)])}catch(s){try{i("ierr",[s,c.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t){i("err",[t,c.now()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,n,e){u&&(d+=1)}),s.on("fn-err",function(t,n,e){u&&(this.thrown=!0,o(e))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",s)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];n.exports=u;var y=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(m,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+
+
+  <title>醍吾米亞菓子工坊</title>
+
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<meta name="google" value="notranslate">
+  <link rel="shortcut icon" type="image/png" href="https://img.shoplineapp.com/media/image_clips/57d648d9617069519691d700/thumb.jpg?1473661144">
+
+<!-- styles-->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' type='text/css' as="style" onload="this.rel='stylesheet'" />
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' type='text/css' as="style" onload="this.rel='stylesheet'">
+<link href="https://dt9jl8a7gc9zr.cloudfront.net/assets/application-21f49f38cddf42b9a3a223801988a929.css" media="all" rel="stylesheet" />
+<link rel="stylesheet" href="/themes/v1/lace/assets/css/lace.css?modified=2017-04-04">
+<!-- styles-->
+
+
+
+<!-- GLOBAL CONTENT FOR HTML HEAD START-->
+<link href='https://fonts.googleapis.com/css?family=Noto+Sans' type='text/css' rel="preload" as="style" onload="this.rel='stylesheet'" />
+
+		<link rel="stylesheet" href="/themes/v1/lace/assets/css/lace.css?modified=2017-04-04">
+	
+		
+<!-- GLOBAL CONTENT FOR HTML HEAD END -->
+
+    <style>
+    .boxify-image {
+      background-size: cover;
+    }
+    </style>
+  <style>
+    
+  </style>
+  
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="9zafSVVrInE2iZruYKjrAapwUtr2fMumFmMSW2shO3E=" name="csrf-token" />
+
+
+<!-- Start of Criteo one tag -->
+<!-- End of Criteo one tag -->
+
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="9zafSVVrInE2iZruYKjrAapwUtr2fMumFmMSW2shO3E=" name="csrf-token" />
+  <meta property="og:site_name" content="醍吾米亞菓子工坊"/>
+<meta property="og:title" content="醍吾米亞菓子工坊"/>
+<meta property="og:url" content="http://www.miacake2008.com"/>
+<link rel="canonical" href="http://www.miacake2008.com" />
+<meta property="og:description" content=""/>
+<meta property="og:image" content="https://img.shoplineapp.com/media/image_clips/57d648c66170691154730900/original.jpg?1473661126"/>
+
+
+
+  <script type="text/javascript">
+  function getScript(url,success){
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = url;
+  var head=document.getElementsByTagName('head')[0], done=false;
+  script.onload=script.onreadystatechange = function(){
+    if ( !done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete') ) {
+      done=true;
+      success();
+      script.onload = script.onreadystatechange = null;
+      head.removeChild(script);
+    }
+  };
+  head.appendChild(script);
+}
+
+window.executeLabQueue = function() {
+  if (window.isQueueClosed && window.isLabLoaded) {
+    $LAB.runQueue();
+  }
+}
+
+getScript('https://cdn.jsdelivr.net/labjs/2.0.3/LAB.min.js', function() {
+  $LAB
+    .queueScript('https://cdn.shopify.com/s/javascripts/currencies.js')
+    .queueScript('https://dt9jl8a7gc9zr.cloudfront.net/assets/application-f24dd427acb3dc9f9b1aebe524e892e4.js').queueWait(function(){
+      $("body").removeClass("loading");
+      $("body").removeAttr('style');
+  app.value('mainConfig', {
+  merchantId: '55f23f06e36c8e916c000071',
+  appCoreHost: "shoplineapp.com",
+  apiBaseUrl: "http://shoplineapp.com",
+  counterApiHost: "https://count.shoplineapp.com/",
+  appendToUrl:'',
+  env: 'production',
+  merchantData: {"_id":"55f23f06e36c8e916c000071","base_country_code":"TW","owner_type":"User","status":"active","shop_status":"open","profile_image":null,"facebook_page_id":"319074308138528","current_theme_key":"lace","signup_ref":{"utm_source":"fbpost","utm_campaign":"hketnews2015","utm_medium":"facebook","utm_content":"tw"},"remarks":{},"tags_s":"","tags":[],"owner_id":"55f23f06e36c8e916c000070","owner_id_s":"55f23f06e36c8e916c000070","name":"醍吾米亞菓子工坊","handle":"mia126","updated_at":"2016-10-15T17:24:19.399Z","base_currency_code":"TWD","favicon_media_id":"57d648d9617069519691d700","invoice_activation":"inactive","domain_remarks":"","beta_feature_keys":["promotions_apply","promotions_apply","hide_coupon"],"enabled_stock_reminder":false,"identifier":"","addon_limit_enabled":true,"family_mart_vendors":[],"instagram_access_token":"","custom_redirection_enabled":false,"brand_home_url":"http://www.miacake2008.com","base_currency":{"id":"twd","iso_code":"TWD","alternate_symbol":"NT$","name":"New Taiwan Dollar","symbol_first":true,"subunit_to_unit":1},"shop_default_home_url":"https://mia126.shoplineapp.com","payment_method_count":2,"delivery_option_count":4,"addon_features":[]},
+  localeData: {"loadedLanguage":{"name":"中文(繁)","code":"zh-hant"},"supportedLocales":[{"name":"EN","code":"en"}]},
+  currentUser:null,
+  themeSettings:{"theme_color":"mint.sea","categories_collapsed":true,"image_fill":true,"is_multicurrency_enabled":false},
+  requestCountry: "US",
+  trackerEventData: {},
+  currencyData: {"displayedCurrency":{"name":"$ TWD","iso_code":"TWD"},"supportedCurrencies":[{"name":"$ HKD","iso_code":"hkd"},{"name":"¥ CNY","iso_code":"cny"},{"name":"$ USD","iso_code":"usd"},{"name":"$ SGD","iso_code":"sgd"},{"name":"€ EUR","iso_code":"eur"},{"name":"$ AUD","iso_code":"aud"},{"name":"£ GBP","iso_code":"gbp"},{"name":"₱ PHP","iso_code":"php"},{"name":"RM MYR","iso_code":"myr"},{"name":"฿ THB","iso_code":"thb"},{"name":"د.إ AED","iso_code":"aed"},{"name":"¥ JPY","iso_code":"jpy"},{"name":"K MMK","iso_code":"mmk"},{"name":"$ BND","iso_code":"bnd"},{"name":"₩ KRW","iso_code":"krw"}]},
+  previousUrl: '',
+  checkoutLandingPath: '/checkout'
+});
+
+app.value('flash', {
+});
+
+app.value('flash_data', {});
+app.value('routeParams', {"action":"new","controller":"devise/passwords"});
+
+
+      app.value('resource', {
+       'data':{"_id":"58e42f9564656560aabb0000","birthday":null,"created_at":null,"custom_data":{},"delivery_addresses":[],"email":"","facebook_id":null,"facebook_info":null,"gender":null,"is_password_set":null,"locale_code":"zh-hant","membership_tier_id":null,"name":"","owner_id":null,"owner_type":"Merchant","phones":[],"profile_image":{},"provider":"","status":"active","subscribed_email_types":[],"updated_at":null},
+       'error_messages': {}
+      });
+
+  
+
+      $('.left-panel-button').sidr({
+        name: 'left-panel',
+        side: 'left',
+        body: ".body-wrapper"
+      });
+      $('.cart-panel-button').sidr({
+        name: 'cart-panel',
+        side: 'left',
+        body: ".body-wrapper"
+      });
+      $( ".body-wrapper" ).click(function(e) {
+        if ($(".body-wrapper").hasClass("sidr-open" )) {
+          e.preventDefault();
+          e.stopPropagation();
+          $.sidr('close','left-panel');
+          $.sidr('close','cart-panel');
+        }
+      });
+
+      $jq = jQuery; // to prevent being overidden by stupid GTM users
+      $(document).ready(function() {
+        // to show a loading dialog when a huge Product Description Image blocks page content from rednering
+        $("#product-loading").remove();
+        $jq(".description-container img[data-src!='']").each(function() {
+          $(this).attr('src', $(this).attr('data-src'));
+          $(this).removeAttr('data-src');
+        });
+
+        if ($jq("#home-carousel").length > 0) {
+          $jq("#home-carousel").owlCarousel({
+            items: 1,
+            singleItem: true,
+            autoPlay: true,
+            stopOnHover: true,
+            lazyLoad : true,
+            autoHeight:true,
+            navigation: true,
+            navigationText: false,
+          });
+        }
+
+        if ($jq(".owl-carousel").length > 0) {
+          $jq(".owl-carousel").owlCarousel({
+            loop:true,
+            items: 1,
+            margin:10,
+            nav:false,
+            lazyLoad: true,
+            autoplay:true,
+            autoplayHoverPause:false // https://github.com/OwlCarousel2/OwlCarousel2/pull/1777
+          });
+        }
+
+        //NOTE: temporarily hack to make boxify work, boxify should be replaced by using other tools and techniques 
+        boxify({});
+        $jq(".title-container.ellipsis").dotdotdot({
+          wrap: 'letter'
+        })
+
+        // Trigger Facebook reload on Page plugin for resizing
+        if (typeof FB !== "undefined") {
+          FB.XFBML.parse();
+        }
+      });
+
+
+      if (window.scriptQueue && window.scriptQueue.length > 0) {
+        for (var i = 0; i < window.scriptQueue.length; i++) {
+          try{
+            window.scriptQueue[i]();
+          }
+          catch (err) {
+            console.log(err);
+          }
+        }
+      }
+
+
+    })
+
+  window.isLabLoaded = true;
+
+  // Try to execute lab queue
+  window.executeLabQueue();
+});
+
+  </script>
+</head>
+
+<body ng-app="shop_app" class="passwords new " ng-controller="MainController"  ng-cloak style="display:none !important; background: none">
+
+<script>
+  function getScript(url,success){
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = url;
+    var head=document.getElementsByTagName('head')[0], done=false;
+    script.onload=script.onreadystatechange = function(){
+      if ( !done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete') ) {
+        done=true;
+        success();
+        script.onload = script.onreadystatechange = null;
+        head.removeChild(script);
+      }
+    };
+    head.appendChild(script);
+  }
+</script>
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '467428936681900',
+        xfbml      : true,
+        version    : 'v2.7'
+      });
+    };
+
+    (function(d, s, id){
+     // Do the language code to ISO standard translation. http://www.loc.gov/standards/iso639-2/php/code_list.php
+     function to_ISO (locale) {
+       if (locale == "zh-hant") locale = "zh"
+       return locale
+     }
+     // Facebook use their regional format for sdk. https://developers.facebook.com/docs/internationalization#locales
+     function get_ll_CC (lang_code, cty_code) {
+       var sdk = to_ISO(lang_code) + "_" + cty_code;
+       return (support_sdk.indexOf(sdk) !== -1) ? sdk : "en_US"
+     }
+     // Support the facebook sdk type.
+     var support_sdk = ["en_US", "zh_TW"];
+     var language_code = "zh-hant";
+     var country_code = "TW";
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/" + get_ll_CC(language_code, country_code) + "/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+  </script>
+  
+  <div id="left-panel" style="display:none">  
+<div class="side-panel-search">
+  <form ng-controller="ProductsSearchController" ng-submit="search(searchQuery)">
+    <button><span class="fa fa-search"></span></button>
+    <input name="searchQuery" ng-model="searchQuery" placeholder="找商品">
+    <span class="fa fa-times" ng-click="clearSearch()"></span>
+  </form>
+</div>
+
+<div class="clear"></div>
+<!-- <div style="float: left;width: 100%;background-color:#262d36;" ng-show='isUserLoggedIn'>
+  <div class="sidr-photo">
+    <div class="sidr-photo-ring">
+      <img class="img-circle sidr-chat-head" ng-src="{{currentUser.profile_image_url}}"/>
+    </div>
+  </div>
+</div>
+<div style="float: left;width: 100%;background-color:#262d36;" ng-show='!isUserLoggedIn'>
+  <div style="height: 1px;background-color:#232a32;"></div>
+</div> -->
+
+
+<div class="clear"></div>
+<div ng-show='isUserLoggedIn' class="hello" style="padding: 25px 15px;word-wrap:break-word;">
+  你好, {{currentUser.name}}
+</div>
+<div ng-show='!isUserLoggedIn' class="hello"></div>
+<div class="clear"></div>
+<div class="visible-sm visible-xs">
+  <div class="section-header">
+     目錄
+  </div>
+  <ul>
+    <li>
+      <a href="/products">所有商品</a>
+    <li>
+      <a href="/categories/生日造型蛋糕">生日造型蛋糕</a>
+    <li>
+      <a href="/categories/戚風蛋糕">蛋糕  點心</a>
+    <li>
+      <a href="/categories/麵包">麵包</a>
+    <li>
+      <a href="/categories/客製餐盒"></a>
+    <li>
+      <a href="/categories/季節限定"></a>
+  </ul>
+</div>
+
+  
+<div class="clear"></div>
+  <div class="visible-sm visible-xs">
+    <div class="section-header">
+      分類
+    </div>
+    <ul>
+        <li class=" text-secondary-color">
+          
+          <a href="/categories/55f23f07e36c8e916c000082">精選商品<!-- <span class="catcount"></span> --></a>
+        </li>
+        <li class=" text-secondary-color">
+          
+          <a href="/categories/55f3eb18e36c8e1fbc00000a">生日造型蛋糕<!-- <span class="catcount"></span> --></a>
+        </li>
+        <li class=" text-secondary-color">
+          
+          <a href="/categories/55f582bce37ec6e695000034">蛋糕  點心<!-- <span class="catcount"></span> --></a>
+        </li>
+        <li class=" text-secondary-color">
+          
+          <a href="/categories/55f584f3039055afc0000003">彌月系列<!-- <span class="catcount"></span> --></a>
+        </li>
+    </ul>
+  </div>
+
+  <div style="" ng-show="isUserLoggedIn && !featureService.hasBetaFeature('hide_membership')">
+    <div class="section-header">
+        帳戶
+    </div>
+     <div collapse="isProfileSectionCollapsed">
+      <ul >
+        <li> <a ng-href="/users/{{currentUser._id}}/edit" target="_self">個人資訊</a></li>
+        <li> <a href="/messages" >訊息</a></li>  
+        <li> <a href="/orders" >訂單</a></li>
+
+        <li>
+          <form accept-charset="UTF-8" action="/users/sign_out" id="signoutForm" method="post" style="margin: 0;"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="delete" /><input name="authenticity_token" type="hidden" value="9zafSVVrInE2iZruYKjrAapwUtr2fMumFmMSW2shO3E=" /></div>
+            <a href="#" onclick="document.getElementById(&#39;signoutForm&#39;).submit()">登出</a>
+</form>         
+         </li>
+      </ul>
+    </div>
+   </div>
+    <div style="" ng-show='!isUserLoggedIn && !featureService.hasBetaFeature("hide_membership")'>
+    <div>
+    <div class="section-header">
+        帳戶
+    </div>  
+    <ul>
+      <li><a class="" href="/users/sign_in" >會員登入</a></li> 
+      <li><a class="" href="/users/sign_up">新用戶註冊</a></li>
+    </ul>
+    </div>
+  </div>
+</div> 
+<!--left-panel-->
+
+
+<div id="cart-panel" style="display:none">
+  <!-- cart Start -->
+   <div ng-controller="CartsController">
+    <div class="cart-header">
+      購物車
+    </div>
+    <!-- cart items start-->
+    <div class="clear"></div>
+    <div class="" ng-show="currentCart.isCartEmpty()">
+      <div style="display:block;padding:15px">
+        你的購物車是空的
+      </div>
+    </div>
+    <div class="" ng-hide="currentCart.isCartEmpty()">
+      <div id="" style="" class="cart-items">
+        <div ng-repeat="item in currentCart.getItems()">
+          <div class="cart-item"> 
+            <a ng-href="/products/{{item.product_id}}" target="_blank" class="product-link">
+              <img class="" style="margin-right:10px;width:50px;height:50px;float:left;" ng-src="{{item.variation.media ? item.variation.media.images.thumb.url : item.data.cover_media.images.thumb.url}}"/>
+            </a>
+            <div class="cart-item-content" style="float:left;width:130px;">
+              <div class="title">{{item.data.title_translations|translateModel}}</div>
+              <div ng-repeat="field in item.variation.fields">
+                <div class="variation">{{ field.name_translations | translateModel }}</div>
+              </div>
+              <div class="variation" ng-hide="item.variation.fields">{{item.variation.name}}</div>
+              <div class="price-details">
+                {{item.quantity}}<span style=";margin:0 3px;">x</span>
+                <span ng-bind-html="currentCart.getItemPrice(item).label | changeCurrency"></span>
+              </div>  
+            </div><!--cart-item-content-->
+              <div class="remove"><a ng-click="removeItemFromCart(item._id,$event)" >刪除</a></div>
+            <div class="clear"></div>
+          </div><!-- cart-item-->
+
+          <div class="addon-cart-item cart-item" ng-repeat="addonItem in item.addon_items" ng-init="addonItemPrice = addonItem.price ? (addonItem.quantity * addonItem.price.cents / mainConfig.merchantData.base_currency.subunit_to_unit) : ''">
+            <a class="product-link">
+              <img class="" style="margin-right:10px;width:50px;height:50px;float:left;" ng-src="{{addonItem.cover_media.images.thumb.url}}"/>
+            </a>
+            <div class="cart-item-content" style="float:left;width:130px;">
+              <div class="label promotion-label label-default">{{ 'product.addon_products.label' | translate }}</div>
+              <div class="title">{{addonItem.title_translations|translateModel}}</div>
+              <div class="price-details">
+                {{addonItem.quantity}}<span style=";margin:0 3px;">x</span>
+                <span ng-show="addonItem.price.label" ng-bind-html="addonItem.price.label | changeCurrency"></span>
+                <span ng-hide="addonItem.price.label">{{ mainConfig.merchantData.base_currency.alternate_symbol + "0" }}</span>
+              </div>
+            </div><!--cart-item-content-->
+              <div class="remove"><a ng-click="removeItemFromCart(addonItem._id,$event)" >刪除</a></div>
+            <div class="clear"></div>
+          </div>
+
+        </div>
+        <div class="clear"></div>
+      </div> <!--cart-items-->
+      <!-- cart items end -->
+      <div class="clear"></div>
+      <div class="cart-chkt-btn-cont">
+        <button id="btn-checkout" class="cart-chkt-btn ladda-button" data-style="slide-down" ladda="checkoutButtonLoading" ng-click="onCheckoutClicked($event)">
+          訂單結帳
+        </button>
+      </div>
+    </div>
+  </div> 
+</div> <!--cart-panel-->
+
+<!-- cart End -->
+
+  <div id="fixed-menu-container" ng-cloak class='ng-cloak'>
+  <a class="menu-button cog-button" id="" href="/admin" ng-show="currentUser && mainConfig.merchantData.owner_id == currentUser._id"  ng-cloak target="_blank">
+    <span class="fa fa-cog"> </span>
+  </a>
+
+  <a class="left-panel-button menu-button" id="" href="#left-panel" ng-class="{'ie-hack':!mainConfig.themeSettings.is_multicurrency_enabled, 'visible-xs-table-cell':featureService.hasBetaFeature('hide_membership')}">
+    <span class="fa fa-bars"> </span><span class="menu-words" style="padding-left:6px;">目錄</span>
+  </a>
+
+  <a class="cart-panel-button menu-button" id="" href="#cart-panel" ng-class="{'ie-hack':!mainConfig.themeSettings.is_multicurrency_enabled}">
+    <span class="fa fa-shopping-cart"> </span><span class="menu-words" style="padding-left:6px;">購物車</span>
+     <span class="cart-count" ng-show="currentCart.getItemCount()>0">({{currentCart.getItemCount()}})</span>
+  </a>
+
+  <a class="menu-button message-button" ng-hide="featureService.hasBetaFeature('hide_message')" ng-click="showMessageForm()" ng-class="{'ie-hack':!mainConfig.themeSettings.is_multicurrency_enabled}">
+  <span class="fa fa-comment"></span><span class="menu-words" style="padding-left:6px;">聯絡店主</span>
+  </a>
+
+  <div class="dropdown" dropdown ng-class="{'ie-hack':!mainConfig.themeSettings.is_multicurrency_enabled}">
+    <div class="menu-button dropdown-toggle" dropdown-toggle>
+      <span class="fa fa-globe"> </span>
+      <span class="menu-words" style="padding-left:5px;padding-right:5px;">中文(繁)</span>
+      <span class="caret menu-words" style="float: right;position: relative;top: 7px;"></span>
+    </div>
+    <ul class="dropdown-menu menu-button">
+        <li ng-click="changeLanguage('en')"><span>EN</span></li>
+    </ul>
+  </div>
+
+  <div class="dropdown" dropdown ng-show="mainConfig.themeSettings.is_multicurrency_enabled" ng-class="{'ie-hack':!mainConfig.themeSettings.is_multicurrency_enabled}">
+    <div class="menu-button dropdown-toggle" dropdown-toggle>
+      <span class="fa menu-words-reversed">$</span>
+      <span class="menu-words" style="padding-left:5px;padding-right:5px;">$ TWD</span>
+      <span class="caret menu-words" style="float: right;position: relative;top: 7px;"></span>
+    </div>
+    <ul class="dropdown-menu menu-button">
+      <li ng-click="changeCurrency('hkd')"><span>$ HKD</span></li>
+      <li ng-click="changeCurrency('cny')"><span>¥ CNY</span></li>
+      <li ng-click="changeCurrency('usd')"><span>$ USD</span></li>
+      <li ng-click="changeCurrency('sgd')"><span>$ SGD</span></li>
+      <li ng-click="changeCurrency('eur')"><span>€ EUR</span></li>
+      <li ng-click="changeCurrency('aud')"><span>$ AUD</span></li>
+      <li ng-click="changeCurrency('gbp')"><span>£ GBP</span></li>
+      <li ng-click="changeCurrency('php')"><span>₱ PHP</span></li>
+      <li ng-click="changeCurrency('myr')"><span>RM MYR</span></li>
+      <li ng-click="changeCurrency('thb')"><span>฿ THB</span></li>
+      <li ng-click="changeCurrency('aed')"><span>د.إ AED</span></li>
+      <li ng-click="changeCurrency('jpy')"><span>¥ JPY</span></li>
+      <li ng-click="changeCurrency('mmk')"><span>K MMK</span></li>
+      <li ng-click="changeCurrency('bnd')"><span>$ BND</span></li>
+      <li ng-click="changeCurrency('krw')"><span>₩ KRW</span></li>
+    </ul>
+  </div>
+
+  <div class="menu-button search-button" ng-class="{'ie-hack':!mainConfig.themeSettings.is_multicurrency_enabled}">
+    <form ng-controller="ProductsSearchController" ng-submit="search(searchQuery)" style="margin-bottom: 0">
+      <input name="searchQuery" ng-model="searchQuery" placeholder="找商品">
+      <button><span class="fa fa-search"></span></button>
+    </form>
+  </div>
+    
+</div>
+
+  <div class="body-wrapper">
+    <div class="body-content">
+    <nav class="main-navigation">
+      <!---navigation -->
+      <div class="navbar-wrapper " >
+        <div class="navbar" role="navigation" style="">
+          <div class="navbar-header-wrapper">
+            <div class="container" >
+              <div class="navbar-header">
+                <a href="http://www.miacake2008.com/">
+                  <img src="https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&url=https://img.shoplineapp.com/media/image_clips/57d648c66170691154730900/original.jpg?1473661126&resize_h=140px"  class="logo-image"/>
+                </a>
+              </div>
+            </div> <!--container-->
+          </div>
+          <div class="navbar-menu-wrapper">
+            <div class="container" >
+              <div class="navbar-menu hidden-xs">
+                <ul class="text-primary-color">
+    <!-- Has dropdown links -->
+    <!-- doesn't have dropdown links -->
+    <li class="">
+      <a class="" href="/products" target="">所有商品</a>
+    </li>
+    <!-- Has dropdown links -->
+    <!-- doesn't have dropdown links -->
+    <li class="">
+      <a class="" href="/categories/生日造型蛋糕" target="">生日造型蛋糕</a>
+    </li>
+    <!-- Has dropdown links -->
+    <!-- doesn't have dropdown links -->
+    <li class="">
+      <a class="" href="/categories/戚風蛋糕" target="">蛋糕  點心</a>
+    </li>
+    <!-- Has dropdown links -->
+    <!-- doesn't have dropdown links -->
+    <li class="">
+      <a class="" href="/categories/麵包" target="">麵包</a>
+    </li>
+    <!-- Has dropdown links -->
+    <!-- doesn't have dropdown links -->
+    <li class="">
+      <a class="" href="/categories/客製餐盒" target=""></a>
+    </li>
+    <!-- Has dropdown links -->
+    <!-- doesn't have dropdown links -->
+    <li class="">
+      <a class="" href="/categories/季節限定" target=""></a>
+    </li>
+</ul>
+              </div>
+            </div> <!--container-->
+          </div>
+        </div><!--navbar-->
+      </div><!--navbar-wrapper-->
+      <!-- navigation end -->
+  </nav>
+
+  <!-- main Content -->
+  <div class="yield-wrapper">
+    
+
+<div class="large-message" ng-controller="PasswordsNewController">
+  <div class="container"  ga-page-view>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="content full-content-center">
+          <h2 class="global-primary dark-primary section-title">忘記密碼?</h2>
+          <div class="alert alert-danger" ng-show="userForm.errorMessages">
+            <div ng-repeat="message in userForm.errorMessages">
+              {{message}}
+            </div>
+          </div>
+          <div class="form-container">
+            <form accept-charset="UTF-8"  class="simple_form form-vertical" data-validate="true" id="new_user" method="post" novalidate="novalidate" name="userForm">
+            <div class="alert alert-success" ng-show="userForm.successMessages && userForm.successMessages.length > 0">
+                <div ng-repeat="message in userForm.successMessages">
+                  {{message}}
+                </div>
+              </div>
+
+
+              <!-- <div class="field">
+                <i class="fa fa-envelope-o"></i> 
+                <input class="line-input" type="hidden" name="user[owner_id]" value="55f23f06e36c8e916c000071"/>
+              </div> -->
+              <div class="" ng-hide="userForm.successMessages.length>0" >
+                <div control-group label=""  data-field-name="電郵"  class="login-input">
+                  <i class="fa fa-envelope-o"></i> 
+                  <input  class="line-input" name="email" ng-model="resource.email" placeholder="電郵"  type="email" ng-required="true" ng-minlength="4" ng-maxlength="50">
+                </div>
+              </div>
+
+              <div class="actions" ng-hide="userForm.successMessages.length>0">
+                <!-- <input class="btn btn-custom-large btn-color-primary" name="commit" type="submit" value="請傳送重設密碼說明至以上電郵"> -->
+                <button ng-click="formSubmit()"  class="btn btn-success btn-block ladda-button btn-custom-large btn-color-primary" data-style="slide-down" ladda="userForm.submitting"><i class="fa fa-rocket"></i> 請傳送重設密碼說明至以上電郵</button>
+              </div>
+              
+
+            </form>
+
+            <div class="links-container">
+
+  <a href="/users/sign_in">會員登入</a><br />
+
+  <a href="/users/sign_up">新用戶註冊</a><br />
+
+
+
+
+
+    <br />
+
+</div>
+          </div> <!-- end form-container-->
+        </div> <!-- end content -->
+      </div> <!-- end col-sm-12 -->
+    </div> <!-- end row -->
+  </div> <!-- end container -->
+</div> <!-- end large-message -->
+  </div><!--yield-wrapper-->
+  <!-- main Content end-->
+</div><!-- body-content-->
+  <!---footer -->
+  <div id="footer">
+      <div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <!-- Footer Links -->
+      <ul>
+            <li class="">
+              <a class="" href="/about" target="">商店介紹</a>
+            </li>
+      </ul>
+      <!-- End Footer Links -->
+
+    </div>
+
+    <div class="col-sm-6 sociallinks">
+      
+      <!-- Payment Social Networks -->
+      <ul>
+          <li class="global-secondary icon-footer_email">
+            <li class="">
+              <a class="" href="https://www.facebook.com/miacake2008" target="_blank">Facebook 專頁</a>
+            </li>
+          </li>
+      </ul>
+      <!-- End Social Networks -->
+
+    </div>
+
+    <div class="col-sm-12 badges">
+
+      <div class="credit-cards">
+        <!--render logo by type ["visa", "master", "amex", "paypal","prizm"]-->
+      </div>  
+      
+      
+    </div>
+
+
+  </div><!--row-->
+</div>
+  </div>
+  <!---footer end-->
+
+  </div>
+
+   		
+
+  <!-- start countly -->
+  <script type="text/javascript">
+    //initializing countly with params
+    // var Countly = Countly || {};
+    // Countly.q = Countly.q || [];
+    //provide countly initialization parameters
+    // Countly.app_key = "234f6523d0d1a8b430364ea094e191a767f86b06";
+    // Countly.url = "http://dc1.shoplinedev.com"; //or none for default countly cloud
+
+
+    // Countly.init({
+    //   app_key: "dd1896ed6ed2ec72b22854a4fbebbd8712ec4d36",
+    //   url: "https://count.shoplineapp.com",
+    // })
+
+    
+//    Countly.begin_session(true);
+    // Countly.add_event({
+    //   "key": "pageView",
+    //   "device_id":" ee9840df7b8b4cb7f32a8156abf564e8",
+    //   "session_duration": 30,
+    //   "segmentation": {
+    //     "url": window.location.pathname,
+    //     merchantId: '55f23f06e36c8e916c000071'
+    //   }
+    // });
+    //end session on leaving page
+
+    // Countly.q.push(['session_duration', 1800]);
+    // Countly.q.push(['add_event',{
+    //   key:"asyncPageView", 
+    //   "segmentation": {
+    //     "url": window.location.pathname
+    //   }
+    // }]);
+
+
+  </script>
+  <!-- end countly-->
+
+
+
+    
+
+
+      <script type="text/javascript">
+        if (typeof ga === 'undefined'){
+					(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+					})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        }
+          ga('create', 'UA-88582109-1', 'auto');
+          ga('send', 'pageview');
+      </script>      
+
+    
+
+      
+
+
+
+
+
+  <script type="text/javascript">
+    window.isQueueClosed = true;
+
+    // Try to execute lab queue
+    window.executeLabQueue();
+  </script>
+</body>
+
+</html>

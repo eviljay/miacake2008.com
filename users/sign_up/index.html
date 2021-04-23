@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+<head>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"aa0d8411ae","applicationID":"5470801","transactionName":"ewxaQUoKDQ0DQRhUV04KR1AXFwQGD0BDQlNMCltbS0oPBBE=","queueTime":0,"applicationTime":182,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={xpid:"VwAPUFFTGwYEU1FaBwA="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(18),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(19),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(21)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(21)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(21)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(21)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(21)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(){var t=window.NREUM,n=t.info.accountID||null,e=t.info.agentID||null,r=t.info.trustKey||null,i="btoa"in window&&"function"==typeof window.btoa;if(!n||!e||!i)return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:e,id:o.generateCatId(),tr:o.generateCatId(),ti:Date.now()}};return r&&n!==r&&(a.d.tk=r),btoa(JSON.stringify(a))}var o=t(16);n.exports={generateTraceHeader:r}},{}],11:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return w(r)}function i(t,n){var e=f(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(12),u=t(10).generateTraceHeader,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(15),w=t(14),v=window.XMLHttpRequest;s.features.xhr=!0,t(9),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(e=!!NREUM.init.distributed_tracing.enabled),e&&this.sameOrigin){var r=u();r&&n.setRequestHeader("newrelic",r)}}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=w(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)})}},{}],12:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],13:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(18),s=t(19),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],14:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],15:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],16:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],17:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],18:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],19:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],20:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],21:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(19),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(18),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(18),u=t("ee"),d=t(17),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:x,userAgent:d};t(13),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,R=t(20)},{}]},{},["loader",2,11,4,3]);</script>
+
+
+  <title>醍吾米亞菓子工坊</title>
+
+  <link rel="preload" href="https://cdn.jsdelivr.net/labjs/2.0.3/LAB.min.js" as="script">
+<link rel="preload" href="https://cdn.shopify.com/s/javascripts/currencies.js" as="script">
+<link rel="preload" href="https://cdn.shoplineapp.com/assets/common-59c2e5b9bf57075940314b3e7ea9f067.js" as="script">
+<link rel="preload" href="https://cdn.shoplineapp.com/assets/shop-9be7936b4f19e1f5960b8082433e026d.js" as="script">
+<link rel="preload" href="https://cdn.shoplineapp.com/assets/fonts/fontawesome-webfont.woff2?v=4.7.0" as="font" type="font/woff2" crossorigin>
+<meta name="viewport" content="initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<meta name="google" value="notranslate">
+
+
+  <link rel="shortcut icon" type="image/png" href="https://img.shoplineapp.com/media/image_clips/57d648d9617069519691d700/thumb.jpg?1473661144">
+
+<!-- styles-->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' type='text/css' as="style" onload="this.rel='stylesheet'" />
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' type='text/css' as="style" onload="this.rel='stylesheet'">
+<link rel="stylesheet" media="all" href="https://cdn.shoplineapp.com/assets/application-de1630c3fc999b9b8019da7faa870127.css" />
+  <link rel="stylesheet" media="screen" href="https://cdn.shoplineapp.com/assets/themes/lace-989f186edef97365efdaa7f4ae5dc18e.css" />
+<!-- styles-->
+
+
+
+<!-- GLOBAL CONTENT FOR HTML HEAD START-->
+<link href='https://fonts.googleapis.com/css?family=Noto+Sans' type='text/css' rel="preload" as="style" onload="this.rel='stylesheet'" />
+
+		<link rel="stylesheet" media="screen" href="https://cdn.shoplineapp.com/assets/themes/lace-989f186edef97365efdaa7f4ae5dc18e.css" />
+	
+		
+<!-- GLOBAL CONTENT FOR HTML HEAD END -->
+
+    <style>
+    .boxify-image {
+      background-size: cover;
+    }
+    </style>
+
+<!--- Site Ownership Data -->
+<!--- Site Ownership Data End-->
+
+<base href="/">
+
+  <style>
+    
+  </style>
+  
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="MDoOKnP3Hz0dB3E+glvC87T6ZbcfpXO0wcll9GKWL3D73D00Jj6nuuzqknjw/q3MDFTAmkP8hZve5Din5WbSXw==" />
+
+
+<!-- Start of Criteo one tag -->
+<!-- End of Criteo one tag -->
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="6+L7SHEybshT2RBo9G/R4L6yqNxP6HGoOGkuYL/f8z4gBMhWJPvWT6I08y6Gyr7fBhwN8ROxh4cnRHMzOC8OEQ==" />
+  <meta property="og:site_name" content="醍吾米亞菓子工坊"/>
+<meta property="og:title" content="醍吾米亞菓子工坊"/>
+<meta property="og:url" content="https://www.miacake2008.com"/>
+<link rel="canonical" href="https://www.miacake2008.com" />
+<meta property="og:description" content=""/>
+<meta property="og:image" content="https://img.shoplineapp.com/media/image_clips/57d648c66170691154730900/original.jpg?1473661126"/>
+
+
+
+  <script type="text/javascript">
+  // for facebook login redirect
+if (location.hash === '#_=_') {
+  history.replaceState(null, document.title, location.toString().replace(/#_=_$/, ''));
+}
+
+function getScript(url,success){
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = url;
+  var head=document.getElementsByTagName('head')[0], done=false;
+  script.onload=script.onreadystatechange = function(){
+    if ( !done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete') ) {
+      done=true;
+      success();
+      script.onload = script.onreadystatechange = null;
+      head.removeChild(script);
+    }
+  };
+  head.appendChild(script);
+}
+
+window.executeLabQueue = function() {
+  if (window.isQueueClosed && window.isLabLoaded) {
+    $LAB.runQueue();
+  }
+}
+
+
+window.resizeImages = function(element) {
+  var images = (element || document).getElementsByClassName("sl-lazy-image")
+  var styleRegex = /background\-image:\ *url\(['"]?(https\:\/\/shoplineimg.com\/[^'"\)]*)+['"]?\)/
+
+  for (var i = 0; i < images.length; i++) {
+    var image = images[i]
+    try {
+      var src = image.getAttribute('src') || image.getAttribute('style').match(styleRegex)[1]
+    } catch(e) {
+      continue;
+    }
+    var setBySrc, head, tail, width, height;
+    try {
+      if (!src) { throw 'Unknown source' }
+
+      setBySrc = !!image.getAttribute('src') // Check if it's setting the image url by "src" or "style"
+      var urlParts = src.split("?"); // Fix issue that the size pattern can be in external image url
+      var result = urlParts[0].match(/(.*)\/(\d+)?x?(\d+)?(.*)/) // Extract width and height from url (e.g. 1000x1000), putting the rest into head and tail for repackaging back
+      head = result[1]
+      tail = result[4]
+      width = parseInt(result[2], 10);
+      height = parseInt(result[3], 10);
+
+      if (!!((width || height) && head != '') !== true) { throw 'Invalid image source'; }
+    } catch(e) {
+      if (typeof e !== 'string') { console.error(e) }
+      continue;
+    }
+
+    var segment = parseInt(image.getAttribute('data-resizing-segment') || 200, 10)
+    var scale = window.devicePixelRatio > 1 ? 2 : 1
+
+    // Resize by size of given element or image itself
+    var refElement = image;
+    if (image.getAttribute('data-ref-element')) {
+      var selector = image.getAttribute('data-ref-element');
+      if (selector.indexOf('.') === 0) {
+        refElement = document.getElementsByClassName(image.getAttribute('data-ref-element').slice(1))[0]
+      } else {
+        refElement = document.getElementById(image.getAttribute('data-ref-element'))
+      }
+    }
+    var refWidth = image.getAttribute('data-max-width') ? Math.min(parseInt(image.getAttribute('data-max-width')), refElement.offsetWidth) : refElement.offsetWidth;
+    var refHeight = image.getAttribute('data-max-height') ? Math.min(parseInt(image.getAttribute('data-max-height')), refElement.offsetHeight) : refElement.offsetHeight;
+
+    // Get desired size based on view, segment and screen scale
+    var resizedWidth = isNaN(width) === false ? Math.ceil(refWidth * scale / segment) * segment : undefined
+    var resizedHeight = isNaN(height) === false ? Math.ceil(refHeight * scale / segment) * segment : undefined
+
+    if (resizedWidth || resizedHeight) {
+      var newSrc = head + '/' + ((resizedWidth || '') + 'x' + (resizedHeight || '')) + (tail || '') + '?';
+      for (var j = 1; j < urlParts.length; j++) { newSrc += urlParts[j]; }
+      if (newSrc !== src) {
+        if (setBySrc) {
+          image.setAttribute('src', newSrc);
+        } else {
+          image.setAttribute('style', image.getAttribute('style').replace(styleRegex, 'background-image:url('+newSrc+')'));
+        }
+      }
+    }
+  }
+}
+
+getScript('https://cdn.jsdelivr.net/labjs/2.0.3/LAB.min.js', function() {
+  $LAB
+    .queueScript('https://cdn.shopify.com/s/javascripts/currencies.js')
+    .queueScript('https://cdn.shoplineapp.com/assets/common-59c2e5b9bf57075940314b3e7ea9f067.js').queueWait()
+    .queueScript('https://cdn.shoplineapp.com/assets/shop-9be7936b4f19e1f5960b8082433e026d.js')
+    .queueWait(function(){
+
+  app.value('mainConfig', {
+  merchantId: '55f23f06e36c8e916c000071',
+  appCoreHost: "shoplineapp.com",
+  apiBaseUrl: "http://shoplineapp.com",
+  counterApiHost: "https://count.shoplineapp.com/",
+  eventTrackApi: "https://events.shoplytics.com/api",
+  appendToUrl:'',
+  env: 'production',
+  merchantData: {"_id":"55f23f06e36c8e916c000071","base_country_code":"TW","owner_type":"User","status":"active","shop_status":"open","profile_image":null,"facebook_page_id":"319074308138528","current_theme_key":"lace","signup_ref":{"utm_source":"fbpost","utm_campaign":"hketnews2015","utm_medium":"facebook","utm_content":"tw"},"remarks":{},"tags_s":"","tags":["food"],"owner_id":"55f23f06e36c8e916c000070","owner_id_s":"55f23f06e36c8e916c000070","name":"醍吾米亞菓子工坊","handle":"mia126","updated_at":"2019-05-17T10:00:47.592Z","base_currency_code":"TWD","favicon_media_id":"57d648d9617069519691d700","invoice_activation":"inactive","domain_remarks":"","beta_feature_keys":["promotions_apply","promotions_apply","hide_coupon","promotions_setup","checkout_v2"],"enabled_stock_reminder":false,"identifier":"","addon_limit_enabled":true,"family_mart_vendors":[],"instagram_access_token":"","custom_redirection_enabled":false,"is_short_message_activated":false,"is_ka":false,"supported_languages":["en","zh-hant"],"staff_id":"5b5f48478a8bb744df022f0f","show_sold_out":false,"brand_home_url":"https://www.miacake2008.com","base_currency":{"id":"twd","iso_code":"TWD","alternate_symbol":"NT$","name":"New Taiwan Dollar","symbol_first":true,"subunit_to_unit":1},"mobile_logo_media_url":"https://img.shoplineapp.com/media/image_clips/57d648c66170691154730900/original.jpg?1473661126","shop_default_home_url":"https://mia126.shoplineapp.com","payment_method_count":2,"delivery_option_count":7,"credit_balance":null,"layout_bundle_tag":"55f23f06e36c8e916c000071","rollout_keys":["order_export_v2","staff_elasticsearch","google_dynamic_remarketing_tag","google_shopping_ads","message_revamp","page_view_cache","new_layout_for_mobile_and_pc","custom_order_export","godaddy","tappay_sdk_v2_3_2","facebook_dia","menu_navigation_revamp","order_status_tag_color","auto_credit_reward","show_promotion_name","new_onboarding_flow","footer_builder","dashboard_revamp","facebook_notify","tappay_sdk_v3","category_banner","rejected_bill_reminder","signin_register_revamp","paypal_upgrade","integrated_sfexpress","shopping_session_enabled","paypal_rest_api","tnc-checkbox","delivery_time","apps_store","bulk_update_v2","einvoice_newlogic","fm_order_receipt","preset_publish","staff_service_migration","multi_lang","auto_credit_recurring","auto_credit_percentage","orderemail_new_logic","h2_tag_phase1","stripe_radar","broadcast_advanced_filters","component_h1_tag","use_aws_ses","feature_alttag_phase1","execute_shipment_permission","subscription_coupon_v2","select_all_inventory","bulk_payment_delivery_setting","stripe_3d_secure","apps_store_blog","UTM_export","apps_store_wishlist","manual_order","bundle_pricing","variant_image_selector","broadcast_email_html","auto_save_sf_plus_address","theme_ultrachic","ultra_setting","image_host_by_region","molpay_credit_card","facebook_pixel_advanced","job_api_products_export","tw_stripe_subscription","customer_import_v2","static_resource_host_by_region","job_api_user_export","tw_fm_sms","promotion_minitem","default_theme_ultrachic","tw_pricing_page_2019","order_split","cart_addon_limit","assign_products_to_category","revert_credit_status","hk_pricing_page_2019","address_format_us","address_format_jp","address_format_my","my_pricing_page_2019"],"subscribed_webhook_topics":[],"user_setting":{"_id":"55f2404469702d5a3a492700","created_at":"2015-09-11T02:45:24.645Z","data":{"general_fields":[{"type":"gender","options":{"order":{"include":"false","required":"false"},"signup":{"include":"false","required":"false"},"profile":{"include":"false","required":"false"}}},{"type":"birthday","options":{"order":{"include":"false","required":"false"},"signup":{"include":"false","required":"false"},"profile":{"include":"false","required":"false"}}}],"custom_fields":[{"type":"text","name_translations":{"zh-hant":"訂購人姓名"},"options":{"order":{"include":"true","required":"true"},"signup":{"include":"true","required":"false"},"profile":{"include":"true","required":"false"}},"field_id":"55f61feb69702d0a4f6b5700","hint_translations":{"zh-hant":"本國人請填完整中文姓名"}},{"type":"text","name_translations":{"zh-hant":"發票類型"},"hint_translations":{"zh-hant":"若要開立三聯發票，請輸入統一編號"},"options":{"order":{"include":"true","required":"false"},"signup":{"include":"true","required":"false"},"profile":{"include":"true","required":"false"}},"field_id":"55f620a669702d0acad85c00"},{"type":"text","name_translations":{"zh-hant":"FB姓名 或是 Line ID"},"hint_translations":{"zh-hant":"請告知是用什麼方式與我們聯絡的~方便我們聯繫"},"options":{"order":{"include":"true","required":"false"},"signup":{"include":"true","required":"false"},"profile":{"include":"true","required":"false"}},"field_id":"55f6213069702d0a4f785700"}],"facebook_login":{"status":"active","app_id":"619466044847368"}},"item_type":"","key":"users","name":null,"owner_id":"55f23f06e36c8e916c000071","owner_type":"Merchant","publish_status":"published","status":"active","updated_at":"2015-12-13T14:47:15.473Z","value":null},"product_setting":{},"order_setting":{"invoice_activation":"inactive","short_message_activation":"inactive","stock_reminder_activation":"false","default_out_of_stock_reminder":false,"auto_cancel_expired_orders":true,"enabled_order_auth_expiry":true,"enforce_user_login_on_checkout":false,"enabled_location_id":false,"custom_fields":[{"type":"text","label":"宅配收件時段 (a)13點前 (b)14時~18時 及 收貨地址 收貨人電話","display_type":"text_field","name_translations":{"zh-hant":"宅配收件時段 (A)13點前 (B)14時~18時 及 收貨地址 收貨人電話"},"hint_translations":{"zh-hant":"造型蛋糕建議來店自取,若選擇黑貓配送.不論是宅配到家還是站所自取皆有風險,若遇損壞.黑貓是不負責的唷!"},"field_id":"5aa9f50c8a8bb7186f001931"},{"type":"text","label":"加購區(盤叉1組10元/6入)(台灣蠟燭5元/隻,日本蠟燭40元/隻 )(壽星名字$50元/片)","display_type":"text_field","name_translations":{"zh-hant":"加購區(盤叉1組10元/6入)(台灣蠟燭5元/隻,日本蠟燭40元/隻 )(壽星名字$50元/片)"},"hint_translations":{"zh-hant":"基本盤叉，台灣蠟燭皆有附贈, 壽星姓名,每片50元,8吋以上最多2個姓名"},"field_id":"5aa9f50c8a8bb7186f001932"},{"type":"text","label":"訂購造型蛋糕請在此註明[蠟燭歲數] 及 [製作圖案]","required":"false","display_type":"text_field","name_translations":{"zh-hant":"訂購造型蛋糕請在此註明[蠟燭歲數] 及 [製作圖案]"},"hint_translations":{"zh-hant":""},"field_id":"5aa9f50c8a8bb7186f001933"},{"type":"text","label":"[匯款金額+加購金額]","required":"true","display_type":"text_field","name_translations":{"zh-hant":"[匯款金額+加購金額]"},"hint_translations":{"zh-hant":"造型蛋糕一律先付款,若要來店付款.請注意付款時間唷!下單後2日內未付款,訂單即失效.請再重新詢問欲訂購日期及名額唷"},"field_id":"5aa9f50c8a8bb7186f001934"}],"invoice":{"tax_id":""},"facebook_messenging":{"status":"deactivated"},"every8d_messenging":{"status":"deactivated"}},"time_zone":"Asia/Taipei"},
+  localeData: {"loadedLanguage":{"name":"繁體中文","code":"zh-hant"},"supportedLocales":[{"name":"English","code":"en"},{"name":"繁體中文","code":"zh-hant"}]},
+  currentUser:null,
+  themeSettings:{"theme_color":"mint.sea","categories_collapsed":true,"image_fill":true,"is_multicurrency_enabled":false},
+  requestCountry: "US",
+  trackerEventData: {},
+  currencyData: {"supportedCurrencies":[{"name":"$ HKD","symbol":"$","iso_code":"hkd"},{"name":"¥ CNY","symbol":"¥","iso_code":"cny"},{"name":"$ TWD","symbol":"$","iso_code":"twd"},{"name":"$ USD","symbol":"$","iso_code":"usd"},{"name":"$ SGD","symbol":"$","iso_code":"sgd"},{"name":"€ EUR","symbol":"€","iso_code":"eur"},{"name":"$ AUD","symbol":"$","iso_code":"aud"},{"name":"£ GBP","symbol":"£","iso_code":"gbp"},{"name":"₱ PHP","symbol":"₱","iso_code":"php"},{"name":"RM MYR","symbol":"RM","iso_code":"myr"},{"name":"฿ THB","symbol":"฿","iso_code":"thb"},{"name":"د.إ AED","symbol":"د.إ","iso_code":"aed"},{"name":"¥ JPY","symbol":"¥","iso_code":"jpy"},{"name":"K MMK","symbol":"K","iso_code":"mmk"},{"name":"$ BND","symbol":"$","iso_code":"bnd"},{"name":"₩ KRW","symbol":"₩","iso_code":"krw"},{"name":"Rp IDR","symbol":"Rp","iso_code":"idr"},{"name":"₫ VND","symbol":"₫","iso_code":"vnd"}]},
+  previousUrl: '',
+  checkoutLandingPath: '/cart',
+  webpSupported: ''
+});
+
+app.value('flash', {
+});
+
+app.value('flash_data', {});
+app.constant('imageServiceEndpoint', 'https\:\/\/shoplineimg.com/')
+app.constant('staticImageHost', 'shoplineimg.com')
+
+
+app.config(function (AnalyticsProvider) {
+  AnalyticsProvider.startOffline(true);
+});
+    
+app.value('fb_pixel_settings', {
+  unique_ids: false,
+  single_variation: false
+});
+
+      app.value('resource', {
+       'data':{"_id":"5cfc7878cffeab001380930a","birthday":null,"country_calling_code":null,"created_at":null,"custom_data":{},"delivery_addresses":[],"email":null,"facebook_id":null,"facebook_info":null,"gender":null,"is_mobile_phone_signup":false,"is_password_set":null,"is_quick_signup":false,"line_id":null,"line_info":null,"locale_code":"zh-hant","membership_tier_id":null,"mobile_phone":null,"mobile_phone_confirmed_at":null,"name":"","owner_id":null,"owner_type":"Merchant","phones":[],"profile_image":{},"provider":"","registered_at":null,"registered_by":null,"status":"active","subscribed_email_types":[],"updated_at":null},
+       'error_messages': {}
+      });
+
+      var $searchPanelMobile;
+
+      $('.left-panel-button').sidr({
+        name: 'left-panel',
+        side: 'left',
+        body: ".body-wrapper",
+        onOpen: function(){
+          if ($searchPanelMobile.hasClass('click')){
+            $searchPanelMobile.removeClass('click');
+          }
+          $('html, body').css({'overflow': 'hidden'});
+        },
+        onClose: function() {
+          $('html, body').css({'overflow': 'auto'});
+        }
+      });
+      $('.cart-panel-button').sidr({
+        name: 'cart-panel',
+        side: 'left',
+        body: ".body-wrapper",
+        onOpen: function() {
+          angular.element('body').scope().$broadcast('cart.reload');
+          if ($searchPanelMobile.hasClass('click')){
+            $searchPanelMobile.removeClass('click');
+          }
+        }
+      });
+      $('.mobile-language-btn').sidr({
+        name: 'language-panel',
+        side: 'left',
+        body: ".body-wrapper"
+      });
+      $('.mobile-currency-btn').sidr({
+        name: 'currency-panel',
+        side: 'left',
+        body: ".body-wrapper"
+      });
+
+      $( ".body-wrapper" ).on("click touch touchmove", function(e) {
+        if ($(".body-wrapper").hasClass("sidr-open" )) {
+          e.preventDefault();
+          e.stopPropagation();
+          $.sidr('close','left-panel');
+          $.sidr('close','cart-panel');
+          $.sidr('close','currency-panel');
+          $.sidr('close','language-panel');
+          $('html, body').css({'overflow': 'auto'});
+        }
+      });
+
+      $(document).ready(function() {
+        $searchPanelMobile = $jq('.search-panel-mobile');
+        // to show a loading dialog when a huge Product Description Image/Video blocks page content from rednering
+        $("#product-loading").remove();
+
+        $jq(".additional-details-content, .ProductDetail-additional, .ProductDetail-gallery")
+          .find("img[data-src]:not([data-src='']), iframe[data-src]:not([data-src=''])")
+          .each(function() {
+            $(this)
+              .attr('src', $(this).attr('data-src'))
+              .removeAttr('data-src');
+        });
+        if ($jq("#home-carousel").length > 0) {
+          $jq("#home-carousel").owlCarousel({
+            items: 1,
+            singleItem: true,
+            autoPlay: true,
+            stopOnHover: true,
+            lazyLoad : true,
+            onLoadedLazy: function(event) { window.resizeImages(event.target); },
+            autoHeight:true,
+            navigation: true,
+            navigationText: false,
+          });
+        }
+
+        $jq(".owl-carousel").each(function () {
+          $jq(this).owlCarousel({
+            loop: true,
+            items: 1,
+            margin: 10,
+            nav: false,
+            lazyLoad: true,
+            onLoadedLazy: function(event) {
+              window.resizeImages(event.target);
+
+              if($(event.target).hasClass('initializing')) {
+                //owl-stage have transition: 0.25s Time difference
+                setTimeout(function() {
+                  $('.owl-carousel-first-initializing').hide()
+                  $(event.target).removeClass('initializing');
+                }, 300)
+              }
+            },
+            autoplay: true,
+            autoplayTimeout: (parseFloat($jq(this).data('interval')) || 5) * 1000,
+            autoHeight: true,
+            autoplayHoverPause: false // https://github.com/OwlCarousel2/OwlCarousel2/pull/1777
+          });
+        });
+
+        $jq(".title-container.ellipsis").dotdotdot({
+          wrap: 'letter'
+        });
+
+        $jq(".Product-item .Product-info .Product-title").dotdotdot({
+          wrap: 'letter',
+          ellipsis: '...',
+          height: 40
+        });
+
+        // avoid using FB.XFBML.parse() as it breaks the fb-checkbox rendering, if u encounter resize issue, solve with CSS instead
+
+      });
+
+      $(document).on('click', '.m-search-button', function(){
+          $searchPanelMobile.toggleClass('click');
+          if ($('.body-wrapper').hasClass('sidr-open')) {
+            $.sidr('close','left-panel');
+            $.sidr('close','cart-panel');
+            $.sidr('close','language-panel');
+            $.sidr('close','currency-panel');
+            $('html, body').css({'overflow': 'auto'});
+          }
+      });
+
+      $(document).on('click', '.search-mask', function() {
+        $searchPanelMobile.toggleClass('click');
+      });
+
+
+      if (window.scriptQueue && window.scriptQueue.length > 0) {
+        for (var i = 0; i < window.scriptQueue.length; i++) {
+          try{
+            window.scriptQueue[i]();
+          }
+          catch (err) {
+            console.log(err);
+          }
+        }
+      }
+
+
+    })
+
+  window.isLabLoaded = true;
+
+  // Try to execute lab queue
+  window.executeLabQueue();
+});
+
+  </script>
+</head>
+
+<body
+  ng-app="shop_app"
+  class="registrations
+         new
+         
+         mobile-revamp-navigation
+         in-authentication-page"
+  ng-controller="MainController"
+>
+<script>
+  function getScript(url,success){
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = url;
+    var head=document.getElementsByTagName('head')[0], done=false;
+    script.onload=script.onreadystatechange = function(){
+      if ( !done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete') ) {
+        done=true;
+        success();
+        script.onload = script.onreadystatechange = null;
+        head.removeChild(script);
+      }
+    };
+    head.appendChild(script);
+  }
+</script>
+<script>
+  // if user browser is FB, stop them from open link in new tab
+  if(isFacebookApp()) {
+    var links = document.querySelectorAll('a[target="_blank"]');
+    for(var i = 0; i < links.length; i++) {
+      links[i].removeAttribute('target');
+    }
+  }
+  function isFacebookApp() {
+    var ua = navigator.userAgent || navigator.vendor || window.opera;
+    return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+  }
+</script>
+  <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '467428936681900',
+        xfbml      : true,
+        version    : 'v2.7'
+      });
+    };
+
+    (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+
+  <div id="left-panel" style="display:none" class="panel-mobile">
+<div class="side-panel-search hidden-xs">
+  <form ng-controller="ProductsSearchController" ng-submit="search(searchQuery, $event)" action="/products">
+    <button><span class="fa fa-search"></span></button>
+    <input name="query" ng-model="searchQuery" placeholder="找商品" maxlength="100">
+    <span class="fa fa-times" ng-click="clearSearch()"></span>
+  </form>
+</div>
+
+<div class="clear"></div>
+<!-- <div style="float: left;width: 100%;background-color:#262d36;" ng-show='isUserLoggedIn'>
+  <div class="sidr-photo">
+    <div class="sidr-photo-ring">
+      <img class="img-circle sidr-chat-head" ng-src="{{currentUser.profile_image_url}}"/>
+    </div>
+  </div>
+</div>
+<div style="float: left;width: 100%;background-color:#262d36;" ng-show='!isUserLoggedIn'>
+  <div style="height: 1px;background-color:#232a32;"></div>
+</div> -->
+
+
+<div class="clear"></div>
+<div ng-show='!isUserLoggedIn' class="hello"></div>
+<div class="clear"></div>
+
+<div class="visible-xs">
+  <div class="section-header">
+     目錄
+  </div>
+  <ul class="categories-mobile-list">
+    <li>
+      <a href="/products" ng-non-bindable>所有商品</a>
+    <li>
+      <a href="/categories/生日造型蛋糕" ng-non-bindable>生日造型蛋糕</a>
+    <li>
+      <a href="/categories/戚風蛋糕" ng-non-bindable>蛋糕  點心</a>
+    <li>
+      <a href="/categories/麵包" ng-non-bindable>麵包</a>
+    <li>
+      <a href="/categories/客製餐盒" ng-non-bindable></a>
+    <li>
+      <a href="/categories/季節限定" ng-non-bindable></a>
+  </ul>
+</div>
+
+
+<div class="clear"></div>
+  <div class="visible-sm visible-xs">
+    <div class="section-header">
+      分類
+    </div>
+    <ul class="categories-mobile-list">
+        <li class=" text-secondary-color">
+          <a href="/categories/55f23f07e36c8e916c000082" ng-non-bindable>
+            精選商品
+          </a>
+            <!-- has subcategories -->
+            <button class="btn btn-clear btn-category-collapse pull-right" ng-click="isExpanded['55f23f07e36c8e916c000082'] = !isExpanded['55f23f07e36c8e916c000082']">
+              <i class="fa fa-angle-down" ng-if="isExpanded['55f23f07e36c8e916c000082'] ? !defaultCollapse : defaultCollapse"></i>
+              <i class="fa fa-angle-up" ng-if="!(isExpanded['55f23f07e36c8e916c000082'] ? !defaultCollapse : defaultCollapse)"></i>
+            </button>
+            <div class="clear"></div>
+            <ul class="inner-list" style="" collapse="isExpanded['55f23f07e36c8e916c000082'] ? !defaultCollapse : defaultCollapse">
+                 <li class=" text-secondary-color" ng-non-bindable>
+
+                    <a href="/categories/生日造型蛋糕">
+                      生日造型蛋糕
+                    </a>
+                  </li>
+            </ul>
+        </li>
+    </ul>
+  </div>
+
+  <div class="visible-xs">
+    <div>
+      <div class="section-header">
+        帳戶
+      </div>
+      <ul>
+        <li><a href="/users/sign_in">會員登入</a></li>
+        <li><a href="/users/sign_up">新用戶註冊</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="other-setting-list visible-xs">
+    <div class="section-header">
+        其他
+    </div>
+    <ul>
+      <li>
+        <div class="menu-button message-button" ng-hide="featureService.hasBetaFeature('hide_message')" ng-click="showMessageForm()" ng-class="{'ie-hack':!mainConfig.themeSettings.is_multicurrency_enabled}">
+          <span class="menu-words"><span class="fa fa-comment"></span>聯絡我們</span>
+        </div>
+      </li>
+      <li>
+        <div class="dropdown mobile-language-btn" ng-class="{'ie-hack':!mainConfig.themeSettings.is_multicurrency_enabled}">
+          <div class="menu-button">
+            <span class="menu-words">
+              <svg class="fa fa-v5-globe">
+                <use xlink:href="#fa-v5-globe"></use>
+              </svg>
+              繁體中文</span>
+            </span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--left-panel-->
+
+
+<div id="cart-panel" style="display:none" class="panel-mobile">
+  <!-- cart Start -->
+   <div ng-controller="CartsController">
+    <div class="cart-header">
+      購物車
+    </div>
+    <!-- cart items start-->
+    <div class="clear"></div>
+    <div ng-cloak ng-show="currentCart.isCartEmpty()">
+      <div style="display:block;padding:15px">
+        你的購物車是空的
+      </div>
+    </div>
+    <div ng-cloak ng-hide="currentCart.isCartEmpty()">
+      <div id="" style="" class="cart-items">
+        <div ng-repeat="item in currentCart.getItems()" ng-if="item.type !== 'gift'">
+          <div class="cart-item">
+            <a ng-href="/products/{{item.product_id}}" target="_blank" class="product-link js-product-link">
+              <img style="margin-right:10px;width:50px;height:50px;float:left;" ng-src="{{item.variation.media ? item.variation.media.images.thumb.url : item.product.cover_media.images.thumb.url}}"
+                alt="{{ (item.variation.media ? item.variation.media.alt_translations : item.product.cover_media.alt_translations) | translateModel }}"/>
+            </a>
+            <div class="cart-item-content" style="float:left;width:130px;">
+              <div
+                ng-show="item.applied_promotion.discount_type === 'bundle_pricing'"
+                class="label promotion-label label-default"
+              >
+                {{ 'product.bundled_products.label' | translate }}
+              </div>
+              <div ng-show="item.type == 'addon_product'" class="label promotion-label label-default">{{ 'product.addon_products.label' | translate }}</div>
+              <div class="title">{{item.product.title_translations|translateModel}}</div>
+              <div ng-repeat="field in item.variation.fields">
+                <div class="variation">{{ field.name_translations | translateModel }}</div>
+              </div>
+              <div class="variation" ng-hide="item.variation.fields">{{item.variation.name}}</div>
+              <div class="price-details">
+                {{item.quantity}}<span style=";margin:0 3px;">x</span>
+                <span ng-bind-html="currentCart.getItemPrice(item).label | changeCurrency"></span>
+              </div>
+            </div><!--cart-item-content-->
+              <div class="remove"><a ng-click="removeItemFromCart(item._id,$event)" >刪除</a></div>
+            <div class="clear"></div>
+          </div><!-- cart-item-->
+
+          <div class="addon-cart-item cart-item" ng-repeat="addonItem in item.addon_items" ng-init="addonItemPrice = addonItem.price ? (addonItem.quantity * addonItem.price.cents / mainConfig.merchantData.base_currency.subunit_to_unit) : ''">
+            <span class="product-link js-product-link">
+              <img style="margin-right:10px;width:50px;height:50px;float:left;" ng-src="{{addonItem.product.cover_media.images.thumb.url}}"
+                alt="{{ addonItem.product.cover_media.alt_translations | translateModel }}"/>
+            </span>
+            <div class="cart-item-content" style="float:left;width:130px;">
+              <div class="label promotion-label label-default">{{ 'product.addon_products.label' | translate }}</div>
+              <div class="title">{{addonItem.product.title_translations|translateModel}}</div>
+              <div class="price-details">
+                {{addonItem.quantity}}<span style=";margin:0 3px;">x</span>
+                <span ng-show="addonItem.price.label" ng-bind-html="addonItem.price.label | changeCurrency"></span>
+                <span ng-hide="addonItem.price.label">{{ mainConfig.merchantData.base_currency.alternate_symbol + "0" }}</span>
+              </div>
+            </div><!--cart-item-content-->
+              <div class="remove"><a ng-click="removeItemFromCart(addonItem._id,$event)" >刪除</a></div>
+            <div class="clear"></div>
+          </div>
+
+        </div>
+        <div class="clear"></div>
+      </div> <!--cart-items-->
+      <!-- cart items end -->
+      <div class="clear"></div>
+      <div class="cart-chkt-btn-cont">
+        <button id="btn-checkout" class="cart-chkt-btn ladda-button" data-style="slide-down" ladda="checkoutButtonLoading" ng-click="onCheckoutClicked($event)">
+          訂單結帳
+        </button>
+      </div>
+    </div>
+  </div>
+</div> <!--cart-panel-->
+
+<!-- cart End -->
+<div id="language-panel" style="display:none" class="panel-mobile">
+  <!-- language Start -->
+   <div class="ng-scope">
+    <div class="section-header language-header">
+      <a class="left-panel-button menu-button ie-hack " href="#left-panel">
+        <span class="fa fa-chevron-left"></span>
+      </a>
+      語言
+    </div>
+  </div>
+  <ul>
+      <li ng-click="changeLanguage('en')"><span>English</span></li>
+      <li ng-click="changeLanguage('zh-hant')"><span>繁體中文</span></li>
+  </ul>
+</div>
+<!-- language End -->
+
+
+<div id="currency-panel" style="display:none" class="panel-mobile">
+  <!-- currency Start -->
+   <div class="ng-scope">
+    <div class="section-header currency-header">
+      <a class="left-panel-button menu-button ie-hack " href="#left-panel">
+        <span class="fa fa-chevron-left"></span>
+      </a>
+      貨幣
+    </div>
+  </div>
+  <ul>
+    <li ng-click="changeCurrency('hkd')"><span>$ HKD</span></li>
+    <li ng-click="changeCurrency('cny')"><span>¥ CNY</span></li>
+    <li ng-click="changeCurrency('twd')"><span>$ TWD</span></li>
+    <li ng-click="changeCurrency('usd')"><span>$ USD</span></li>
+    <li ng-click="changeCurrency('sgd')"><span>$ SGD</span></li>
+    <li ng-click="changeCurrency('eur')"><span>€ EUR</span></li>
+    <li ng-click="changeCurrency('aud')"><span>$ AUD</span></li>
+    <li ng-click="changeCurrency('gbp')"><span>£ GBP</span></li>
+    <li ng-click="changeCurrency('php')"><span>₱ PHP</span></li>
+    <li ng-click="changeCurrency('myr')"><span>RM MYR</span></li>
+    <li ng-click="changeCurrency('thb')"><span>฿ THB</span></li>
+    <li ng-click="changeCurrency('aed')"><span>د.إ AED</span></li>
+    <li ng-click="changeCurrency('jpy')"><span>¥ JPY</span></li>
+    <li ng-click="changeCurrency('mmk')"><span>K MMK</span></li>
+    <li ng-click="changeCurrency('bnd')"><span>$ BND</span></li>
+    <li ng-click="changeCurrency('krw')"><span>₩ KRW</span></li>
+    <li ng-click="changeCurrency('idr')"><span>Rp IDR</span></li>
+    <li ng-click="changeCurrency('vnd')"><span>₫ VND</span></li>
+  </ul>
+</div>
+
+<!-- currency End -->
+
+  <div class="side-panel-search search-panel-mobile">
+  <form ng-controller="ProductsSearchController" ng-submit="search(searchQuery, $event); $event.preventDefault();" action="{{'#/search/'}}">
+    <button class="mobile-search-btn"><span class="fa fa-search"></span></button>
+    <input type="search" name="searchQuery" ng-model="searchQuery" placeholder="找商品">
+    <span class="fa fa-times" ng-class="{ 'has-search-query': searchQuery }" ng-show="searchQuery.length > 0" ng-click="clearSearch()"></span>
+  </form>
+  <div class="search-mask"></div>
+</div>
+
+<div id="fixed-menu-container" class="mobile-revamp-navigation ">
+
+  <a class="left-panel-button menu-button visible-xs visible-sm
+            ie-hack
+            "
+     href="#left-panel"
+  >
+    <span class="fa fa-bars"> </span><span class="menu-words" style="padding-left:6px;">目錄</span>
+  </a>
+
+  <a class="visible-xs m-search-button menu-button ie-hack ">
+    <span class="fa fa-search"></span>
+  </a>
+
+  <!-- mobile logo -->
+  <div class="mobile-logo">
+    <a href="https://www.miacake2008.com/" class="sl-lazy-image" style="background-image: url('https://shoplineimg.com/55f23f06e36c8e916c000071/57d648c66170691154730900/x40.jpg?')"></a>
+  </div>
+
+  <a href="/users/sign_in" class="menu-button signin-signup-button mobile-revamp-navigation">
+    <span class="fa fa-user"> </span><span class="menu-words">登入會員</span>
+  </a>
+
+  <a class="cart-panel-button menu-button ie-hack" id="" href="#cart-panel">
+    <span class="fa fa-shopping-cart"> </span><span class="menu-words">購物車</span>
+    <span class="cart-count" ng-show="currentCart.getItemCount()>0" ng-cloak>
+      <span class="hidden-xs">(</span>{{currentCart.getItemCount()}}<span class="hidden-xs">)</span>
+    </span>
+  </a>
+
+    <a class="menu-button
+      message-button
+      hidden-xs
+      ie-hack"
+      ng-click="showMessageForm()"
+    >
+      <span class="fa fa-comment"></span><span class="menu-words" style="padding-left:6px;">聯絡我們</span>
+    </a>
+  <div class="dropdown ie-hack hidden-xs" dropdown>
+    <div class="menu-button dropdown-toggle" dropdown-toggle>
+      <span>
+        <svg class="fa fa-v5-globe">
+          <use xlink:href="#fa-v5-globe" />
+        </svg>
+      </span>
+      <span class="menu-words" style="padding-left:5px;padding-right:5px;">繁體中文</span>
+      <span class="caret menu-words" style="float: right;position: relative;top: 7px;"></span>
+    </div>
+    <ul class="dropdown-menu menu-button language">
+        <li ng-click="changeLanguage('en')"><span>English</span></li>
+        <li ng-click="changeLanguage('zh-hant')"><span>繁體中文</span></li>
+    </ul>
+  </div>
+
+  <div class="menu-button search-button ie-hack">
+    <form ng-controller="ProductsSearchController" ng-submit="search(searchQuery, $event)" action="/products" style="margin-bottom: 0">
+      <input name="query" ng-model="searchQuery" placeholder="找商品" maxlength="100">
+      <button><span class="fa fa-search"></span></button>
+    </form>
+  </div>
+</div>
+
+
+  <div class="body-wrapper  ">
+    <div class="body-content mobile-revamp-navigation">
+    <nav class="main-navigation">
+    <!---navigation -->
+    <div class="navbar-wrapper " >
+      <div class="navbar hidden-xs" role="navigation">
+        <div class="navbar-header-wrapper">
+          <div class="container" >
+            <div class="navbar-header">
+              <a href="https://www.miacake2008.com/">
+                <img src="https://shoplineimg.com/55f23f06e36c8e916c000071/57d648c66170691154730900/x140.jpg?"  class="logo-image sl-lazy-image" data-resizing-segment="140" />
+              </a>
+            </div>
+          </div> <!--container-->
+        </div>
+        <div class="navbar-menu-wrapper">
+          <div class="container" >
+            <div class="navbar-menu hidden-xs">
+              <ul class="text-primary-color">
+    <!-- Has dropdown links -->
+      <!-- doesn't have dropdown links -->
+      <li link-highlight="/products">
+        <a link-highlight="/products" href="/products" target="" ng-non-bindable>所有商品</a>
+      </li>
+    <!-- Has dropdown links -->
+      <!-- doesn't have dropdown links -->
+      <li link-highlight="/categories/生日造型蛋糕">
+        <a link-highlight="/categories/生日造型蛋糕" href="/categories/生日造型蛋糕" target="" ng-non-bindable>生日造型蛋糕</a>
+      </li>
+    <!-- Has dropdown links -->
+      <!-- doesn't have dropdown links -->
+      <li link-highlight="/categories/戚風蛋糕">
+        <a link-highlight="/categories/戚風蛋糕" href="/categories/戚風蛋糕" target="" ng-non-bindable>蛋糕  點心</a>
+      </li>
+    <!-- Has dropdown links -->
+      <!-- doesn't have dropdown links -->
+      <li link-highlight="/categories/麵包">
+        <a link-highlight="/categories/麵包" href="/categories/麵包" target="" ng-non-bindable>麵包</a>
+      </li>
+    <!-- Has dropdown links -->
+      <!-- doesn't have dropdown links -->
+      <li link-highlight="/categories/客製餐盒">
+        <a link-highlight="/categories/客製餐盒" href="/categories/客製餐盒" target="" ng-non-bindable></a>
+      </li>
+    <!-- Has dropdown links -->
+      <!-- doesn't have dropdown links -->
+      <li link-highlight="/categories/季節限定">
+        <a link-highlight="/categories/季節限定" href="/categories/季節限定" target="" ng-non-bindable></a>
+      </li>
+</ul>
+            </div>
+          </div> <!--container-->
+        </div>
+      </div><!--navbar-->
+    </div><!--navbar-wrapper-->
+    <!-- navigation end -->
+  </nav>
+
+  <!-- main Content -->
+  <div class="yield-wrapper">
+    
+<div class="large-message" ng-cloak >
+  <div class="container" ga-page-view>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="content full-content-center content-with-tabset">
+          <tabset justified="true" class="content-tabset content-2-tabset">
+  <tab heading="註冊會員" active=true>
+    <div ng-controller="RegistrationsNewController">
+      <div class="alert alert-success" ng-show="userForm.successMessages && userForm.successMessages.length > 0">
+        <div ng-repeat="message in userForm.successMessages">
+          {{message}}
+        </div>
+      </div>
+      <div class="alert alert-info" ng-show="userForm.showUnVerifiedMessage">
+        {{ 'users.signup.unconfirmed' | translate: { email: resource.email || resource.mobile_phone_or_email } }}
+      </div>
+      <div class="alert alert-danger" ng-show="userForm.errorMessages">
+        <div ng-repeat="message in userForm.errorMessages">
+          {{message}}
+        </div>
+      </div>
+
+        <div class="social-login-container">
+            <div>
+                <a
+                  class="btn btn-block btn-facebook-login"
+                  ng-href="{{facebook_url()}}"
+                  ng-hide="userForm.successMessages.length > 0"
+                >
+                  <img ng-src="{{imageServiceEndpoint}}assets/misc/fb_login.png" />
+                  <span class="login-btn-label">使用Facebook註冊</span>
+                </a>
+            </div>
+        </div>
+        <hr>
+
+      <div
+        class="tabset-title"
+        ng-if="::(!featureService.hasFeature('mobile_signup_and_validation') && !featureService.hasFeature('mobile_signup_p2'))"
+      >
+        註冊電郵
+      </div>
+      <div class="form-container" ng-hide="userForm.successMessages.length > 0">
+        <form ng-hide="mobileSignInStep" accept-charset="UTF-8" class="simple_form form-vertical" data-validate="true" novalidate name="userForm" >
+          <div control-group data-field-name="用戶名" class="login-input">
+            <input autofocus="autofocus" class="line-input" name="name" ng-model="resource.name" placeholder="用戶名" type="text" required="true" ng-maxlength="50">
+          </div>
+
+          <!-- mobile phone phase2 signup select -->
+          <div
+            ng-if="::featureService.hasFeature('mobile_signup_p2') && !resource.isMobilePhoneSignUp"
+            class="login-input input-dropdown"
+            control-group
+          >
+            <select
+              name="user_sign_up_selection"
+              class="line-input"
+              ng-change="changeSignupSelection()"
+              ng-model="resource.isMobilePhoneSignUp"
+              ng-options="item.value as item.label for item in signUpSelections"
+            >
+            </select>
+            <i class="fa fa-angle-down dropdown-arrow"></i>
+          </div>
+          <!-- end of mobile phone phase2 signup select -->
+          <div
+            control-group
+            data-field-name="電郵"
+            class="login-input"
+            ng-if="!isMobilePhoneSignUp()"
+          >
+            <input
+              class="line-input"
+              name="email"
+              ng-model="resource.email"
+              placeholder="電郵"
+              type="email"
+              ng-minlength="4"
+              ng-maxlength="50"
+              ng-pattern="emailRegex"
+              required
+            >
+          </div>
+          <div
+            control-group
+            data-field-name="手機號碼"
+            class="login-input"
+            ng-if="featureService.hasFeature('mobile_signup_and_validation') || isMobilePhoneSignUp()"
+          >
+            <input
+              class="line-input intl-tel-input"
+              name="mobilePhone"
+              ng-model="resource.mobilePhone"
+              on-change="onCountryCodeChange"
+              ng-pattern="countryMobilePattern"
+              required
+            >
+          </div>
+          <div control-group data-field-name="密碼" class="login-input">
+            <input class="line-input" name="password" ng-model="resource.password" placeholder="密碼" type="password" required="true" ng-maxlength="50" ng-minlength="8" >
+            <div class="text-left notice-content">至少8個字元</div>
+          </div>
+          <span ng-repeat="field in user_setting.general_fields" ng-switch="field.type">
+            <span ng-switch-when="gender">
+              <div class="login-input input-dropdown" ng-show="field.options.signup.include=='true'" control-group data-field-name="性別">
+                <select
+                  name="user_gender"
+                  class="line-input"
+                  ng-model="resource.gender"
+                  ng-required="field.options.signup.required == 'true'"
+                  ng-options="item.id as item.label for item in genders"
+                >
+                  <option value="" selected="selected"
+                  >
+                    性別&nbsp;{{ field.options.signup.required == 'true' ? '' : '(選填)' }}
+                  </option>
+                </select>
+                <i class="fa fa-angle-down dropdown-arrow"></i>
+              </div>
+            </span>
+            <span ng-switch-when="birthday">
+              <div class="login-input datepicker-section" ng-show="field.options.signup.include == 'true'" control-group data-field-name="生日日期">
+                <input class="line-input"
+                  ng-click="open($event)"
+                  name="user_birthday"
+                  datepicker-popup="yyyy/MM/dd"
+                  ng-model="temp.birthday"
+                  is-open="datepicker.open"
+                  show-button-bar="false"
+                  show-weeks="datepickerOptions.showWeeks"
+                  min-date="datepickerOptions.minDate"
+                  max-date="datepickerOptions.maxDate"
+                  ng-required="field.options.signup.required == 'true'"
+                  placeholder="生日日期 (YYYY/MM/DD){{ field.options.signup.required == 'true' ? '' : '(選填)'}}"
+                >
+              </div>
+            </span>
+          </span>
+          <span ng-repeat="field in user_setting.custom_fields" ng-switch="field.type">
+            <div class="login-input" ng-show="field.options.signup.include == 'true'" control-group data-field-name="{{ field.name_translations | translateModel }}">
+              <input class="line-input" type="text" ng-model="resource.custom_data[field.field_id]" dynamic-name="'user_custom_'+$index" value="" placeholder="{{ field.name_translations|translateModel }}{{ field.options.signup.required == 'true' ? '' : '(選填)' }}" ng-maxlength="50" ng-required="field.options.signup.required == 'true'" style="width:100%;">
+              <div class="text-left notice-content">{{ field.hint_translations|translateModel }}</div>
+            </div>
+          </span>
+          <label class="text-left">商店資訊及優惠方案</label>
+          <label class="text-left">
+            <input
+              class="text-left signup-page-checkbox"
+              type="checkbox"
+              ng-model="subscription_tags['marketing.news']"
+            >發送至電郵或其他通訊方式
+          </label>
+          <hr class="divider">
+          <label class="text-left"
+            ng-show="featureService.hasFeature('tnc-checkbox')"
+            ng-class="{'tnc-checkbox-error': userForm.submitted && !state.tncChecked}"
+          >
+            <input
+              class="text-left signup-page-checkbox"
+              type="checkbox"
+              ng-model="state.tncChecked"
+            >
+            我同意<a class='agree-highlight' href=/about/terms target='_blank'>網站服務條款及隱私政策</a>
+          </label>
+          <input type="hidden" name="user[owner_id]" value="55f23f06e36c8e916c000071">
+          <div class="actions">
+            <button
+              id="submit-btn"
+              ng-click="formSubmit()"
+              class="btn btn-success btn-block ladda-button btn-custom-large btn-color-primary"
+              data-style="slide-down"
+              ladda="userForm.submitting"
+              ng-disabled="!state.tncChecked"
+              ng-hide="false"
+            >
+              立即加入!
+            </button>
+          </div>
+
+        </form>
+      </div> <!-- end form-container-->
+    </div> <!-- end content -->
+  </tab>
+  <tab heading="會員登入" >
+    <div ng-controller="SessionsNewController">
+      <div class="alert alert-info" ng-show="userForm.showUnVerifiedMessage">
+        {{ 'users.signup.unconfirmed' | translate: { email: resource.email || resource.mobile_phone_or_email } }}
+      </div>
+      <div class="alert alert-danger" ng-show="userForm.errorMessage">
+        {{ userForm.errorMessage }}
+      </div>
+      <div class="form-container">
+        <div class="alert alert-danger" ng-hide="true">
+          
+        </div>
+
+          <div class="social-login-container">
+              <div>
+                <a
+                  class="btn btn-block btn-facebook-login"
+                  ng-href="/users/auth/facebook"
+                  ng-hide="userForm.successMessages.length > 0"
+                >
+                  <img src="{{imageServiceEndpoint}}assets/misc/fb_login.png" />
+                  <span class="login-btn-label">使用Facebook登入</span>
+                </a>
+              </div>
+          </div>
+          <hr>
+
+          <div class="tabset-title">登入電郵</div>
+
+        <form accept-charset="UTF-8" class="simple_form form-vertical" data-validate="true" method="post" novalidate name="userForm">
+            <div control-group data-field-name="{{ 'users.fields.email' | translate }}" class="login-input">
+              <input class="line-input" name="email" ng-model="resource.email" placeholder="電郵" type="email" required="true" ng-minlength="4" ng-maxlength="50" ng-pattern="emailRegex">
+            </div>
+          <div control-group data-field-name="{{'users.fields.password'|translate}}" class="login-input">
+            <input class="line-input" name="password" ng-model="resource.password" placeholder="密碼" type="password" required="true" ng-maxlength="50" ng-minlength="6" >
+            <!-- The minimum validation is different fromt same one in signup/reset/forgot pw because we set minimum 6 when setting pw before -->
+          </div>
+
+          <input type="hidden" name="user[owner_id]" value="55f23f06e36c8e916c000071">
+
+          <div class="actions">
+            <button ng-click="formSubmit()" class="btn btn-success btn-block ladda-button btn-custom-large btn-color-primary" data-style="slide-down" ladda="userForm.submitting"></> 開始購物吧！</button>
+          </div>
+
+        </form>
+
+        <div class="links-container">
+
+  <a href="/users/sign_in">會員登入</a><br />
+
+
+<!--
+  <a href="/users/confirmation/new">沒有收到確認信?</a><br />
+-->
+
+</div>
+
+      </div> <!-- end form-container-->
+    </div>
+  </tab>
+</tabset>
+
+        </div> <!-- end content -->
+      </div> <!-- end col-sm-12 -->
+    </div> <!-- end row -->
+  </div> <!-- end container -->
+</div> <!-- end large-message -->
+
+  </div><!--yield-wrapper-->
+  <!-- main Content end-->
+</div><!-- body-content-->
+  <!---footer -->
+  <div id="footer">
+      <div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <!-- Footer Links -->
+      <ul>
+            <li link-highlight="/about">
+              <a link-highlight="/about" href="/about" target="" ng-non-bindable>商店介紹</a>
+            </li>
+      </ul>
+      <!-- End Footer Links -->
+
+    </div>
+
+    <div class="col-sm-6 sociallinks">
+      
+      <!-- Payment Social Networks -->
+      <ul>
+          <li class="global-secondary icon-footer_email">
+            <li link-highlight="https://www.facebook.com/miacake2008">
+              <a link-highlight="https://www.facebook.com/miacake2008" href="https://www.facebook.com/miacake2008" target="_blank" ng-non-bindable>Facebook 專頁</a>
+            </li>
+          </li>
+      </ul>
+      <!-- End Social Networks -->
+
+    </div>
+
+    <div class="col-sm-12 badges">
+      <div class="credit-cards">
+      </div>
+    </div>
+
+  </div><!--row-->
+</div>
+
+      <div id="poweredby-shopline">
+        <a target="_blank" href=https://shopline.tw/>Powered by SHOPLINE</a>
+      </div>
+  </div>
+  <!---footer end-->
+
+
+  </div>
+
+  <script type="text/javascript">
+    window.resizeImages();
+  </script>
+
+    <!-- start countly -->
+  <script type="text/javascript">
+    //initializing countly with params
+    // var Countly = Countly || {};
+    // Countly.q = Countly.q || [];
+    //provide countly initialization parameters
+    // Countly.app_key = "234f6523d0d1a8b430364ea094e191a767f86b06";
+    // Countly.url = "http://dc1.shoplinedev.com"; //or none for default countly cloud
+
+
+    // Countly.init({
+    //   app_key: "dd1896ed6ed2ec72b22854a4fbebbd8712ec4d36",
+    //   url: "https://count.shoplineapp.com",
+    // })
+
+    
+//    Countly.begin_session(true);
+    // Countly.add_event({
+    //   "key": "pageView",
+    //   "device_id":" ce0917956f4d7c8f10b276369d5b0b28",
+    //   "session_duration": 30,
+    //   "segmentation": {
+    //     "url": window.location.pathname,
+    //     merchantId: '55f23f06e36c8e916c000071'
+    //   }
+    // });
+    //end session on leaving page
+
+    // Countly.q.push(['session_duration', 1800]);
+    // Countly.q.push(['add_event',{
+    //   key:"asyncPageView", 
+    //   "segmentation": {
+    //     "url": window.location.pathname
+    //   }
+    // }]);
+
+
+  </script>
+  <!-- end countly-->
+
+
+
+    
+
+    <!-- tr: tracking pixel and same as facebook naming rule -->
+    <script type="text/javascript">
+      var documentData = {
+        url_path: document.location.pathname,
+        http_domain: document.location.protocol + '//' + document.location.hostname,
+        http_search: document.location.search,
+        http_referer: document.referrer
+      };
+      var trackingDocumentData = Object.keys(documentData).reduce(function(previous, key) {
+        return previous + key + '=' + encodeURIComponent(documentData[key]) + '&'
+      }, '');
+      (new Image()).src = "https://events.shoplytics.com/api/v1/tr?" + trackingDocumentData + "merchant_id=55f23f06e36c8e916c000071&country=US&language=zh-hant&is_mobile=false&product_id=&user_id=&";
+    </script>
+
+
+    
+
+      
+
+
+
+
+
+  <script type="text/javascript">
+    window.isQueueClosed = true;
+
+    // Try to execute lab queue
+    window.executeLabQueue();
+  </script>
+</body>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="fa-v5-globe" viewBox="0 0 496 512">
+    <path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"/>
+  </symbol>
+</svg>
+</html>
